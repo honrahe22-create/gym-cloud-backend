@@ -144,7 +144,21 @@ app.get("/api/socios", async (req, res) => {
 
     return res.status(500).json({
       ok: false,
-      error: String(error?.message || error),
+      error: {
+        name: error?.name || null,
+        message: error?.message || null,
+        stack: error?.stack || null,
+        errors: Array.isArray(error?.errors)
+          ? error.errors.map((e) => ({
+              name: e?.name || null,
+              message: e?.message || null,
+              code: e?.code || null,
+              errno: e?.errno || null,
+              address: e?.address || null,
+              port: e?.port || null,
+            }))
+          : [],
+      },
     });
   }
 });
