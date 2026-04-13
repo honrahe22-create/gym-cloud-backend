@@ -1,3 +1,4 @@
+console.log("USANDO SERVER CORRECTO GYM 123");
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
@@ -131,21 +132,10 @@ app.get("/api/ejercicios/musculo/:nombre", async (req, res) => {
 // ==============================
 
 app.get("/api/socios", async (req, res) => {
-  try {
-    const result = await pool.query("SELECT * FROM socios");
-
-    res.json({
-      ok: true,
-      socios: result.rows || [],
-    });
-  } catch (error) {
-    console.error("🔥 ERROR REAL:", error);
-
-    res.status(500).json({
-      ok: false,
-      error: error.message,
-    });
-  }
+  return res.json({
+    ok: true,
+    prueba: "ruta nueva gym",
+  });
 });
 
 app.get("/api/socios/:id", async (req, res) => {
