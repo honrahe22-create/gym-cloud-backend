@@ -542,38 +542,7 @@ async function startServer() {
     await initDB();
     await seedData();
 
-    app.get("/api/socios", async (req, res) => {
-  try {
-    const result = await pool.query(`
-      SELECT
-        id,
-        identificacion,
-        nombres,
-        apellidos,
-        telefono,
-        correo,
-        fecha_nacimiento,
-        genero,
-        objetivo,
-        estado
-      FROM socios
-      ORDER BY id DESC
-    `);
-
-    res.json({
-      ok: true,
-      socios: result.rows || [],
-    });
-  } catch (error) {
-    console.error("Error en GET /api/socios:", error);
-    res.status(500).json({
-      ok: false,
-      error: error.message || "Error obteniendo socios",
-    });
-  }
-});
-
-app.get("/api/ejercicios/musculo/:musculo", async (req, res) => {
+   app.get("/api/ejercicios/musculo/:musculo", async (req, res) => {
   try {
     const { musculo } = req.params;
 
