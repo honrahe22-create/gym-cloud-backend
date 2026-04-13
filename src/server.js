@@ -132,20 +132,18 @@ app.get("/api/ejercicios/musculo/:nombre", async (req, res) => {
 
 app.get("/api/socios", async (req, res) => {
   try {
-    const result = await pool.query(`
-      SELECT *
-      FROM socios
-      ORDER BY id DESC
-    `);
+    const result = await pool.query("SELECT * FROM socios");
 
     res.json({
       ok: true,
-      socios: result.rows
+      socios: result.rows || [],
     });
   } catch (error) {
+    console.error("🔥 ERROR REAL:", error);
+
     res.status(500).json({
       ok: false,
-      error: error.message
+      error: error.message,
     });
   }
 });
@@ -543,6 +541,82 @@ async function startServer() {
   try {
     await initDB();
     await seedData();
+
+    app.get("/api/socios", async (req, res) => {
+  try {
+    const result = await pool.query(`
+      SELECT
+        id,
+        identificacion,
+        nombres,
+        apellidos,
+        telefono,
+        correo,
+        fecha_nacimiento,
+        genero,
+        objetivo,
+        estado
+      FROM socios
+      ORDER BY id DESC
+    `);
+
+    res.json({
+      ok: true,
+      socios: result.rows || [],
+    });
+  } catch (error) {
+    console.error("Error en GET /api/socios:", error);
+    res.status(500).json({
+      ok: false,
+      error: error.message || "Error obteniendo socios",
+    });
+  }
+});
+
+app.get("/api/ejercicios/musculo/:musculo", async (req, res) => {
+  try {
+    const { musculo } = req.params;
+
+    const mapaMusculos = {
+      pecho: ["Pecho alto", "Pecho medio", "Pecho bajo"],
+      hombros: ["Hombros"],
+      biceps: ["Bíceps"],
+      abdomen: ["Abdomen"],
+      piernas: ["Cuádriceps", "Pantorrillas", "Pantorrillas posterior", "Isquiotibiales"],
+      espalda: ["Espalda alta", "Espalda media", "Espalda baja"],
+      triceps: ["Tríceps"],
+      gluteos: ["Glúteos"],
+    };
+
+    const grupos = mapaMusculos[musculo?.toLowerCase()] || [musculo];
+
+    const result = await pool.query(
+      `
+      SELECT
+        id,
+        nombre,
+        descripcion,
+        musculo_nombre,
+        imagen_url
+      FROM ejercicios
+      WHERE musculo_nombre = ANY($1)
+      ORDER BY id ASC
+      `,
+      [grupos]
+    );
+
+    res.json({
+      ok: true,
+      ejercicios: result.rows || [],
+    });
+  } catch (error) {
+    console.error("Error en GET /api/ejercicios/musculo/:musculo:", error);
+    res.status(500).json({
+      ok: false,
+      error: error.message || "Error obteniendo ejercicios",
+    });
+  }
+});
 
     app.listen(PORT, "0.0.0.0", () => {
       console.log(`🚀 Backend corriendo en http://localhost:${PORT}`);
