@@ -132,10 +132,21 @@ app.get("/api/ejercicios/musculo/:nombre", async (req, res) => {
 // ==============================
 
 app.get("/api/socios", async (req, res) => {
-  return res.json({
-    ok: true,
-    prueba: "ruta nueva gym",
-  });
+  try {
+    const result = await pool.query("SELECT * FROM socios ORDER BY id DESC");
+
+    return res.json({
+      ok: true,
+      socios: result.rows || [],
+    });
+  } catch (error) {
+    console.error("ERROR_GET_SOCIOS:", error);
+
+    return res.status(500).json({
+      ok: false,
+      error: String(error?.message || error),
+    });
+  }
 });
 
 app.get("/api/socios/:id", async (req, res) => {
