@@ -9,16 +9,35 @@ const seedData = require("./config/seedData");
 
 const app = express();
 
-app.use(cors({
-  origin: process.env.FRONTEND_URL || "http://localhost:5173"
-}));
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://gym-cloud-frontend.onrender.com",
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      // Permitir requests sin origin (Postman, navegador directo, Render health checks)
+      if (!origin) return callback(null, true);
+
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      console.log("❌ Bloqueado por CORS:", origin);
+      return callback(new Error("No permitido por CORS"));
+    },
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    credentials: false,
+  })
+);
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
+app.get("/api/test", (req, res) => {
   res.json({
     ok: true,
-    message: "Backend Gym Nube funcionando"
+    mensaje: "Backend OK GYM"
   });
 });
 
