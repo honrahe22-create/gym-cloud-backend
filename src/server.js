@@ -1,4 +1,5 @@
 console.log("USANDO SERVER CORRECTO GYM 123");
+
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
@@ -17,7 +18,6 @@ const allowedOrigins = [
 app.use(
   cors({
     origin: function (origin, callback) {
-      // Permitir requests sin origin (Postman, navegador directo, Render health checks)
       if (!origin) return callback(null, true);
 
       if (allowedOrigins.includes(origin)) {
@@ -28,33 +28,35 @@ app.use(
       return callback(new Error("No permitido por CORS"));
     },
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: false,
   })
 );
 
+app.options("*", cors());
+
 app.use(express.json());
 
-app.get("/api/test", (req, res) => {
-  res.json({
-    ok: true,
-    mensaje: "Backend OK GYM"
-  });
+app.use((req, res, next) => {
+  console.log("➡️ Request:", req.method, req.originalUrl, "Origin:", req.headers.origin);
+  next();
 });
 
 app.get("/api/test", async (req, res) => {
   try {
     const result = await pool.query("SELECT NOW() AS fecha");
+
     res.json({
       ok: true,
-      message: "Conexión a PostgreSQL correcta",
-      dbTime: result.rows[0].fecha
+      mensaje: "Backend OK GYM",
+      dbTime: result.rows[0].fecha,
     });
   } catch (error) {
     res.status(500).json({
       ok: false,
       error: error?.message || "Error desconocido",
       code: error?.code || null,
-      detail: error?.detail || null
+      detail: error?.detail || null,
     });
   }
 });
@@ -70,12 +72,12 @@ app.get("/api/tablas", async (req, res) => {
 
     res.json({
       ok: true,
-      tablas: result.rows
+      tablas: result.rows,
     });
   } catch (error) {
     res.status(500).json({
       ok: false,
-      error: error.message
+      error: error.message,
     });
   }
 });
@@ -89,12 +91,12 @@ app.get("/api/musculos", async (req, res) => {
 
     res.json({
       ok: true,
-      musculos: result.rows
+      musculos: result.rows,
     });
   } catch (error) {
     res.status(500).json({
       ok: false,
-      error: error.message
+      error: error.message,
     });
   }
 });
@@ -108,40 +110,53 @@ app.get("/api/ejercicios", async (req, res) => {
 
     res.json({
       ok: true,
-      ejercicios: result.rows
+      ejercicios: result.rows,
     });
   } catch (error) {
     res.status(500).json({
       ok: false,
-      error: error.message
+      error: error.message,
     });
   }
 });
 
-app.get("/api/ejercicios/musculo/:nombre", async (req, res) => {
+app.get("/api/ejercicios/musculo/:musculo", async (req, res) => {
   try {
-    const { nombre } = req.params;
+    const { musculo } = req.params;
+
+    const mapaMusculos = {
+      pecho: ["Pecho alto", "Pecho medio", "Pecho bajo"],
+      hombros: ["Hombros"],
+      biceps: ["Bíceps"],
+      abdomen: ["Abdomen"],
+      piernas: ["Cuádriceps", "Pantorrillas", "Pantorrillas posterior", "Isquiotibiales"],
+      espalda: ["Espalda alta", "Espalda media", "Espalda baja"],
+      triceps: ["Tríceps"],
+      gluteos: ["Glúteos"],
+    };
+
+    const grupos = mapaMusculos[musculo?.toLowerCase()] || [musculo];
 
     const result = await pool.query(
       `
-      SELECT e.*
-      FROM ejercicios e
-      INNER JOIN ejercicio_musculo em ON em.ejercicio_id = e.id
-      INNER JOIN musculos m ON m.id = em.musculo_id
-      WHERE m.nombre = $1
-      ORDER BY e.id ASC
+      SELECT *
+      FROM ejercicios
+      WHERE musculo_nombre = ANY($1)
+      ORDER BY id ASC
       `,
-      [nombre]
+      [grupos]
     );
 
     res.json({
       ok: true,
-      ejercicios: result.rows
+      ejercicios: result.rows || [],
     });
   } catch (error) {
+    console.error("Error en GET /api/ejercicios/musculo/:musculo:", error);
+
     res.status(500).json({
       ok: false,
-      error: error.message
+      error: error.message || "Error obteniendo ejercicios",
     });
   }
 });
@@ -163,21 +178,7 @@ app.get("/api/socios", async (req, res) => {
 
     return res.status(500).json({
       ok: false,
-      error: {
-        name: error?.name || null,
-        message: error?.message || null,
-        stack: error?.stack || null,
-        errors: Array.isArray(error?.errors)
-          ? error.errors.map((e) => ({
-              name: e?.name || null,
-              message: e?.message || null,
-              code: e?.code || null,
-              errno: e?.errno || null,
-              address: e?.address || null,
-              port: e?.port || null,
-            }))
-          : [],
-      },
+      error: error.message || "Error obteniendo socios",
     });
   }
 });
@@ -199,101 +200,24 @@ app.get("/api/socios/:id", async (req, res) => {
     if (!result.rows.length) {
       return res.status(404).json({
         ok: false,
-        error: "Socio no encontrado"
+        error: "Socio no encontrado",
       });
     }
 
     res.json({
       ok: true,
-      socio: result.rows[0]
+      socio: result.rows[0],
     });
   } catch (error) {
     res.status(500).json({
       ok: false,
-      error: error.message
+      error: error.message,
     });
   }
 });
 
 app.post("/api/socios", async (req, res) => {
   try {
-    const {
-  nombres,
-  apellidos,
-  cedula,
-  telefono,
-  email,
-  fecha_nacimiento,
-  genero,
-  objetivo,
-  observaciones,
-  estado,
-  peso,
-  altura,
-  nivel_actividad,
-  meta_nutricional
-} = req.body;
-
-    if (!nombres || !apellidos) {
-      return res.status(400).json({
-        ok: false,
-        error: "Nombres y apellidos son obligatorios"
-      });
-    }
-
-    const result = await pool.query(
-  `
-  INSERT INTO socios
-  (
-    nombres,
-    apellidos,
-    cedula,
-    telefono,
-    email,
-    fecha_nacimiento,
-    genero,
-    objetivo,
-    observaciones,
-    peso,
-    altura,
-    nivel_actividad,
-    meta_nutricional
-  )
-  VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)
-  RETURNING *
-  `,
-  [
-    nombres,
-    apellidos,
-    cedula || null,
-    telefono || null,
-    email || null,
-    fecha_nacimiento || null,
-    genero || null,
-    objetivo || null,
-    observaciones || null,
-    peso || null,
-    altura || null,
-    nivel_actividad || null,
-    meta_nutricional || null
-  ]
-);
-
-    res.status(201).json({
-      ok: true,
-      socio: result.rows[0]
-    });
-  } catch (error) {
-    res.status(500).json({
-      ok: false,
-      error: error.message
-    });
-  }
-});
-
-app.put("/api/socios/:id", async (req, res) => {
-  try {
-    const { id } = req.params;
     const {
       nombres,
       apellidos,
@@ -304,13 +228,97 @@ app.put("/api/socios/:id", async (req, res) => {
       genero,
       objetivo,
       observaciones,
-      estado
+      estado,
+      peso,
+      altura,
+      nivel_actividad,
+      meta_nutricional,
     } = req.body;
 
     if (!nombres || !apellidos) {
       return res.status(400).json({
         ok: false,
-        error: "Nombres y apellidos son obligatorios"
+        error: "Nombres y apellidos son obligatorios",
+      });
+    }
+
+    const result = await pool.query(
+      `
+      INSERT INTO socios
+      (
+        nombres,
+        apellidos,
+        cedula,
+        telefono,
+        email,
+        fecha_nacimiento,
+        genero,
+        objetivo,
+        observaciones,
+        estado,
+        peso,
+        altura,
+        nivel_actividad,
+        meta_nutricional
+      )
+      VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14)
+      RETURNING *
+      `,
+      [
+        nombres,
+        apellidos,
+        cedula || null,
+        telefono || null,
+        email || null,
+        fecha_nacimiento || null,
+        genero || null,
+        objetivo || null,
+        observaciones || null,
+        estado || "ACTIVO",
+        peso || null,
+        altura || null,
+        nivel_actividad || null,
+        meta_nutricional || null,
+      ]
+    );
+
+    res.status(201).json({
+      ok: true,
+      socio: result.rows[0],
+    });
+  } catch (error) {
+    res.status(500).json({
+      ok: false,
+      error: error.message,
+    });
+  }
+});
+
+app.put("/api/socios/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const {
+      nombres,
+      apellidos,
+      cedula,
+      telefono,
+      email,
+      fecha_nacimiento,
+      genero,
+      objetivo,
+      observaciones,
+      estado,
+      peso,
+      altura,
+      nivel_actividad,
+      meta_nutricional,
+    } = req.body;
+
+    if (!nombres || !apellidos) {
+      return res.status(400).json({
+        ok: false,
+        error: "Nombres y apellidos son obligatorios",
       });
     }
 
@@ -327,58 +335,58 @@ app.put("/api/socios/:id", async (req, res) => {
     if (!existe.rows.length) {
       return res.status(404).json({
         ok: false,
-        error: "Socio no encontrado"
+        error: "Socio no encontrado",
       });
     }
 
     const result = await pool.query(
-  `
-  UPDATE socios
-  SET
-    nombres = $1,
-    apellidos = $2,
-    cedula = $3,
-    telefono = $4,
-    email = $5,
-    fecha_nacimiento = $6,
-    genero = $7,
-    objetivo = $8,
-    observaciones = $9,
-    estado = $10,
-    peso = $11,
-    altura = $12,
-    nivel_actividad = $13,
-    meta_nutricional = $14
-  WHERE id = $15
-  RETURNING *
-  `,
-  [
-    nombres,
-    apellidos,
-    cedula || null,
-    telefono || null,
-    email || null,
-    fecha_nacimiento || null,
-    genero || null,
-    objetivo || null,
-    observaciones || null,
-    estado || "ACTIVO",
-    peso || null,
-    altura || null,
-    nivel_actividad || null,
-    meta_nutricional || null,
-    id
-  ]
-);
+      `
+      UPDATE socios
+      SET
+        nombres = $1,
+        apellidos = $2,
+        cedula = $3,
+        telefono = $4,
+        email = $5,
+        fecha_nacimiento = $6,
+        genero = $7,
+        objetivo = $8,
+        observaciones = $9,
+        estado = $10,
+        peso = $11,
+        altura = $12,
+        nivel_actividad = $13,
+        meta_nutricional = $14
+      WHERE id = $15
+      RETURNING *
+      `,
+      [
+        nombres,
+        apellidos,
+        cedula || null,
+        telefono || null,
+        email || null,
+        fecha_nacimiento || null,
+        genero || null,
+        objetivo || null,
+        observaciones || null,
+        estado || "ACTIVO",
+        peso || null,
+        altura || null,
+        nivel_actividad || null,
+        meta_nutricional || null,
+        id,
+      ]
+    );
 
     res.json({
       ok: true,
-      socio: result.rows[0]
+      socio: result.rows[0],
     });
   } catch (error) {
     res.status(500).json({
       ok: false,
-      error: error.message
+      error: error.message,
     });
   }
 });
@@ -400,7 +408,7 @@ app.delete("/api/socios/:id", async (req, res) => {
     if (!existe.rows.length) {
       return res.status(404).json({
         ok: false,
-        error: "Socio no encontrado"
+        error: "Socio no encontrado",
       });
     }
 
@@ -414,12 +422,12 @@ app.delete("/api/socios/:id", async (req, res) => {
 
     res.json({
       ok: true,
-      message: "Socio eliminado correctamente"
+      message: "Socio eliminado correctamente",
     });
   } catch (error) {
     res.status(500).json({
       ok: false,
-      error: error.message
+      error: error.message,
     });
   }
 });
@@ -450,12 +458,12 @@ app.get("/api/rutinas/socio/:socioId", async (req, res) => {
 
     res.json({
       ok: true,
-      rutinas: result.rows
+      rutinas: result.rows,
     });
   } catch (error) {
     res.status(500).json({
       ok: false,
-      error: error.message
+      error: error.message,
     });
   }
 });
@@ -467,7 +475,7 @@ app.post("/api/rutinas", async (req, res) => {
     if (!socio_id) {
       return res.status(400).json({
         ok: false,
-        error: "El socio es obligatorio"
+        error: "El socio es obligatorio",
       });
     }
 
@@ -481,30 +489,37 @@ app.post("/api/rutinas", async (req, res) => {
         socio_id,
         nombre || "Rutina general",
         objetivo || null,
-        observaciones || null
+        observaciones || null,
       ]
     );
 
     res.status(201).json({
       ok: true,
-      rutina: result.rows[0]
+      rutina: result.rows[0],
     });
   } catch (error) {
     res.status(500).json({
       ok: false,
-      error: error.message
+      error: error.message,
     });
   }
 });
 
 app.post("/api/rutina-detalle", async (req, res) => {
   try {
-    const { rutina_id, ejercicio_id, series, repeticiones, peso, descanso } = req.body;
+    const {
+      rutina_id,
+      ejercicio_id,
+      series,
+      repeticiones,
+      peso,
+      descanso,
+    } = req.body;
 
     if (!rutina_id || !ejercicio_id) {
       return res.status(400).json({
         ok: false,
-        error: "Rutina y ejercicio son obligatorios"
+        error: "Rutina y ejercicio son obligatorios",
       });
     }
 
@@ -521,18 +536,18 @@ app.post("/api/rutina-detalle", async (req, res) => {
         series || 3,
         repeticiones || "12",
         peso || "",
-        descanso || "60 seg"
+        descanso || "60 seg",
       ]
     );
 
     res.status(201).json({
       ok: true,
-      detalle: result.rows[0]
+      detalle: result.rows[0],
     });
   } catch (error) {
     res.status(500).json({
       ok: false,
-      error: error.message
+      error: error.message,
     });
   }
 });
@@ -559,14 +574,26 @@ app.get("/api/rutina-detalle/:rutinaId", async (req, res) => {
 
     res.json({
       ok: true,
-      detalles: result.rows
+      detalles: result.rows,
     });
   } catch (error) {
     res.status(500).json({
       ok: false,
-      error: error.message
+      error: error.message,
     });
   }
+});
+
+// ==============================
+// 404
+// ==============================
+
+app.use((req, res) => {
+  res.status(404).json({
+    ok: false,
+    message: "Ruta no encontrada",
+    path: req.originalUrl,
+  });
 });
 
 const PORT = process.env.PORT || 10000;
@@ -575,51 +602,6 @@ async function startServer() {
   try {
     await initDB();
     await seedData();
-
-   app.get("/api/ejercicios/musculo/:musculo", async (req, res) => {
-  try {
-    const { musculo } = req.params;
-
-    const mapaMusculos = {
-      pecho: ["Pecho alto", "Pecho medio", "Pecho bajo"],
-      hombros: ["Hombros"],
-      biceps: ["Bíceps"],
-      abdomen: ["Abdomen"],
-      piernas: ["Cuádriceps", "Pantorrillas", "Pantorrillas posterior", "Isquiotibiales"],
-      espalda: ["Espalda alta", "Espalda media", "Espalda baja"],
-      triceps: ["Tríceps"],
-      gluteos: ["Glúteos"],
-    };
-
-    const grupos = mapaMusculos[musculo?.toLowerCase()] || [musculo];
-
-    const result = await pool.query(
-      `
-      SELECT
-        id,
-        nombre,
-        descripcion,
-        musculo_nombre,
-        imagen_url
-      FROM ejercicios
-      WHERE musculo_nombre = ANY($1)
-      ORDER BY id ASC
-      `,
-      [grupos]
-    );
-
-    res.json({
-      ok: true,
-      ejercicios: result.rows || [],
-    });
-  } catch (error) {
-    console.error("Error en GET /api/ejercicios/musculo/:musculo:", error);
-    res.status(500).json({
-      ok: false,
-      error: error.message || "Error obteniendo ejercicios",
-    });
-  }
-});
 
     app.listen(PORT, "0.0.0.0", () => {
       console.log(`🚀 Backend corriendo en http://localhost:${PORT}`);
