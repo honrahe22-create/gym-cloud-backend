@@ -119,6 +119,45 @@ async function seedData() {
       ["Hip thrust", "Glúteos"],
       ["Curl femoral", "Isquiotibiales"],
       ["Elevación de talones", "Pantorrillas posterior"]
+      ["Aperturas inclinadas","Pecho alto"],
+["Press hammer inclinado","Pecho alto"],
+["Cruce poleas altas","Pecho alto"],
+["Press inclinado mancuernas","Pecho alto"],
+
+["Aperturas planas","Pecho medio"],
+["Chest press","Pecho medio"],
+["Push ups","Pecho medio"],
+["Press plano mancuernas","Pecho medio"],
+
+["Press declinado","Pecho bajo"],
+["Cruce polea baja","Pecho bajo"],
+["Fondos asistidos","Pecho bajo"],
+["Decline dumbbell press","Pecho bajo"],
+
+["Elevaciones laterales","Hombros"],
+["Arnold press","Hombros"],
+["Pajaros","Hombros"],
+["Elevaciones frontales","Hombros"],
+
+["Curl martillo","Bíceps"],
+["Curl alterno","Bíceps"],
+["Curl polea","Bíceps"],
+["Curl concentrado","Bíceps"],
+
+["Plancha","Abdomen"],
+["Russian twist","Abdomen"],
+["Elevaciones piernas","Abdomen"],
+["Mountain climbers","Abdomen"],
+
+["Prensa","Cuádriceps"],
+["Hack squat","Cuádriceps"],
+["Zancadas","Cuádriceps"],
+["Extension pierna","Cuádriceps"],
+
+["Dominadas","Espalda alta"],
+["Face pull","Espalda alta"],
+["Remo alto","Espalda alta"],
+["Pullover polea","Espalda alta"]
     ];
 
     for (const [ejercicioNombre, musculoNombre] of relaciones) {
