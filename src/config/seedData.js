@@ -118,7 +118,7 @@ async function seedData() {
       ["Extensión de tríceps", "Tríceps"],
       ["Hip thrust", "Glúteos"],
       ["Curl femoral", "Isquiotibiales"],
-      ["Elevación de talones", "Pantorrillas posterior"]
+      ["Elevación de talones", "Pantorrillas posterior"],
       ["Aperturas inclinadas","Pecho alto"],
 ["Press hammer inclinado","Pecho alto"],
 ["Cruce poleas altas","Pecho alto"],
@@ -158,6 +158,16 @@ async function seedData() {
 ["Face pull","Espalda alta"],
 ["Remo alto","Espalda alta"],
 ["Pullover polea","Espalda alta"]
+
+["Aperturas planas", "Pecho medio"],
+["Chest press", "Pecho medio"],
+["Push ups", "Pecho medio"],
+["Press plano mancuernas", "Pecho medio"],
+
+["Extensión de tríceps","Tríceps"],
+["Hip thrust","Glúteos"],
+["Curl femoral","Isquiotibiales"],
+["Elevaciones Talón","Pantorrillas"],
     ];
 
     for (const [ejercicioNombre, musculoNombre] of relaciones) {
