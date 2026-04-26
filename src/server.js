@@ -124,27 +124,22 @@ app.get("/api/ejercicios/musculo/:musculo", async (req, res) => {
   try {
     const { musculo } = req.params;
 
-    const mapaMusculos = {
-      pecho: ["Pecho alto", "Pecho medio", "Pecho bajo"],
-      hombros: ["Hombros"],
-      biceps: ["Bíceps"],
-      abdomen: ["Abdomen"],
-      piernas: ["Cuádriceps", "Pantorrillas", "Pantorrillas posterior", "Isquiotibiales"],
-      espalda: ["Espalda alta", "Espalda media", "Espalda baja"],
-      triceps: ["Tríceps"],
-      gluteos: ["Glúteos"],
-    };
-
-    const grupos = mapaMusculos[musculo?.toLowerCase()] || [musculo];
-
     const result = await pool.query(
       `
-      SELECT *
-      FROM ejercicios
-      WHERE musculo_nombre = ANY($1)
-      ORDER BY id ASC
+      SELECT
+        e.id,
+        e.nombre,
+        e.descripcion,
+        e.imagen_url,
+        e.video_url,
+        e.nivel
+      FROM ejercicios e
+      INNER JOIN ejercicio_musculo em ON em.ejercicio_id = e.id
+      INNER JOIN musculos m ON m.id = em.musculo_id
+      WHERE LOWER(m.nombre) = LOWER($1)
+      ORDER BY e.id ASC
       `,
-      [grupos]
+      [musculo]
     );
 
     res.json({
@@ -152,8 +147,7 @@ app.get("/api/ejercicios/musculo/:musculo", async (req, res) => {
       ejercicios: result.rows || [],
     });
   } catch (error) {
-    console.error("Error en GET /api/ejercicios/musculo/:musculo:", error);
-
+    console.error("Error en ejercicios por músculo:", error);
     res.status(500).json({
       ok: false,
       error: error.message || "Error obteniendo ejercicios",
