@@ -34,107 +34,57 @@ async function seedData() {
     }
 
     // Ejercicios base
-    const ejercicios = [
-      {
-        nombre: "Press inclinado",
-        descripcion: "Ejercicio para pecho alto con banco inclinado.",
-        imagen_url: "https://via.placeholder.com/300x200?text=Press+Inclinado",
-        video_url: "",
-        nivel: "Intermedio"
-      },
-      {
-        nombre: "Press plano",
-        descripcion: "Ejercicio para pecho medio.",
-        imagen_url: "https://via.placeholder.com/300x200?text=Press+Plano",
-        video_url: "",
-        nivel: "Principiante"
-      },
-      {
-        nombre: "Fondos para pecho",
-        descripcion: "Ejercicio para pecho bajo.",
-        imagen_url: "https://via.placeholder.com/300x200?text=Fondos+Pecho",
-        video_url: "",
-        nivel: "Intermedio"
-      },
-      {
-        nombre: "Press militar",
-        descripcion: "Ejercicio principal para hombros.",
-        imagen_url: "https://via.placeholder.com/300x200?text=Press+Militar",
-        video_url: "",
-        nivel: "Intermedio"
-      },
-      {
-        nombre: "Curl con barra",
-        descripcion: "Ejercicio para bíceps.",
-        imagen_url: "https://via.placeholder.com/300x200?text=Curl+Barra",
-        video_url: "",
-        nivel: "Principiante"
-      },
-      {
-        nombre: "Crunch abdominal",
-        descripcion: "Ejercicio básico para abdomen.",
-        imagen_url: "https://via.placeholder.com/300x200?text=Crunch",
-        video_url: "",
-        nivel: "Principiante"
-      },
-      {
-        nombre: "Sentadilla",
-        descripcion: "Ejercicio principal para piernas.",
-        imagen_url: "https://via.placeholder.com/300x200?text=Sentadilla",
-        video_url: "",
-        nivel: "Principiante"
-      },
-      {
-        nombre: "Elevación de talones",
-        descripcion: "Ejercicio para pantorrillas.",
-        imagen_url: "https://via.placeholder.com/300x200?text=Pantorrillas",
-        video_url: "",
-        nivel: "Principiante"
-      },
-      {
-        nombre: "Jalón al pecho",
-        descripcion: "Ejercicio para espalda alta.",
-        imagen_url: "https://via.placeholder.com/300x200?text=Jalon+al+Pecho",
-        video_url: "",
-        nivel: "Principiante"
-      },
-      {
-        nombre: "Remo con barra",
-        descripcion: "Ejercicio para espalda media.",
-        imagen_url: "https://via.placeholder.com/300x200?text=Remo+Barra",
-        video_url: "",
-        nivel: "Intermedio"
-      },
-      {
-        nombre: "Hiperextensiones",
-        descripcion: "Ejercicio para espalda baja.",
-        imagen_url: "https://via.placeholder.com/300x200?text=Hiperextensiones",
-        video_url: "",
-        nivel: "Principiante"
-      },
-      {
-        nombre: "Extensión de tríceps",
-        descripcion: "Ejercicio para tríceps.",
-        imagen_url: "https://via.placeholder.com/300x200?text=Triceps",
-        video_url: "",
-        nivel: "Principiante"
-      },
-      {
-        nombre: "Hip thrust",
-        descripcion: "Ejercicio para glúteos.",
-        imagen_url: "https://via.placeholder.com/300x200?text=Hip+Thrust",
-        video_url: "",
-        nivel: "Intermedio"
-      },
-      {
-        nombre: "Curl femoral",
-        descripcion: "Ejercicio para isquiotibiales.",
-        imagen_url: "https://via.placeholder.com/300x200?text=Curl+Femoral",
-        video_url: "",
-        nivel: "Principiante"
-      }
-    ];
+   const ejercicios = [
 
+{nombre:"Press inclinado",descripcion:"Pecho alto",imagen_url:"",video_url:"",nivel:"Intermedio"},
+{nombre:"Aperturas inclinadas",descripcion:"Pecho alto",imagen_url:"",video_url:"",nivel:"Intermedio"},
+{nombre:"Press hammer inclinado",descripcion:"Pecho alto",imagen_url:"",video_url:"",nivel:"Intermedio"},
+{nombre:"Cruce poleas altas",descripcion:"Pecho alto",imagen_url:"",video_url:"",nivel:"Intermedio"},
+{nombre:"Press inclinado mancuernas",descripcion:"Pecho alto",imagen_url:"",video_url:"",nivel:"Intermedio"},
+
+{nombre:"Press plano",descripcion:"Pecho medio",imagen_url:"",video_url:"",nivel:"Principiante"},
+{nombre:"Aperturas planas",descripcion:"Pecho medio",imagen_url:"",video_url:"",nivel:"Principiante"},
+{nombre:"Chest press",descripcion:"Pecho medio",imagen_url:"",video_url:"",nivel:"Intermedio"},
+{nombre:"Push ups",descripcion:"Pecho medio",imagen_url:"",video_url:"",nivel:"Principiante"},
+{nombre:"Press plano mancuernas",descripcion:"Pecho medio",imagen_url:"",video_url:"",nivel:"Intermedio"},
+
+{nombre:"Fondos para pecho",descripcion:"Pecho bajo",imagen_url:"",video_url:"",nivel:"Intermedio"},
+{nombre:"Press declinado",descripcion:"Pecho bajo",imagen_url:"",video_url:"",nivel:"Intermedio"},
+{nombre:"Cruce polea baja",descripcion:"Pecho bajo",imagen_url:"",video_url:"",nivel:"Intermedio"},
+{nombre:"Fondos asistidos",descripcion:"Pecho bajo",imagen_url:"",video_url:"",nivel:"Principiante"},
+{nombre:"Decline dumbbell press",descripcion:"Pecho bajo",imagen_url:"",video_url:"",nivel:"Intermedio"},
+
+{nombre:"Press militar",descripcion:"Hombros",imagen_url:"",video_url:"",nivel:"Intermedio"},
+{nombre:"Elevaciones laterales",descripcion:"Hombros",imagen_url:"",video_url:"",nivel:"Principiante"},
+{nombre:"Arnold press",descripcion:"Hombros",imagen_url:"",video_url:"",nivel:"Intermedio"},
+{nombre:"Pajaros",descripcion:"Hombros",imagen_url:"",video_url:"",nivel:"Intermedio"},
+{nombre:"Elevaciones frontales",descripcion:"Hombros",imagen_url:"",video_url:"",nivel:"Principiante"},
+
+{nombre:"Curl con barra",descripcion:"Bíceps",imagen_url:"",video_url:"",nivel:"Principiante"},
+{nombre:"Curl martillo",descripcion:"Bíceps",imagen_url:"",video_url:"",nivel:"Intermedio"},
+{nombre:"Curl alterno",descripcion:"Bíceps",imagen_url:"",video_url:"",nivel:"Principiante"},
+{nombre:"Curl polea",descripcion:"Bíceps",imagen_url:"",video_url:"",nivel:"Intermedio"},
+{nombre:"Curl concentrado",descripcion:"Bíceps",imagen_url:"",video_url:"",nivel:"Intermedio"},
+
+{nombre:"Crunch abdominal",descripcion:"Abdomen",imagen_url:"",video_url:"",nivel:"Principiante"},
+{nombre:"Plancha",descripcion:"Abdomen",imagen_url:"",video_url:"",nivel:"Principiante"},
+{nombre:"Russian twist",descripcion:"Abdomen",imagen_url:"",video_url:"",nivel:"Intermedio"},
+{nombre:"Elevaciones piernas",descripcion:"Abdomen",imagen_url:"",video_url:"",nivel:"Intermedio"},
+{nombre:"Mountain climbers",descripcion:"Abdomen",imagen_url:"",video_url:"",nivel:"Intermedio"},
+
+{nombre:"Sentadilla",descripcion:"Cuádriceps",imagen_url:"",video_url:"",nivel:"Principiante"},
+{nombre:"Prensa",descripcion:"Cuádriceps",imagen_url:"",video_url:"",nivel:"Intermedio"},
+{nombre:"Hack squat",descripcion:"Cuádriceps",imagen_url:"",video_url:"",nivel:"Intermedio"},
+{nombre:"Zancadas",descripcion:"Cuádriceps",imagen_url:"",video_url:"",nivel:"Principiante"},
+{nombre:"Extension pierna",descripcion:"Cuádriceps",imagen_url:"",video_url:"",nivel:"Principiante"},
+
+{nombre:"Jalon al pecho",descripcion:"Espalda alta",imagen_url:"",video_url:"",nivel:"Principiante"},
+{nombre:"Dominadas",descripcion:"Espalda alta",imagen_url:"",video_url:"",nivel:"Intermedio"},
+{nombre:"Face pull",descripcion:"Espalda alta",imagen_url:"",video_url:"",nivel:"Intermedio"},
+{nombre:"Remo alto",descripcion:"Espalda alta",imagen_url:"",video_url:"",nivel:"Intermedio"},
+{nombre:"Pullover polea",descripcion:"Espalda alta",imagen_url:"",video_url:"",nivel:"Intermedio"}
+
+];
     for (const ejercicio of ejercicios) {
       await pool.query(
         `
