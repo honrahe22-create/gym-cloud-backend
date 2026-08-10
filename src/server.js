@@ -25,6 +25,113 @@ const normalizeHeightCm = (value) => {
 
 
 
+
+const DISCIPLINE_SEED = {
+  Calistenia: [
+    ["Flexiones inclinadas", "Empuje", "Principiante", "Flexión con apoyo elevado para aprender control escapular y técnica."],
+    ["Sentadilla al aire", "Piernas", "Principiante", "Patrón básico de sentadilla usando el peso corporal."],
+    ["Plancha frontal", "Core", "Principiante", "Estabilidad del tronco manteniendo alineación corporal."],
+    ["Remo australiano", "Tirón", "Principiante", "Tirón horizontal con barra baja, ideal para progresar a dominadas."],
+    ["Puente de glúteos", "Piernas", "Principiante", "Extensión de cadera para glúteos y cadena posterior."],
+    ["Flexiones clásicas", "Empuje", "Principiante", "Trabajo global de pecho, tríceps, hombro y core."],
+    ["Dominada asistida", "Tirón", "Principiante", "Progresión de dominada con asistencia para desarrollar fuerza."],
+    ["Fondos asistidos", "Empuje", "Intermedio", "Progresión de fondos enfocada en tríceps, pecho y hombros."],
+    ["Zancadas alternas", "Piernas", "Intermedio", "Trabajo unilateral de pierna, equilibrio y estabilidad."],
+    ["Hollow body hold", "Core", "Intermedio", "Control del core en posición hueca para habilidades gimnásticas."],
+    ["Dominadas estrictas", "Tirón", "Intermedio", "Dominada completa sin impulso con control escapular."],
+    ["Fondos en paralelas", "Empuje", "Intermedio", "Empuje vertical para pecho, tríceps y cintura escapular."],
+    ["Pike push-up", "Empuje", "Intermedio", "Progresión de empuje vertical hacia handstand push-up."],
+    ["L-sit tuck", "Habilidad", "Intermedio", "Progresión de L-sit con rodillas flexionadas."],
+    ["Handstand asistido", "Habilidad", "Intermedio", "Equilibrio invertido con apoyo en pared."],
+    ["Muscle-up progresión", "Habilidad", "Avanzado", "Transición explosiva de dominada a fondo sobre barra."],
+    ["Handstand push-up asistido", "Empuje", "Avanzado", "Empuje vertical invertido con apoyo en pared."],
+    ["Front lever tuck", "Habilidad", "Avanzado", "Progresión isométrica de front lever para dorsal y core."],
+  ],
+  Boxeo: [
+    ["Guardia básica", "Técnica", "Principiante", "Posición base, protección del mentón y distribución del peso."],
+    ["Desplazamiento adelante y atrás", "Pies", "Principiante", "Trabajo de distancia sin cruzar los pies."],
+    ["Jab", "Golpes", "Principiante", "Golpe recto de mano adelantada con retorno rápido a guardia."],
+    ["Cross", "Golpes", "Principiante", "Recto de mano atrasada coordinado con rotación de cadera."],
+    ["Jab-Cross 1-2", "Combinaciones", "Principiante", "Combinación base para ritmo, distancia y coordinación."],
+    ["Sombra técnica 2 minutos", "Sombra", "Principiante", "Ronda de boxeo sin impacto priorizando postura y fluidez."],
+    ["Hook delantero", "Golpes", "Intermedio", "Gancho corto con rotación de cadera y control de codo."],
+    ["Uppercut trasero", "Golpes", "Intermedio", "Golpe ascendente desde guardia con potencia de piernas y cadera."],
+    ["Slip exterior", "Defensa", "Intermedio", "Esquiva corta fuera de la línea del golpe recto."],
+    ["Bloqueo y contra 1-2", "Defensa", "Intermedio", "Defensa compacta seguida de respuesta inmediata."],
+    ["Combinación 1-2-3", "Combinaciones", "Intermedio", "Jab, cross y hook delantero enlazados con transferencia de peso."],
+    ["Saco: potencia 3 x 2 min", "Saco", "Intermedio", "Rondas de potencia controlada manteniendo técnica y respiración."],
+    ["Doble jab + cross", "Combinaciones", "Intermedio", "Cambio de ritmo para abrir distancia y finalizar con cross."],
+    ["Pivote + contraataque", "Pies", "Intermedio", "Salida angular y respuesta desde una nueva línea."],
+    ["Roll bajo hook", "Defensa", "Avanzado", "Movimiento de cintura bajo gancho manteniendo base estable."],
+    ["Combinación 1-2-3-2", "Combinaciones", "Avanzado", "Secuencia de cuatro golpes con recuperación de guardia."],
+    ["Sombra libre 3 x 3 min", "Sombra", "Avanzado", "Rondas completas con defensa, ángulos, fintas y combinaciones."],
+    ["Circuito boxeo HIIT", "Acondicionamiento", "Avanzado", "Intervalos de golpes, desplazamientos y trabajo cardiovascular."],
+  ],
+};
+
+async function ensureDisciplineModule() {
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS disciplina_planes (
+      id SERIAL PRIMARY KEY,
+      socio_id INTEGER NOT NULL REFERENCES socios(id) ON DELETE CASCADE,
+      disciplina_id INTEGER NOT NULL REFERENCES disciplinas(id) ON DELETE CASCADE,
+      nombre TEXT NOT NULL,
+      nivel TEXT,
+      objetivo TEXT,
+      estado TEXT DEFAULT 'ACTIVO',
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
+
+    CREATE TABLE IF NOT EXISTS disciplina_plan_detalle (
+      id SERIAL PRIMARY KEY,
+      plan_id INTEGER NOT NULL REFERENCES disciplina_planes(id) ON DELETE CASCADE,
+      ejercicio_id INTEGER NOT NULL REFERENCES disciplina_ejercicios(id) ON DELETE CASCADE,
+      series INTEGER DEFAULT 3,
+      repeticiones TEXT DEFAULT '10',
+      duracion TEXT DEFAULT '',
+      descanso TEXT DEFAULT '60 seg',
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
+
+    CREATE INDEX IF NOT EXISTS idx_disciplina_planes_socio ON disciplina_planes(socio_id);
+    CREATE INDEX IF NOT EXISTS idx_disciplina_plan_detalle_plan ON disciplina_plan_detalle(plan_id);
+  `);
+
+  for (const [disciplinaNombre, ejercicios] of Object.entries(DISCIPLINE_SEED)) {
+    const disciplinaRes = await pool.query(
+      `SELECT id FROM disciplinas WHERE LOWER(nombre) = LOWER($1) LIMIT 1`,
+      [disciplinaNombre]
+    );
+
+    if (!disciplinaRes.rows.length) continue;
+    const disciplinaId = disciplinaRes.rows[0].id;
+
+    for (const [nombre, categoria, nivel, descripcion] of ejercicios) {
+      const existe = await pool.query(
+        `
+        SELECT id FROM disciplina_ejercicios
+        WHERE disciplina_id = $1 AND LOWER(nombre) = LOWER($2)
+        LIMIT 1
+        `,
+        [disciplinaId, nombre]
+      );
+
+      if (!existe.rows.length) {
+        await pool.query(
+          `
+          INSERT INTO disciplina_ejercicios
+          (disciplina_id, nombre, descripcion, nivel, categoria, video_url, imagen_url)
+          VALUES ($1,$2,$3,$4,$5,$6,$7)
+          `,
+          [disciplinaId, nombre, descripcion, nivel, categoria, "", ""]
+        );
+      }
+    }
+  }
+
+  console.log("✅ Módulos Calistenia y Boxeo preparados");
+}
+
 const allowedOrigins = [
   "http://localhost:5173",
   "https://gym-cloud-frontend.onrender.com",
@@ -648,6 +755,216 @@ app.get("/api/rutina-detalle/:rutinaId", async (req, res) => {
 });
 
 
+
+// ==============================
+// CALISTENIA Y BOXEO
+// ==============================
+
+app.get("/api/disciplinas", async (_req, res) => {
+  try {
+    const result = await pool.query(
+      `SELECT * FROM disciplinas WHERE estado = 'ACTIVO' ORDER BY id ASC`
+    );
+    res.json({ ok: true, disciplinas: result.rows || [] });
+  } catch (error) {
+    res.status(500).json({ ok: false, error: error.message });
+  }
+});
+
+app.get("/api/disciplinas/:nombre/ejercicios", async (req, res) => {
+  try {
+    const { nombre } = req.params;
+    const { nivel } = req.query;
+
+    const params = [nombre];
+    let filtroNivel = "";
+    if (nivel && nivel !== "Todos") {
+      params.push(nivel);
+      filtroNivel = `AND LOWER(de.nivel) = LOWER($2)`;
+    }
+
+    const result = await pool.query(
+      `
+      SELECT
+        de.id,
+        de.nombre,
+        de.descripcion,
+        de.nivel,
+        de.categoria,
+        de.video_url,
+        de.imagen_url,
+        d.nombre AS disciplina
+      FROM disciplina_ejercicios de
+      INNER JOIN disciplinas d ON d.id = de.disciplina_id
+      WHERE LOWER(d.nombre) = LOWER($1)
+        AND de.estado = 'ACTIVO'
+        ${filtroNivel}
+      ORDER BY
+        CASE de.nivel
+          WHEN 'Principiante' THEN 1
+          WHEN 'Intermedio' THEN 2
+          WHEN 'Avanzado' THEN 3
+          ELSE 4
+        END,
+        de.id ASC
+      `,
+      params
+    );
+
+    res.json({ ok: true, ejercicios: result.rows || [] });
+  } catch (error) {
+    res.status(500).json({ ok: false, error: error.message });
+  }
+});
+
+app.get("/api/planes-disciplina/socio/:socioId", async (req, res) => {
+  try {
+    const { socioId } = req.params;
+    const result = await pool.query(
+      `
+      SELECT
+        dp.*,
+        d.nombre AS disciplina
+      FROM disciplina_planes dp
+      INNER JOIN disciplinas d ON d.id = dp.disciplina_id
+      WHERE dp.socio_id = $1
+      ORDER BY dp.id DESC
+      `,
+      [socioId]
+    );
+
+    res.json({ ok: true, planes: result.rows || [] });
+  } catch (error) {
+    res.status(500).json({ ok: false, error: error.message });
+  }
+});
+
+app.post("/api/planes-disciplina", async (req, res) => {
+  try {
+    const { socio_id, disciplina, nombre, nivel, objetivo } = req.body;
+
+    if (!socio_id || !disciplina) {
+      return res.status(400).json({
+        ok: false,
+        error: "Socio y disciplina son obligatorios",
+      });
+    }
+
+    const disciplinaRes = await pool.query(
+      `SELECT id FROM disciplinas WHERE LOWER(nombre) = LOWER($1) LIMIT 1`,
+      [disciplina]
+    );
+
+    if (!disciplinaRes.rows.length) {
+      return res.status(404).json({ ok: false, error: "Disciplina no encontrada" });
+    }
+
+    const result = await pool.query(
+      `
+      INSERT INTO disciplina_planes
+      (socio_id, disciplina_id, nombre, nivel, objetivo)
+      VALUES ($1,$2,$3,$4,$5)
+      RETURNING *
+      `,
+      [
+        socio_id,
+        disciplinaRes.rows[0].id,
+        nombre || `Plan ${disciplina}`,
+        nivel || "Principiante",
+        objetivo || null,
+      ]
+    );
+
+    res.status(201).json({
+      ok: true,
+      plan: { ...result.rows[0], disciplina },
+    });
+  } catch (error) {
+    res.status(500).json({ ok: false, error: error.message });
+  }
+});
+
+app.get("/api/planes-disciplina/:planId/detalle", async (req, res) => {
+  try {
+    const { planId } = req.params;
+    const result = await pool.query(
+      `
+      SELECT
+        dpd.*,
+        de.nombre AS ejercicio_nombre,
+        de.descripcion AS ejercicio_descripcion,
+        de.nivel,
+        de.categoria,
+        de.video_url,
+        de.imagen_url
+      FROM disciplina_plan_detalle dpd
+      INNER JOIN disciplina_ejercicios de ON de.id = dpd.ejercicio_id
+      WHERE dpd.plan_id = $1
+      ORDER BY dpd.id ASC
+      `,
+      [planId]
+    );
+
+    res.json({ ok: true, detalles: result.rows || [] });
+  } catch (error) {
+    res.status(500).json({ ok: false, error: error.message });
+  }
+});
+
+app.post("/api/planes-disciplina/:planId/ejercicios", async (req, res) => {
+  try {
+    const { planId } = req.params;
+    const {
+      ejercicio_id,
+      series,
+      repeticiones,
+      duracion,
+      descanso,
+    } = req.body;
+
+    if (!ejercicio_id) {
+      return res.status(400).json({ ok: false, error: "Ejercicio obligatorio" });
+    }
+
+    const duplicado = await pool.query(
+      `
+      SELECT id FROM disciplina_plan_detalle
+      WHERE plan_id = $1 AND ejercicio_id = $2
+      LIMIT 1
+      `,
+      [planId, ejercicio_id]
+    );
+
+    if (duplicado.rows.length) {
+      return res.status(409).json({
+        ok: false,
+        error: "Este ejercicio ya está agregado al plan",
+      });
+    }
+
+    const result = await pool.query(
+      `
+      INSERT INTO disciplina_plan_detalle
+      (plan_id, ejercicio_id, series, repeticiones, duracion, descanso)
+      VALUES ($1,$2,$3,$4,$5,$6)
+      RETURNING *
+      `,
+      [
+        planId,
+        ejercicio_id,
+        series || 3,
+        repeticiones || "10",
+        duracion || "",
+        descanso || "60 seg",
+      ]
+    );
+
+    res.status(201).json({ ok: true, detalle: result.rows[0] });
+  } catch (error) {
+    res.status(500).json({ ok: false, error: error.message });
+  }
+});
+
 // ==============================
 // MEMBRESÍAS Y PAGOS
 // ==============================
@@ -777,6 +1094,7 @@ const PORT = process.env.PORT || 10000;
 async function startServer() {
   try {
     await initDB();
+    await ensureDisciplineModule();
     await seedData();
 
     app.listen(PORT, "0.0.0.0", () => {
