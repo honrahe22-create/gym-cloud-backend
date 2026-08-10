@@ -48,24 +48,26 @@ const DISCIPLINE_SEED = {
     ["Front lever tuck", "Habilidad", "Avanzado", "Progresión isométrica de front lever para dorsal y core."],
   ],
   Boxeo: [
-    ["Guardia básica", "Técnica", "Principiante", "Posición base, protección del mentón y distribución del peso."],
-    ["Desplazamiento adelante y atrás", "Pies", "Principiante", "Trabajo de distancia sin cruzar los pies."],
-    ["Jab", "Golpes", "Principiante", "Golpe recto de mano adelantada con retorno rápido a guardia."],
-    ["Cross", "Golpes", "Principiante", "Recto de mano atrasada coordinado con rotación de cadera."],
-    ["Jab-Cross 1-2", "Combinaciones", "Principiante", "Combinación base para ritmo, distancia y coordinación."],
-    ["Sombra técnica 2 minutos", "Sombra", "Principiante", "Ronda de boxeo sin impacto priorizando postura y fluidez."],
-    ["Hook delantero", "Golpes", "Intermedio", "Gancho corto con rotación de cadera y control de codo."],
-    ["Uppercut trasero", "Golpes", "Intermedio", "Golpe ascendente desde guardia con potencia de piernas y cadera."],
-    ["Slip exterior", "Defensa", "Intermedio", "Esquiva corta fuera de la línea del golpe recto."],
-    ["Bloqueo y contra 1-2", "Defensa", "Intermedio", "Defensa compacta seguida de respuesta inmediata."],
-    ["Combinación 1-2-3", "Combinaciones", "Intermedio", "Jab, cross y hook delantero enlazados con transferencia de peso."],
-    ["Saco: potencia 3 x 2 min", "Saco", "Intermedio", "Rondas de potencia controlada manteniendo técnica y respiración."],
-    ["Doble jab + cross", "Combinaciones", "Intermedio", "Cambio de ritmo para abrir distancia y finalizar con cross."],
-    ["Pivote + contraataque", "Pies", "Intermedio", "Salida angular y respuesta desde una nueva línea."],
-    ["Roll bajo hook", "Defensa", "Avanzado", "Movimiento de cintura bajo gancho manteniendo base estable."],
-    ["Combinación 1-2-3-2", "Combinaciones", "Avanzado", "Secuencia de cuatro golpes con recuperación de guardia."],
-    ["Sombra libre 3 x 3 min", "Sombra", "Avanzado", "Rondas completas con defensa, ángulos, fintas y combinaciones."],
-    ["Circuito boxeo HIIT", "Acondicionamiento", "Avanzado", "Intervalos de golpes, desplazamientos y trabajo cardiovascular."],
+    // PRINCIPIANTE
+    ["Guardia y movilidad", "Técnica", "Principiante", "Base de guardia, postura, movilidad y control de distancia."],
+    ["Jab directo", "Golpes", "Principiante", "Trabajo del jab con regreso rápido a guardia, precisión y distancia."],
+    ["Defensa en guardia", "Defensa", "Principiante", "Protección básica, lectura del golpe y mantenimiento de una guardia compacta."],
+    ["Sombra básica", "Sombra", "Principiante", "Sombra controlada para postura, coordinación, desplazamiento y técnica."],
+    ["Trabajo en saco básico", "Saco", "Principiante", "Golpes básicos al saco priorizando postura, control y respiración."],
+
+    // INTERMEDIO
+    ["Golpes de potencia", "Golpes", "Intermedio", "Trabajo de transferencia de peso y potencia manteniendo técnica y equilibrio."],
+    ["Saco con combinaciones", "Saco", "Intermedio", "Secuencias de golpes al saco con cambios de ritmo y recuperación de guardia."],
+    ["Combinaciones con pareja", "Combinaciones", "Intermedio", "Trabajo coordinado con compañero para precisión, distancia y respuesta."],
+    ["Manoplas - combinación", "Manoplas", "Intermedio", "Combinaciones sobre manoplas para precisión, coordinación y fluidez."],
+    ["Manoplas - velocidad", "Manoplas", "Intermedio", "Trabajo rápido de manos con enfoque en velocidad y reacción."],
+
+    // AVANZADO
+    ["Sparring defensa y contraataque", "Sparring", "Avanzado", "Lectura ofensiva, defensa activa y respuesta inmediata en situación de sparring."],
+    ["Sparring técnico", "Sparring", "Avanzado", "Trabajo técnico de distancia, ángulos, ritmo y toma de decisiones."],
+    ["Boxeo de potencia avanzado", "Potencia", "Avanzado", "Secuencias explosivas con control técnico, cadera y transferencia de fuerza."],
+    ["Manoplas de alta intensidad", "Manoplas", "Avanzado", "Combinaciones complejas a alta intensidad con reacción y precisión."],
+    ["Combinación avanzada", "Combinaciones", "Avanzado", "Secuencia avanzada de golpes, desplazamientos y cambios de ángulo."],
   ],
 };
 
@@ -161,6 +163,45 @@ async function ensureDisciplineModule() {
         [nuevo, categoria, nivel, descripcion, disciplinaId, anterior]
       );
     }
+  }
+
+
+  const boxeoRes = await pool.query(
+    `SELECT id FROM disciplinas WHERE LOWER(nombre) = LOWER('Boxeo') LIMIT 1`
+  );
+
+  if (boxeoRes.rows.length) {
+    const boxeoId = boxeoRes.rows[0].id;
+
+    const nombresBoxeoActuales = [
+      "Guardia y movilidad",
+      "Jab directo",
+      "Defensa en guardia",
+      "Sombra básica",
+      "Trabajo en saco básico",
+      "Golpes de potencia",
+      "Saco con combinaciones",
+      "Combinaciones con pareja",
+      "Manoplas - combinación",
+      "Manoplas - velocidad",
+      "Sparring defensa y contraataque",
+      "Sparring técnico",
+      "Boxeo de potencia avanzado",
+      "Manoplas de alta intensidad",
+      "Combinación avanzada",
+    ];
+
+    await pool.query(
+      `
+      UPDATE disciplina_ejercicios
+      SET estado = CASE
+        WHEN nombre = ANY($2::text[]) THEN 'ACTIVO'
+        ELSE 'INACTIVO'
+      END
+      WHERE disciplina_id = $1
+      `,
+      [boxeoId, nombresBoxeoActuales]
+    );
   }
 
   console.log("✅ Módulos Calistenia y Boxeo preparados");
