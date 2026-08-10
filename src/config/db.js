@@ -8,8 +8,8 @@ console.log("DB URL cargada:", connectionString ? "SI" : "NO");
 const pool = new Pool({
   connectionString,
   ssl: {
-    rejectUnauthorized: false
-  }
+    rejectUnauthorized: false,
+  },
 });
 
 pool.on("error", (err) => {

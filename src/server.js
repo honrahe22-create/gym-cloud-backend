@@ -10,6 +10,21 @@ const seedData = require("./config/seedData");
 
 const app = express();
 
+
+const parseNumericFlexible = (value) => {
+  if (value === null || value === undefined || value === "") return null;
+  const numero = Number(String(value).trim().replace(",", "."));
+  return Number.isFinite(numero) ? numero : null;
+};
+
+const normalizeHeightCm = (value) => {
+  const numero = parseNumericFlexible(value);
+  if (!numero || numero <= 0) return null;
+  return numero <= 3 ? numero * 100 : numero;
+};
+
+
+
 const allowedOrigins = [
   "http://localhost:5173",
   "https://gym-cloud-frontend.onrender.com",
@@ -36,6 +51,13 @@ app.use(
 app.options("*", cors());
 
 app.use(express.json());
+
+app.use("/api", (_req, res, next) => {
+  res.set("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
+  res.set("Pragma", "no-cache");
+  res.set("Expires", "0");
+  next();
+});
 
 app.use((req, res, next) => {
   console.log("➡️ Request:", req.method, req.originalUrl, "Origin:", req.headers.origin);
@@ -161,7 +183,7 @@ app.get("/api/ejercicios/musculo/:musculo", async (req, res) => {
 
 app.get("/api/socios", async (req, res) => {
   try {
-    const result = await pool.query("SELECT * FROM socios ORDER BY id DESC");
+    const result = await pool.query("SELECT * FROM socios ORDER BY id ASC");
 
     return res.json({
       ok: true,
@@ -227,6 +249,13 @@ app.post("/api/socios", async (req, res) => {
       altura,
       nivel_actividad,
       meta_nutricional,
+      somatotipo,
+      nivel_entrenamiento,
+      condicion_especial,
+      condiciones_especiales,
+      restricciones_entrenamiento,
+      disciplina_preferida,
+      dias_entrenamiento,
     } = req.body;
 
     if (!nombres || !apellidos) {
@@ -253,9 +282,20 @@ app.post("/api/socios", async (req, res) => {
         peso,
         altura,
         nivel_actividad,
-        meta_nutricional
+        meta_nutricional,
+        somatotipo,
+        nivel_entrenamiento,
+        condicion_especial,
+        condiciones_especiales,
+        restricciones_entrenamiento,
+        disciplina_preferida,
+        dias_entrenamiento,
+        updated_at
       )
-      VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14)
+      VALUES (
+        $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,
+        CURRENT_TIMESTAMP
+      )
       RETURNING *
       `,
       [
@@ -269,10 +309,17 @@ app.post("/api/socios", async (req, res) => {
         objetivo || null,
         observaciones || null,
         estado || "ACTIVO",
-        peso || null,
-        altura || null,
+        parseNumericFlexible(peso),
+        normalizeHeightCm(altura),
         nivel_actividad || null,
         meta_nutricional || null,
+        somatotipo || null,
+        nivel_entrenamiento || null,
+        condicion_especial || "NO",
+        condiciones_especiales || null,
+        restricciones_entrenamiento || null,
+        disciplina_preferida || "Gimnasio",
+        dias_entrenamiento ? Number(dias_entrenamiento) : null,
       ]
     );
 
@@ -307,6 +354,13 @@ app.put("/api/socios/:id", async (req, res) => {
       altura,
       nivel_actividad,
       meta_nutricional,
+      somatotipo,
+      nivel_entrenamiento,
+      condicion_especial,
+      condiciones_especiales,
+      restricciones_entrenamiento,
+      disciplina_preferida,
+      dias_entrenamiento,
     } = req.body;
 
     if (!nombres || !apellidos) {
@@ -350,8 +404,16 @@ app.put("/api/socios/:id", async (req, res) => {
         peso = $11,
         altura = $12,
         nivel_actividad = $13,
-        meta_nutricional = $14
-      WHERE id = $15
+        meta_nutricional = $14,
+        somatotipo = $15,
+        nivel_entrenamiento = $16,
+        condicion_especial = $17,
+        condiciones_especiales = $18,
+        restricciones_entrenamiento = $19,
+        disciplina_preferida = $20,
+        dias_entrenamiento = $21,
+        updated_at = CURRENT_TIMESTAMP
+      WHERE id = $22
       RETURNING *
       `,
       [
@@ -365,10 +427,17 @@ app.put("/api/socios/:id", async (req, res) => {
         objetivo || null,
         observaciones || null,
         estado || "ACTIVO",
-        peso || null,
-        altura || null,
+        parseNumericFlexible(peso),
+        normalizeHeightCm(altura),
         nivel_actividad || null,
         meta_nutricional || null,
+        somatotipo || null,
+        nivel_entrenamiento || null,
+        condicion_especial || "NO",
+        condiciones_especiales || null,
+        restricciones_entrenamiento || null,
+        disciplina_preferida || "Gimnasio",
+        dias_entrenamiento ? Number(dias_entrenamiento) : null,
         id,
       ]
     );
@@ -575,6 +644,119 @@ app.get("/api/rutina-detalle/:rutinaId", async (req, res) => {
       ok: false,
       error: error.message,
     });
+  }
+});
+
+
+// ==============================
+// MEMBRESÍAS Y PAGOS
+// ==============================
+
+app.get("/api/pagos/socio/:socioId", async (req, res) => {
+  try {
+    const { socioId } = req.params;
+    const result = await pool.query(
+      `
+      SELECT
+        p.*,
+        m.tipo AS membresia_tipo,
+        m.total AS membresia_total
+      FROM pagos p
+      LEFT JOIN membresias m ON m.id = p.membresia_id
+      WHERE p.socio_id = $1
+      ORDER BY p.fecha DESC, p.id DESC
+      `,
+      [socioId]
+    );
+
+    res.json({ ok: true, pagos: result.rows || [] });
+  } catch (error) {
+    res.status(500).json({ ok: false, error: error.message });
+  }
+});
+
+app.post("/api/membresias", async (req, res) => {
+  try {
+    const {
+      socio_id,
+      tipo,
+      precio,
+      descuento,
+      fecha_inicio,
+      fecha_fin,
+      observaciones,
+    } = req.body;
+
+    if (!socio_id || !tipo) {
+      return res.status(400).json({ ok: false, error: "Socio y tipo de membresía son obligatorios" });
+    }
+
+    const precioNum = Number(precio || 0);
+    const descuentoNum = Number(descuento || 0);
+    const total = Math.max(0, precioNum - descuentoNum);
+
+    const result = await pool.query(
+      `
+      INSERT INTO membresias
+      (socio_id, tipo, precio, descuento, total, fecha_inicio, fecha_fin, observaciones)
+      VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+      RETURNING *
+      `,
+      [
+        socio_id,
+        tipo,
+        precioNum,
+        descuentoNum,
+        total,
+        fecha_inicio || null,
+        fecha_fin || null,
+        observaciones || null,
+      ]
+    );
+
+    res.status(201).json({ ok: true, membresia: result.rows[0] });
+  } catch (error) {
+    res.status(500).json({ ok: false, error: error.message });
+  }
+});
+
+app.post("/api/pagos", async (req, res) => {
+  try {
+    const {
+      socio_id,
+      membresia_id,
+      monto,
+      metodo,
+      referencia,
+      tipo,
+      observaciones,
+    } = req.body;
+
+    if (!socio_id || !metodo || Number(monto) <= 0) {
+      return res.status(400).json({ ok: false, error: "Socio, monto y método de pago son obligatorios" });
+    }
+
+    const result = await pool.query(
+      `
+      INSERT INTO pagos
+      (socio_id, membresia_id, monto, metodo, referencia, tipo, observaciones)
+      VALUES ($1,$2,$3,$4,$5,$6,$7)
+      RETURNING *
+      `,
+      [
+        socio_id,
+        membresia_id || null,
+        Number(monto),
+        metodo,
+        referencia || null,
+        tipo || "PAGO",
+        observaciones || null,
+      ]
+    );
+
+    res.status(201).json({ ok: true, pago: result.rows[0] });
+  } catch (error) {
+    res.status(500).json({ ok: false, error: error.message });
   }
 });
 
