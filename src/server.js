@@ -129,6 +129,40 @@ async function ensureDisciplineModule() {
     }
   }
 
+
+  const calisteniaRes = await pool.query(
+    `SELECT id FROM disciplinas WHERE LOWER(nombre) = LOWER('Calistenia') LIMIT 1`
+  );
+
+  if (calisteniaRes.rows.length) {
+    const disciplinaId = calisteniaRes.rows[0].id;
+
+    const reemplazos = [
+      ["Hollow body hold", "V-Up", "Core", "Intermedio", "Flexión dinámica de tronco y piernas para fortalecer el core."],
+      ["Pike push-up", "Flexiones cerradas", "Empuje", "Intermedio", "Flexión con agarre cerrado para reforzar tríceps, pecho y control corporal."],
+      ["L-sit tuck", "Elevación vertical de piernas", "Core", "Intermedio", "Elevación de piernas en paralelas para core y flexores de cadera."],
+      ["Handstand asistido", "Plancha lateral", "Core", "Intermedio", "Estabilidad lateral para mejorar control corporal y cintura escapular."],
+      ["Muscle-up progresión", "Dominada commando", "Tirón", "Avanzado", "Dominada avanzada con agarre alterno para fuerza de tirón y control."],
+      ["Handstand push-up asistido", "Fondos escapulares", "Empuje", "Avanzado", "Trabajo avanzado de control escapular y estabilidad de hombros."],
+      ["Front lever tuck", "Dominada supina", "Tirón", "Avanzado", "Dominada supina avanzada para dorsal, bíceps y control corporal."],
+    ];
+
+    for (const [anterior, nuevo, categoria, nivel, descripcion] of reemplazos) {
+      await pool.query(
+        `
+        UPDATE disciplina_ejercicios
+        SET nombre = $1,
+            categoria = $2,
+            nivel = $3,
+            descripcion = $4
+        WHERE disciplina_id = $5
+          AND LOWER(nombre) = LOWER($6)
+        `,
+        [nuevo, categoria, nivel, descripcion, disciplinaId, anterior]
+      );
+    }
+  }
+
   console.log("✅ Módulos Calistenia y Boxeo preparados");
 }
 
