@@ -166,6 +166,67 @@ async function ensureDisciplineModule() {
   }
 
 
+  // =========================================================
+  // CALISTENIA: CATÁLOGO AUTORITATIVO SIN DUPLICADOS
+  // =========================================================
+  const calisteniaCatalogoRes = await pool.query(
+    `SELECT id FROM disciplinas WHERE LOWER(nombre) = LOWER('Calistenia') LIMIT 1`
+  );
+
+  if (calisteniaCatalogoRes.rows.length) {
+    const calisteniaId = calisteniaCatalogoRes.rows[0].id;
+
+    const nombresCalisteniaActuales = [
+      "Flexiones inclinadas",
+      "Sentadilla al aire",
+      "Plancha frontal",
+      "Remo australiano",
+      "Puente de glúteos",
+      "Flexiones clásicas",
+      "Dominada asistida",
+      "Fondos asistidos",
+      "Zancadas alternas",
+      "V-Up",
+      "Dominadas estrictas",
+      "Fondos en paralelas",
+      "Flexiones cerradas",
+      "Elevación vertical de piernas",
+      "Plancha lateral",
+      "Dominada commando",
+      "Fondos escapulares",
+      "Dominada supina",
+      "Dominada ancho de hombros"
+    ];
+
+    await pool.query(
+      `
+      UPDATE disciplina_ejercicios
+      SET estado = CASE
+        WHEN nombre = ANY($2::text[]) THEN 'ACTIVO'
+        ELSE 'INACTIVO'
+      END
+      WHERE disciplina_id = $1
+      `,
+      [calisteniaId, nombresCalisteniaActuales]
+    );
+
+    await pool.query(
+      `
+      UPDATE disciplina_ejercicios de
+      SET estado = 'INACTIVO'
+      WHERE de.disciplina_id = $1
+        AND de.id NOT IN (
+          SELECT MIN(id)
+          FROM disciplina_ejercicios
+          WHERE disciplina_id = $1
+            AND nombre = ANY($2::text[])
+          GROUP BY LOWER(nombre)
+        )
+      `,
+      [calisteniaId, nombresCalisteniaActuales]
+    );
+  }
+
   const boxeoRes = await pool.query(
     `SELECT id FROM disciplinas WHERE LOWER(nombre) = LOWER('Boxeo') LIMIT 1`
   );
