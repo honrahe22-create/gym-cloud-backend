@@ -1,4 +1,6 @@
 const pool = require("./db");
+const fs = require("fs");
+const path = require("path");
 
 async function seedData() {
   try {
@@ -18,6 +20,7 @@ async function seedData() {
       { nombre: "Cuádriceps", vista: "front" },
       { nombre: "Pantorrillas", vista: "front" },
 
+      { nombre: "Trapecio", vista: "back" },
       { nombre: "Espalda alta", vista: "back" },
       { nombre: "Espalda media", vista: "back" },
       { nombre: "Espalda baja", vista: "back" },
@@ -328,6 +331,41 @@ async function seedData() {
       },
 
       // =======================================================
+      // TRAPECIO
+      // =======================================================
+
+      {
+        nombre: 'Barbell Shrug',
+        descripcion: 'Trapecio',
+        video_url: '/videos/trapecio-1.mp4',
+        nivel: "Principiante",
+      },
+      {
+        nombre: 'Dumbbell Shrug',
+        descripcion: 'Trapecio',
+        video_url: '/videos/trapecio-2.mp4',
+        nivel: "Principiante",
+      },
+      {
+        nombre: 'Cable Shrug',
+        descripcion: 'Trapecio',
+        video_url: '/videos/trapecio-3.mp4',
+        nivel: "Intermedio",
+      },
+      {
+        nombre: 'Lever Shrug',
+        descripcion: 'Trapecio',
+        video_url: '/videos/trapecio-4.mp4',
+        nivel: "Intermedio",
+      },
+      {
+        nombre: 'Smith Machine Shrug',
+        descripcion: 'Trapecio',
+        video_url: '/videos/trapecio-5.mp4',
+        nivel: "Avanzado",
+      },
+
+      // =======================================================
       // ESPALDA ALTA
       // =======================================================
 
@@ -575,10 +613,37 @@ async function seedData() {
     ];
 
     // =========================================================
+    // FASE 2: 20 EJERCICIOS POR GRUPO MUSCULAR
+    // El script export-gym-videos-20.mjs genera este archivo
+    // automáticamente desde free-exercise-db-with-videos.
+    // Si todavía no existe, conservamos los 5 ejercicios actuales.
+    // =========================================================
+    const generadoPath = path.join(__dirname, "gym20-generated.json");
+    let ejerciciosConfigurados = ejercicios;
+
+    if (fs.existsSync(generadoPath)) {
+      try {
+        const generado = JSON.parse(fs.readFileSync(generadoPath, "utf8"));
+        if (Array.isArray(generado?.ejercicios) && generado.ejercicios.length) {
+          ejerciciosConfigurados = generado.ejercicios;
+          console.log(
+            `✅ Fase 2 cargada: ${ejerciciosConfigurados.length} ejercicios desde gym20-generated.json`
+          );
+        }
+      } catch (error) {
+        console.warn("⚠️ No se pudo leer gym20-generated.json. Se usará la base anterior:", error.message);
+      }
+    } else {
+      console.warn(
+        "⚠️ gym20-generated.json todavía no existe. Ejecuta scripts/export-gym-videos-20.mjs para activar los 20 ejercicios por músculo."
+      );
+    }
+
+    // =========================================================
     // 3. INSERTAR / ACTUALIZAR EJERCICIOS SIN DUPLICAR
     // =========================================================
 
-    for (const ejercicio of ejercicios) {
+    for (const ejercicio of ejerciciosConfigurados) {
       const existente = await pool.query(
         `
         SELECT id
@@ -681,8 +746,43 @@ async function seedData() {
       }
     }
 
+    // =========================================================
+    // 5. LIMPIAR RELACIONES ANTIGUAS DE LOS MÚSCULOS CONFIGURADOS
+    // Esto evita que aparezcan ejercicios viejos además de los 20 nuevos.
+    // No elimina ejercicios ni rutinas históricas; solo depura la relación
+    // visible entre músculo y ejercicio.
+    // =========================================================
+    const catalogoPorMusculo = new Map();
+
+    for (const ejercicio of ejerciciosConfigurados) {
+      if (!catalogoPorMusculo.has(ejercicio.descripcion)) {
+        catalogoPorMusculo.set(ejercicio.descripcion, []);
+      }
+      catalogoPorMusculo.get(ejercicio.descripcion).push(ejercicio.nombre);
+    }
+
+    for (const [musculoNombre, nombresPermitidos] of catalogoPorMusculo.entries()) {
+      const musculoRes = await pool.query(
+        `SELECT id FROM musculos WHERE nombre = $1 LIMIT 1`,
+        [musculoNombre]
+      );
+
+      if (!musculoRes.rows.length) continue;
+
+      await pool.query(
+        `
+          DELETE FROM ejercicio_musculo em
+          USING ejercicios e
+          WHERE em.ejercicio_id = e.id
+            AND em.musculo_id = $1
+            AND NOT (e.nombre = ANY($2::text[]))
+        `,
+        [musculoRes.rows[0].id, nombresPermitidos]
+      );
+    }
+
     console.log("✅ Datos base del GYM insertados/actualizados correctamente.");
-    console.log(`✅ ${ejercicios.length} ejercicios configurados.`);
+    console.log(`✅ ${ejerciciosConfigurados.length} ejercicios configurados.`);
   } catch (error) {
     console.error("❌ Error insertando datos base:", error);
   }
