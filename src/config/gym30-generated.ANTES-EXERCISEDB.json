@@ -1,0 +1,1494 @@
+{
+  "generatedAt": "2026-08-15T23:56:59.596Z",
+  "total": 245,
+  "resumen": {
+    "Pecho alto": 8,
+    "Pecho medio": 12,
+    "Pecho bajo": 4,
+    "Hombros": 30,
+    "Bíceps": 20,
+    "Abdomen": 30,
+    "Cuádriceps": 19,
+    "Pantorrillas": 9,
+    "Trapecio": 4,
+    "Espalda alta": 21,
+    "Espalda media": 18,
+    "Espalda baja": 8,
+    "Tríceps": 24,
+    "Glúteos": 17,
+    "Isquiotibiales": 12,
+    "Pantorrillas posterior": 9
+  },
+  "ejercicios": [
+    {
+      "nombre": "Barbell Incline Bench Press",
+      "descripcion": "Pecho alto",
+      "video_url": "/videos/pecho-alto-1.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Dumbbell Incline Fly",
+      "descripcion": "Pecho alto",
+      "video_url": "/videos/pecho-alto-2.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Incline Hammer Press",
+      "descripcion": "Pecho alto",
+      "video_url": "/videos/pecho-alto-3.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Lever Incline Hammer Chest Press",
+      "descripcion": "Pecho alto",
+      "video_url": "/videos/pecho-alto-4.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Incline Bench Press",
+      "descripcion": "Pecho alto",
+      "video_url": "/videos/pecho-alto-5.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Dumbbell Incline Fly On Exercise Ball",
+      "descripcion": "Pecho alto",
+      "video_url": "/videos/pecho-alto-6.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Incline Push-Up",
+      "descripcion": "Pecho alto",
+      "video_url": "/videos/pecho-alto-7.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Resistance Band High Fly",
+      "descripcion": "Pecho alto",
+      "video_url": "/videos/pecho-alto-8.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Barbell Bench Press",
+      "descripcion": "Pecho medio",
+      "video_url": "/videos/pecho-medio-1.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Dumbbell Lying Hammer Press",
+      "descripcion": "Pecho medio",
+      "video_url": "/videos/pecho-medio-2.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Lever Lying Chest Press",
+      "descripcion": "Pecho medio",
+      "video_url": "/videos/pecho-medio-3.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Pec Deck Fly",
+      "descripcion": "Pecho medio",
+      "video_url": "/videos/pecho-medio-4.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Flat Bench Cable Fly",
+      "descripcion": "Pecho medio",
+      "video_url": "/videos/pecho-medio-5.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Cable Standing Fly",
+      "descripcion": "Pecho medio",
+      "video_url": "/videos/pecho-medio-6.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Fly",
+      "descripcion": "Pecho medio",
+      "video_url": "/videos/pecho-medio-7.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Push-Up",
+      "descripcion": "Pecho medio",
+      "video_url": "/videos/pecho-medio-8.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Resistance Band High Fly — Pecho medio",
+      "descripcion": "Pecho medio",
+      "video_url": "/videos/pecho-medio-9.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Deep Push-Up",
+      "descripcion": "Pecho medio",
+      "video_url": "/videos/pecho-medio-10.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Dumbbell Fly On Exercise Ball",
+      "descripcion": "Pecho medio",
+      "video_url": "/videos/pecho-medio-11.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Rotational Push-Up",
+      "descripcion": "Pecho medio",
+      "video_url": "/videos/pecho-medio-12.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Chest Dips",
+      "descripcion": "Pecho bajo",
+      "video_url": "/videos/pecho-bajo-1.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Barbell Decline Bench Press",
+      "descripcion": "Pecho bajo",
+      "video_url": "/videos/pecho-bajo-2.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Decline Dumbbell Bench Press",
+      "descripcion": "Pecho bajo",
+      "video_url": "/videos/pecho-bajo-3.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Decline Dumbbell Fly",
+      "descripcion": "Pecho bajo",
+      "video_url": "/videos/pecho-bajo-4.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Lever Lateral Raise",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-1.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Arnold Press",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-2.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "EZ Barbell Anti Gravity Press",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-3.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Military Press",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-4.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Barbell Seated Behind-The-Neck Press",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-5.mp4",
+      "nivel": "Avanzado"
+    },
+    {
+      "nombre": "Band Bent-Over Rear Lateral Raise",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-6.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Band One Arm Front Raise",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-7.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Barbell Front Raise",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-8.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Cable Lateral Raise",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-9.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Cable One Arm Lateral Raise",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-10.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Alternating Shoulder Press",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-11.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Front Raise",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-12.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Incline Rear Lateral Raise",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-13.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Iron Cross",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-14.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Lateral Raise",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-15.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell One Arm Lateral Raise",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-16.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Seated Front Raise",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-17.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Seated Lateral Raise",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-18.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Upright Row",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-19.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Seated Dumbbell Shoulder Press",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-20.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Smith Seated Shoulder Press",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-21.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Barbell Wide-Grip Upright Row",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-22.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Cable One Arm Front Raise",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-23.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Band Standing Rear Delt Row",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-24.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Cable Rear Delt Row (with rope)",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-25.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Rear Delt Row",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-26.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Lever Seated Reverse Fly",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-27.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Barbell Rear Delt Raise",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-28.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Cable Crossover Reverse Fly",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-29.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Dumbbell Incline Hammer Press — Hombros",
+      "descripcion": "Hombros",
+      "video_url": "/videos/hombros-30.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Seated Preacher Curl",
+      "descripcion": "Bíceps",
+      "video_url": "/videos/biceps-1.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Barbell Curl",
+      "descripcion": "Bíceps",
+      "video_url": "/videos/biceps-2.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Barbell Prone Incline Curl",
+      "descripcion": "Bíceps",
+      "video_url": "/videos/biceps-3.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Cable One Arm Curl",
+      "descripcion": "Bíceps",
+      "video_url": "/videos/biceps-4.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Cable Standing Inner Curl",
+      "descripcion": "Bíceps",
+      "video_url": "/videos/biceps-5.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Biceps Curl",
+      "descripcion": "Bíceps",
+      "video_url": "/videos/biceps-6.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Incline Curl",
+      "descripcion": "Bíceps",
+      "video_url": "/videos/biceps-7.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Preacher Curl Over Exercise Ball",
+      "descripcion": "Bíceps",
+      "video_url": "/videos/biceps-8.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Prone Incline Curl",
+      "descripcion": "Bíceps",
+      "video_url": "/videos/biceps-9.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "EZ Bar Biceps Curl",
+      "descripcion": "Bíceps",
+      "video_url": "/videos/biceps-10.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Lever Preacher Curl",
+      "descripcion": "Bíceps",
+      "video_url": "/videos/biceps-11.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Seated Alternating Dumbbell Curl",
+      "descripcion": "Bíceps",
+      "video_url": "/videos/biceps-12.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Supine Dumbbell Biceps Curl",
+      "descripcion": "Bíceps",
+      "video_url": "/videos/biceps-13.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Barbell Drag Curl",
+      "descripcion": "Bíceps",
+      "video_url": "/videos/biceps-14.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Dumbbell Incline Biceps Curl",
+      "descripcion": "Bíceps",
+      "video_url": "/videos/biceps-15.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Dumbbell One Arm Zottman Preacher Curl",
+      "descripcion": "Bíceps",
+      "video_url": "/videos/biceps-16.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Weighted Standing Curl",
+      "descripcion": "Bíceps",
+      "video_url": "/videos/biceps-17.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Concentration Curl",
+      "descripcion": "Bíceps",
+      "video_url": "/videos/biceps-18.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Cross Body Hammer Curl",
+      "descripcion": "Bíceps",
+      "video_url": "/videos/biceps-19.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Incline Hammer Curl",
+      "descripcion": "Bíceps",
+      "video_url": "/videos/biceps-20.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Jackknife Floor",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-1.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "V-Up",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-2.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "45-Degree Bicycle Twisting Crunch",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-3.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Chest Lift with Rotation",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-4.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Floor Crunch",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-5.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Leg Raise Crunch",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-6.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Reverse Crunch",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-7.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Exercise Ball Sit-Up",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-8.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Band Side Bend",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-9.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Seated Straight Arm Twist",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-10.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Twisting Crunch",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-11.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Side Bend on Stability Ball",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-12.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Bench Crunch",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-13.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Flexion Leg Sit-Up Stretch",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-14.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Front Plank",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-15.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Lever Seated Crunch",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-16.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Lying Leg Raise",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-17.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Sit-Up",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-18.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Straight-Leg Up Crunch",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-19.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Band Resisted Decline Sit-Up",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-20.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Hanging Straight Leg Raise",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-21.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Incline Leg Hip Raise",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-22.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Jackknife Split Crunch",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-23.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Leg Raise with Hip Lift",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-24.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Medicine Ball Wall Sit-Up",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-25.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Stability Ball Leg Elevated Crunch",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-26.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Weighted Leg Extension Crunch",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-27.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Otis-Up",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-28.mp4",
+      "nivel": "Avanzado"
+    },
+    {
+      "nombre": "Band Standing Crunch",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-29.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Cable Kneeling Crunch",
+      "descripcion": "Abdomen",
+      "video_url": "/videos/abdomen-30.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Weighted Sissy Squat",
+      "descripcion": "Cuádriceps",
+      "video_url": "/videos/cuadriceps-1.mp4",
+      "nivel": "Avanzado"
+    },
+    {
+      "nombre": "Sled 45 Degree Wide Leg Press",
+      "descripcion": "Cuádriceps",
+      "video_url": "/videos/cuadriceps-2.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Dumbbell Goblet Squat",
+      "descripcion": "Cuádriceps",
+      "video_url": "/videos/cuadriceps-3.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Lever Leg Extension",
+      "descripcion": "Cuádriceps",
+      "video_url": "/videos/cuadriceps-4.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Smith Chair Squat",
+      "descripcion": "Cuádriceps",
+      "video_url": "/videos/cuadriceps-5.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Barbell Back Squat",
+      "descripcion": "Cuádriceps",
+      "video_url": "/videos/cuadriceps-6.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Barbell Front Squat",
+      "descripcion": "Cuádriceps",
+      "video_url": "/videos/cuadriceps-7.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Band Seated Leg Extension",
+      "descripcion": "Cuádriceps",
+      "video_url": "/videos/cuadriceps-8.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Lunge",
+      "descripcion": "Cuádriceps",
+      "video_url": "/videos/cuadriceps-9.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Squat",
+      "descripcion": "Cuádriceps",
+      "video_url": "/videos/cuadriceps-10.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Lever Horizontal Leg Press",
+      "descripcion": "Cuádriceps",
+      "video_url": "/videos/cuadriceps-11.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Sled Hack Squat",
+      "descripcion": "Cuádriceps",
+      "video_url": "/videos/cuadriceps-12.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Barbell Lunge",
+      "descripcion": "Cuádriceps",
+      "video_url": "/videos/cuadriceps-13.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Smith Machine Leg Press",
+      "descripcion": "Cuádriceps",
+      "video_url": "/videos/cuadriceps-14.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Dumbbell Single Leg Squat",
+      "descripcion": "Cuádriceps",
+      "video_url": "/videos/cuadriceps-15.mp4",
+      "nivel": "Avanzado"
+    },
+    {
+      "nombre": "Squat",
+      "descripcion": "Cuádriceps",
+      "video_url": "/videos/cuadriceps-16.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Burpee",
+      "descripcion": "Cuádriceps",
+      "video_url": "/videos/cuadriceps-17.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Close Feet Leg Press",
+      "descripcion": "Cuádriceps",
+      "video_url": "/videos/cuadriceps-18.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Jump Step-Up",
+      "descripcion": "Cuádriceps",
+      "video_url": "/videos/cuadriceps-19.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Band Standing Calf Raise",
+      "descripcion": "Pantorrillas",
+      "video_url": "/videos/pantorrillas-1.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Donkey Calf Raise",
+      "descripcion": "Pantorrillas",
+      "video_url": "/videos/pantorrillas-2.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Seated Calf Raise",
+      "descripcion": "Pantorrillas",
+      "video_url": "/videos/pantorrillas-3.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Standing Calf Raise",
+      "descripcion": "Pantorrillas",
+      "video_url": "/videos/pantorrillas-4.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Lever Seated Calf Raise",
+      "descripcion": "Pantorrillas",
+      "video_url": "/videos/pantorrillas-5.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Lever Standing Calf Raise",
+      "descripcion": "Pantorrillas",
+      "video_url": "/videos/pantorrillas-6.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Smith Machine Calf Raise",
+      "descripcion": "Pantorrillas",
+      "video_url": "/videos/pantorrillas-7.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Single Leg Calf Raise",
+      "descripcion": "Pantorrillas",
+      "video_url": "/videos/pantorrillas-8.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Sled 45 Degree Calf Press",
+      "descripcion": "Pantorrillas",
+      "video_url": "/videos/pantorrillas-9.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Shrug",
+      "descripcion": "Trapecio",
+      "video_url": "/videos/trapecio-1.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Barbell Shrug",
+      "descripcion": "Trapecio",
+      "video_url": "/videos/trapecio-2.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Incline Shrug",
+      "descripcion": "Trapecio",
+      "video_url": "/videos/trapecio-3.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Lever Shrug",
+      "descripcion": "Trapecio",
+      "video_url": "/videos/trapecio-4.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Cable Close Grip Lat Pulldown",
+      "descripcion": "Espalda alta",
+      "video_url": "/videos/espalda-alta-1.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Reverse-Grip Cable Lat Pulldown",
+      "descripcion": "Espalda alta",
+      "video_url": "/videos/espalda-alta-2.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Wide Grip Cable Lat Pulldown",
+      "descripcion": "Espalda alta",
+      "video_url": "/videos/espalda-alta-3.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Cable One Arm Lateral Pulldown",
+      "descripcion": "Espalda alta",
+      "video_url": "/videos/espalda-alta-4.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Close Grip Chin-Up",
+      "descripcion": "Espalda alta",
+      "video_url": "/videos/espalda-alta-5.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Pull-Up / Chin-Up",
+      "descripcion": "Espalda alta",
+      "video_url": "/videos/espalda-alta-6.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Reverse Grip Pull-Up",
+      "descripcion": "Espalda alta",
+      "video_url": "/videos/espalda-alta-7.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Band Kneeling One Arm Pulldown",
+      "descripcion": "Espalda alta",
+      "video_url": "/videos/espalda-alta-8.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Cable Pulldown",
+      "descripcion": "Espalda alta",
+      "video_url": "/videos/espalda-alta-9.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Cable Straight Arm Pulldown",
+      "descripcion": "Espalda alta",
+      "video_url": "/videos/espalda-alta-10.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Reverse Grip Machine Lat Pulldown",
+      "descripcion": "Espalda alta",
+      "video_url": "/videos/espalda-alta-11.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Chin-ups (narrow parallel grip)",
+      "descripcion": "Espalda alta",
+      "video_url": "/videos/espalda-alta-12.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Bench Pull-Up",
+      "descripcion": "Espalda alta",
+      "video_url": "/videos/espalda-alta-13.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Inverted Row Between Chairs",
+      "descripcion": "Espalda alta",
+      "video_url": "/videos/espalda-alta-14.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Pull-Up (Wide Grip)",
+      "descripcion": "Espalda alta",
+      "video_url": "/videos/espalda-alta-15.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Shoulder-Width Pull-Up",
+      "descripcion": "Espalda alta",
+      "video_url": "/videos/espalda-alta-16.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Commando Pull-Up",
+      "descripcion": "Espalda alta",
+      "video_url": "/videos/espalda-alta-17.mp4",
+      "nivel": "Avanzado"
+    },
+    {
+      "nombre": "Lever High Row",
+      "descripcion": "Espalda alta",
+      "video_url": "/videos/espalda-alta-18.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Band Assisted Pull-up",
+      "descripcion": "Espalda alta",
+      "video_url": "/videos/espalda-alta-19.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Seated Cable Row (V-Grip)",
+      "descripcion": "Espalda alta",
+      "video_url": "/videos/espalda-alta-20.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Cable Seated High Row (V-bar)",
+      "descripcion": "Espalda alta",
+      "video_url": "/videos/espalda-alta-21.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Cable Seated High Row (V-bar) — Espalda media",
+      "descripcion": "Espalda media",
+      "video_url": "/videos/espalda-media-1.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Seated Cable Row (V-Grip) — Espalda media",
+      "descripcion": "Espalda media",
+      "video_url": "/videos/espalda-media-2.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Band Seated Row",
+      "descripcion": "Espalda media",
+      "video_url": "/videos/espalda-media-3.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Band Straight-Back Seated Row",
+      "descripcion": "Espalda media",
+      "video_url": "/videos/espalda-media-4.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Bent-Over Row",
+      "descripcion": "Espalda media",
+      "video_url": "/videos/espalda-media-5.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Lever High Row — Espalda media",
+      "descripcion": "Espalda media",
+      "video_url": "/videos/espalda-media-6.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Lever Reverse T-Bar Row",
+      "descripcion": "Espalda media",
+      "video_url": "/videos/espalda-media-7.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Seated Cable Row (Wide-Grip)",
+      "descripcion": "Espalda media",
+      "video_url": "/videos/espalda-media-8.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Barbell Underhand Bent-Over Row",
+      "descripcion": "Espalda media",
+      "video_url": "/videos/espalda-media-9.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Cable One-Arm Twisting Seated Row",
+      "descripcion": "Espalda media",
+      "video_url": "/videos/espalda-media-10.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Dumbbell Palm Rotational Bent Over Row",
+      "descripcion": "Espalda media",
+      "video_url": "/videos/espalda-media-11.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Lever T-Bar Row",
+      "descripcion": "Espalda media",
+      "video_url": "/videos/espalda-media-12.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Ring High Row",
+      "descripcion": "Espalda media",
+      "video_url": "/videos/espalda-media-13.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Dumbbell Incline Row",
+      "descripcion": "Espalda media",
+      "video_url": "/videos/espalda-media-14.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Lying Rear Delt Row",
+      "descripcion": "Espalda media",
+      "video_url": "/videos/espalda-media-15.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Inverted Row Between Chairs — Espalda media",
+      "descripcion": "Espalda media",
+      "video_url": "/videos/espalda-media-16.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Inverted Row With Straps",
+      "descripcion": "Espalda media",
+      "video_url": "/videos/espalda-media-17.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Cambered Bar Lying Row",
+      "descripcion": "Espalda media",
+      "video_url": "/videos/espalda-media-18.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "45 Degree Hyperextension",
+      "descripcion": "Espalda baja",
+      "video_url": "/videos/espalda-baja-1.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Lever Back Extension",
+      "descripcion": "Espalda baja",
+      "video_url": "/videos/espalda-baja-2.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Kettlebell Deadlift",
+      "descripcion": "Espalda baja",
+      "video_url": "/videos/espalda-baja-3.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Single Dumbbell Stiff-Leg Deadlift",
+      "descripcion": "Espalda baja",
+      "video_url": "/videos/espalda-baja-4.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Smith Machine Deadlift",
+      "descripcion": "Espalda baja",
+      "video_url": "/videos/espalda-baja-5.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Deadlift",
+      "descripcion": "Espalda baja",
+      "video_url": "/videos/espalda-baja-6.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Barbell Straight Leg Deadlift",
+      "descripcion": "Espalda baja",
+      "video_url": "/videos/espalda-baja-7.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Dumbbell Stiff Leg Deadlift",
+      "descripcion": "Espalda baja",
+      "video_url": "/videos/espalda-baja-8.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Band Triceps Pushdown",
+      "descripcion": "Tríceps",
+      "video_url": "/videos/triceps-1.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Bench Dips",
+      "descripcion": "Tríceps",
+      "video_url": "/videos/triceps-2.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Cable Lying Triceps Extension",
+      "descripcion": "Tríceps",
+      "video_url": "/videos/triceps-3.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Cable Rope Triceps Pushdown",
+      "descripcion": "Tríceps",
+      "video_url": "/videos/triceps-4.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Cable Standing One Arm Triceps Extension",
+      "descripcion": "Tríceps",
+      "video_url": "/videos/triceps-5.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Cable Triceps Pushdown",
+      "descripcion": "Tríceps",
+      "video_url": "/videos/triceps-6.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Incline Triceps Extension",
+      "descripcion": "Tríceps",
+      "video_url": "/videos/triceps-7.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Kickback",
+      "descripcion": "Tríceps",
+      "video_url": "/videos/triceps-8.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Lying Alternate Extension",
+      "descripcion": "Tríceps",
+      "video_url": "/videos/triceps-9.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Lying Triceps Extension",
+      "descripcion": "Tríceps",
+      "video_url": "/videos/triceps-10.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Seated Kickback",
+      "descripcion": "Tríceps",
+      "video_url": "/videos/triceps-11.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Lever Triceps Extension",
+      "descripcion": "Tríceps",
+      "video_url": "/videos/triceps-12.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Old School Reverse Extensions",
+      "descripcion": "Tríceps",
+      "video_url": "/videos/triceps-13.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Triceps Dips",
+      "descripcion": "Tríceps",
+      "video_url": "/videos/triceps-14.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Barbell Close Grip Bench Press",
+      "descripcion": "Tríceps",
+      "video_url": "/videos/triceps-15.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Dumbbell Close-Grip Press",
+      "descripcion": "Tríceps",
+      "video_url": "/videos/triceps-16.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "EZ Bar Lying Triceps Extension",
+      "descripcion": "Tríceps",
+      "video_url": "/videos/triceps-17.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Band Overhead Triceps Extension",
+      "descripcion": "Tríceps",
+      "video_url": "/videos/triceps-18.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Close-Grip Push-Up",
+      "descripcion": "Tríceps",
+      "video_url": "/videos/triceps-19.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Pronate-grip Triceps Extension",
+      "descripcion": "Tríceps",
+      "video_url": "/videos/triceps-20.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Seated Triceps Extension",
+      "descripcion": "Tríceps",
+      "video_url": "/videos/triceps-21.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Lever Seated Dip",
+      "descripcion": "Tríceps",
+      "video_url": "/videos/triceps-22.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Cable Rope Overhead Triceps Extension",
+      "descripcion": "Tríceps",
+      "video_url": "/videos/triceps-23.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Dumbbell One-Arm Triceps Extension",
+      "descripcion": "Tríceps",
+      "video_url": "/videos/triceps-24.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Glute Bridge",
+      "descripcion": "Glúteos",
+      "video_url": "/videos/gluteos-1.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Lever Standing Hip Extension",
+      "descripcion": "Glúteos",
+      "video_url": "/videos/gluteos-2.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Band One-Leg Kickback (Bent Position)",
+      "descripcion": "Glúteos",
+      "video_url": "/videos/gluteos-3.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Lever Standing Rear Kick",
+      "descripcion": "Glúteos",
+      "video_url": "/videos/gluteos-4.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Rear Decline Bridge",
+      "descripcion": "Glúteos",
+      "video_url": "/videos/gluteos-5.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Lying Hip Lift on Stability Ball",
+      "descripcion": "Glúteos",
+      "video_url": "/videos/gluteos-6.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Band Hip Abduction",
+      "descripcion": "Glúteos",
+      "video_url": "/videos/gluteos-7.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Sumo Squat",
+      "descripcion": "Glúteos",
+      "video_url": "/videos/gluteos-8.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Lever Seated Hip Abduction",
+      "descripcion": "Glúteos",
+      "video_url": "/videos/gluteos-9.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Goblet Squat — Glúteos",
+      "descripcion": "Glúteos",
+      "video_url": "/videos/gluteos-10.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Lunge — Glúteos",
+      "descripcion": "Glúteos",
+      "video_url": "/videos/gluteos-11.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Squat — Glúteos",
+      "descripcion": "Glúteos",
+      "video_url": "/videos/gluteos-12.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Sled Hack Squat — Glúteos",
+      "descripcion": "Glúteos",
+      "video_url": "/videos/gluteos-13.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Smith Chair Squat — Glúteos",
+      "descripcion": "Glúteos",
+      "video_url": "/videos/gluteos-14.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Barbell Lunge — Glúteos",
+      "descripcion": "Glúteos",
+      "video_url": "/videos/gluteos-15.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Dumbbell Single Leg Squat — Glúteos",
+      "descripcion": "Glúteos",
+      "video_url": "/videos/gluteos-16.mp4",
+      "nivel": "Avanzado"
+    },
+    {
+      "nombre": "Weighted Sissy Squat — Glúteos",
+      "descripcion": "Glúteos",
+      "video_url": "/videos/gluteos-17.mp4",
+      "nivel": "Avanzado"
+    },
+    {
+      "nombre": "Band Prone Leg Curl",
+      "descripcion": "Isquiotibiales",
+      "video_url": "/videos/isquiotibiales-1.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Band Standing Leg Curl",
+      "descripcion": "Isquiotibiales",
+      "video_url": "/videos/isquiotibiales-2.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Deadlift — Isquiotibiales",
+      "descripcion": "Isquiotibiales",
+      "video_url": "/videos/isquiotibiales-3.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Lever Kneeling Leg Curl",
+      "descripcion": "Isquiotibiales",
+      "video_url": "/videos/isquiotibiales-4.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Lever Lying Leg Curl",
+      "descripcion": "Isquiotibiales",
+      "video_url": "/videos/isquiotibiales-5.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Lever Seated Leg Curl",
+      "descripcion": "Isquiotibiales",
+      "video_url": "/videos/isquiotibiales-6.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Barbell Straight Leg Deadlift — Isquiotibiales",
+      "descripcion": "Isquiotibiales",
+      "video_url": "/videos/isquiotibiales-7.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Dumbbell Lying Leg Curl",
+      "descripcion": "Isquiotibiales",
+      "video_url": "/videos/isquiotibiales-8.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Dumbbell Stiff Leg Deadlift — Isquiotibiales",
+      "descripcion": "Isquiotibiales",
+      "video_url": "/videos/isquiotibiales-9.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Stability Ball Leg Curl",
+      "descripcion": "Isquiotibiales",
+      "video_url": "/videos/isquiotibiales-10.mp4",
+      "nivel": "Intermedio"
+    },
+    {
+      "nombre": "Band Pull Through",
+      "descripcion": "Isquiotibiales",
+      "video_url": "/videos/isquiotibiales-11.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Single Dumbbell Stiff-Leg Deadlift — Isquiotibiales",
+      "descripcion": "Isquiotibiales",
+      "video_url": "/videos/isquiotibiales-12.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Band Standing Calf Raise — Pantorrillas posterior",
+      "descripcion": "Pantorrillas posterior",
+      "video_url": "/videos/pantorrillas-posterior-1.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Donkey Calf Raise — Pantorrillas posterior",
+      "descripcion": "Pantorrillas posterior",
+      "video_url": "/videos/pantorrillas-posterior-2.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Seated Calf Raise — Pantorrillas posterior",
+      "descripcion": "Pantorrillas posterior",
+      "video_url": "/videos/pantorrillas-posterior-3.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Standing Calf Raise — Pantorrillas posterior",
+      "descripcion": "Pantorrillas posterior",
+      "video_url": "/videos/pantorrillas-posterior-4.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Lever Seated Calf Raise — Pantorrillas posterior",
+      "descripcion": "Pantorrillas posterior",
+      "video_url": "/videos/pantorrillas-posterior-5.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Lever Standing Calf Raise — Pantorrillas posterior",
+      "descripcion": "Pantorrillas posterior",
+      "video_url": "/videos/pantorrillas-posterior-6.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Smith Machine Calf Raise — Pantorrillas posterior",
+      "descripcion": "Pantorrillas posterior",
+      "video_url": "/videos/pantorrillas-posterior-7.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Dumbbell Single Leg Calf Raise — Pantorrillas posterior",
+      "descripcion": "Pantorrillas posterior",
+      "video_url": "/videos/pantorrillas-posterior-8.mp4",
+      "nivel": "Principiante"
+    },
+    {
+      "nombre": "Sled 45 Degree Calf Press — Pantorrillas posterior",
+      "descripcion": "Pantorrillas posterior",
+      "video_url": "/videos/pantorrillas-posterior-9.mp4",
+      "nivel": "Principiante"
+    }
+  ]
+}
