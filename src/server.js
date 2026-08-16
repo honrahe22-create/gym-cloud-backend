@@ -28,46 +28,188 @@ const normalizeHeightCm = (value) => {
 
 const DISCIPLINE_SEED = {
   Calistenia: [
-    ["Flexiones inclinadas", "Empuje", "Principiante", "Flexión con apoyo elevado para aprender control escapular y técnica."],
-    ["Sentadilla al aire", "Piernas", "Principiante", "Patrón básico de sentadilla usando el peso corporal."],
-    ["Plancha frontal", "Core", "Principiante", "Estabilidad del tronco manteniendo alineación corporal."],
-    ["Remo australiano", "Tirón", "Principiante", "Tirón horizontal con barra baja, ideal para progresar a dominadas."],
-    ["Puente de glúteos", "Piernas", "Principiante", "Extensión de cadera para glúteos y cadena posterior."],
-    ["Flexiones clásicas", "Empuje", "Principiante", "Trabajo global de pecho, tríceps, hombro y core."],
-    ["Dominada asistida", "Tirón", "Principiante", "Progresión de dominada con asistencia para desarrollar fuerza."],
-    ["Fondos asistidos", "Empuje", "Intermedio", "Progresión de fondos enfocada en tríceps, pecho y hombros."],
-    ["Zancadas alternas", "Piernas", "Intermedio", "Trabajo unilateral de pierna, equilibrio y estabilidad."],
-    ["Hollow body hold", "Core", "Intermedio", "Control del core en posición hueca para habilidades gimnásticas."],
-    ["Dominadas estrictas", "Tirón", "Intermedio", "Dominada completa sin impulso con control escapular."],
-    ["Fondos en paralelas", "Empuje", "Intermedio", "Empuje vertical para pecho, tríceps y cintura escapular."],
-    ["Pike push-up", "Empuje", "Intermedio", "Progresión de empuje vertical hacia handstand push-up."],
-    ["L-sit tuck", "Habilidad", "Intermedio", "Progresión de L-sit con rodillas flexionadas."],
-    ["Handstand asistido", "Habilidad", "Intermedio", "Equilibrio invertido con apoyo en pared."],
-    ["Muscle-up progresión", "Habilidad", "Avanzado", "Transición explosiva de dominada a fondo sobre barra."],
-    ["Handstand push-up asistido", "Empuje", "Avanzado", "Empuje vertical invertido con apoyo en pared."],
-    ["Front lever tuck", "Habilidad", "Avanzado", "Progresión isométrica de front lever para dorsal y core."],
+    ["Flexiones inclinadas", "Empuje", "Principiante", "Flexiones inclinadas: ejercicio de calistenia nivel principiante enfocado en empuje, control corporal y técnica progresiva."],
+    ["Sentadilla al aire", "Piernas", "Principiante", "Sentadilla al aire: ejercicio de calistenia nivel principiante enfocado en piernas, control corporal y técnica progresiva."],
+    ["Plancha frontal", "Core", "Principiante", "Plancha frontal: ejercicio de calistenia nivel principiante enfocado en core, control corporal y técnica progresiva."],
+    ["Remo australiano", "Tirón", "Principiante", "Remo australiano: ejercicio de calistenia nivel principiante enfocado en tirón, control corporal y técnica progresiva."],
+    ["Puente de glúteos", "Piernas", "Principiante", "Puente de glúteos: ejercicio de calistenia nivel principiante enfocado en piernas, control corporal y técnica progresiva."],
+    ["Flexiones clásicas", "Empuje", "Principiante", "Flexiones clásicas: ejercicio de calistenia nivel principiante enfocado en empuje, control corporal y técnica progresiva."],
+    ["Dominada asistida", "Tirón", "Principiante", "Dominada asistida: ejercicio de calistenia nivel principiante enfocado en tirón, control corporal y técnica progresiva."],
+    ["Fondos asistidos", "Empuje", "Principiante", "Fondos asistidos: ejercicio de calistenia nivel principiante enfocado en empuje, control corporal y técnica progresiva."],
+    ["Zancadas alternas", "Piernas", "Principiante", "Zancadas alternas: ejercicio de calistenia nivel principiante enfocado en piernas, control corporal y técnica progresiva."],
+    ["Dead bug", "Core", "Principiante", "Dead bug: ejercicio de calistenia nivel principiante enfocado en core, control corporal y técnica progresiva."],
+    ["Bird dog", "Core", "Principiante", "Bird dog: ejercicio de calistenia nivel principiante enfocado en core, control corporal y técnica progresiva."],
+    ["Plancha alta", "Core", "Principiante", "Plancha alta: ejercicio de calistenia nivel principiante enfocado en core, control corporal y técnica progresiva."],
+    ["Plancha con rodillas apoyadas", "Core", "Principiante", "Plancha con rodillas apoyadas: ejercicio de calistenia nivel principiante enfocado en core, control corporal y técnica progresiva."],
+    ["Sentadilla isométrica en pared", "Piernas", "Principiante", "Sentadilla isométrica en pared: ejercicio de calistenia nivel principiante enfocado en piernas, control corporal y técnica progresiva."],
+    ["Step-up bajo", "Piernas", "Principiante", "Step-up bajo: ejercicio de calistenia nivel principiante enfocado en piernas, control corporal y técnica progresiva."],
+    ["Elevación de pantorrillas", "Piernas", "Principiante", "Elevación de pantorrillas: ejercicio de calistenia nivel principiante enfocado en piernas, control corporal y técnica progresiva."],
+    ["Flexión de rodillas apoyadas", "Empuje", "Principiante", "Flexión de rodillas apoyadas: ejercicio de calistenia nivel principiante enfocado en empuje, control corporal y técnica progresiva."],
+    ["Flexión escapular", "Empuje", "Principiante", "Flexión escapular: ejercicio de calistenia nivel principiante enfocado en empuje, control corporal y técnica progresiva."],
+    ["Remo invertido con rodillas flexionadas", "Tirón", "Principiante", "Remo invertido con rodillas flexionadas: ejercicio de calistenia nivel principiante enfocado en tirón, control corporal y técnica progresiva."],
+    ["Colgado pasivo", "Agarre", "Principiante", "Colgado pasivo: ejercicio de calistenia nivel principiante enfocado en agarre, control corporal y técnica progresiva."],
+    ["Colgado activo", "Agarre", "Principiante", "Colgado activo: ejercicio de calistenia nivel principiante enfocado en agarre, control corporal y técnica progresiva."],
+    ["Superman", "Core", "Principiante", "Superman: ejercicio de calistenia nivel principiante enfocado en core, control corporal y técnica progresiva."],
+    ["Mountain climber lento", "Core", "Principiante", "Mountain climber lento: ejercicio de calistenia nivel principiante enfocado en core, control corporal y técnica progresiva."],
+    ["Crunch invertido", "Core", "Principiante", "Crunch invertido: ejercicio de calistenia nivel principiante enfocado en core, control corporal y técnica progresiva."],
+    ["Elevación de rodillas de pie", "Core", "Principiante", "Elevación de rodillas de pie: ejercicio de calistenia nivel principiante enfocado en core, control corporal y técnica progresiva."],
+    ["Buenos días sin peso", "Piernas", "Principiante", "Buenos días sin peso: ejercicio de calistenia nivel principiante enfocado en piernas, control corporal y técnica progresiva."],
+    ["Desplante atrás asistido", "Piernas", "Principiante", "Desplante atrás asistido: ejercicio de calistenia nivel principiante enfocado en piernas, control corporal y técnica progresiva."],
+    ["Sentadilla sumo", "Piernas", "Principiante", "Sentadilla sumo: ejercicio de calistenia nivel principiante enfocado en piernas, control corporal y técnica progresiva."],
+    ["Bear crawl básico", "Locomoción", "Principiante", "Bear crawl básico: ejercicio de calistenia nivel principiante enfocado en locomoción, control corporal y técnica progresiva."],
+    ["Hollow hold básico", "Core", "Principiante", "Hollow hold básico: ejercicio de calistenia nivel principiante enfocado en core, control corporal y técnica progresiva."],
+    ["Fondos en paralelas", "Empuje", "Intermedio", "Fondos en paralelas: ejercicio de calistenia nivel intermedio enfocado en empuje, control corporal y técnica progresiva."],
+    ["Dominadas estrictas", "Tirón", "Intermedio", "Dominadas estrictas: ejercicio de calistenia nivel intermedio enfocado en tirón, control corporal y técnica progresiva."],
+    ["V-Up", "Core", "Intermedio", "V-Up: ejercicio de calistenia nivel intermedio enfocado en core, control corporal y técnica progresiva."],
+    ["Flexiones cerradas", "Empuje", "Intermedio", "Flexiones cerradas: ejercicio de calistenia nivel intermedio enfocado en empuje, control corporal y técnica progresiva."],
+    ["Elevación vertical de piernas", "Core", "Intermedio", "Elevación vertical de piernas: ejercicio de calistenia nivel intermedio enfocado en core, control corporal y técnica progresiva."],
+    ["Plancha lateral", "Core", "Intermedio", "Plancha lateral: ejercicio de calistenia nivel intermedio enfocado en core, control corporal y técnica progresiva."],
+    ["Dominada commando", "Tirón", "Intermedio", "Dominada commando: ejercicio de calistenia nivel intermedio enfocado en tirón, control corporal y técnica progresiva."],
+    ["Fondos escapulares", "Empuje", "Intermedio", "Fondos escapulares: ejercicio de calistenia nivel intermedio enfocado en empuje, control corporal y técnica progresiva."],
+    ["Dominada supina", "Tirón", "Intermedio", "Dominada supina: ejercicio de calistenia nivel intermedio enfocado en tirón, control corporal y técnica progresiva."],
+    ["Dominada ancho de hombros", "Tirón", "Intermedio", "Dominada ancho de hombros: ejercicio de calistenia nivel intermedio enfocado en tirón, control corporal y técnica progresiva."],
+    ["Flexiones diamante", "Empuje", "Intermedio", "Flexiones diamante: ejercicio de calistenia nivel intermedio enfocado en empuje, control corporal y técnica progresiva."],
+    ["Flexiones declinadas", "Empuje", "Intermedio", "Flexiones declinadas: ejercicio de calistenia nivel intermedio enfocado en empuje, control corporal y técnica progresiva."],
+    ["Flexiones archer asistidas", "Empuje", "Intermedio", "Flexiones archer asistidas: ejercicio de calistenia nivel intermedio enfocado en empuje, control corporal y técnica progresiva."],
+    ["Pike push-up", "Empuje", "Intermedio", "Pike push-up: ejercicio de calistenia nivel intermedio enfocado en empuje, control corporal y técnica progresiva."],
+    ["Sentadilla búlgara", "Piernas", "Intermedio", "Sentadilla búlgara: ejercicio de calistenia nivel intermedio enfocado en piernas, control corporal y técnica progresiva."],
+    ["Pistol squat asistida", "Piernas", "Intermedio", "Pistol squat asistida: ejercicio de calistenia nivel intermedio enfocado en piernas, control corporal y técnica progresiva."],
+    ["Zancada lateral", "Piernas", "Intermedio", "Zancada lateral: ejercicio de calistenia nivel intermedio enfocado en piernas, control corporal y técnica progresiva."],
+    ["Salto al cajón", "Potencia", "Intermedio", "Salto al cajón: ejercicio de calistenia nivel intermedio enfocado en potencia, control corporal y técnica progresiva."],
+    ["Burpee controlado", "Metabólico", "Intermedio", "Burpee controlado: ejercicio de calistenia nivel intermedio enfocado en metabólico, control corporal y técnica progresiva."],
+    ["Hollow rocks", "Core", "Intermedio", "Hollow rocks: ejercicio de calistenia nivel intermedio enfocado en core, control corporal y técnica progresiva."],
+    ["Toes to bar asistido", "Core", "Intermedio", "Toes to bar asistido: ejercicio de calistenia nivel intermedio enfocado en core, control corporal y técnica progresiva."],
+    ["Knee raises colgado", "Core", "Intermedio", "Knee raises colgado: ejercicio de calistenia nivel intermedio enfocado en core, control corporal y técnica progresiva."],
+    ["Remo australiano pies elevados", "Tirón", "Intermedio", "Remo australiano pies elevados: ejercicio de calistenia nivel intermedio enfocado en tirón, control corporal y técnica progresiva."],
+    ["Dominada negativa", "Tirón", "Intermedio", "Dominada negativa: ejercicio de calistenia nivel intermedio enfocado en tirón, control corporal y técnica progresiva."],
+    ["Dominada agarre neutro", "Tirón", "Intermedio", "Dominada agarre neutro: ejercicio de calistenia nivel intermedio enfocado en tirón, control corporal y técnica progresiva."],
+    ["Fondos en banco", "Empuje", "Intermedio", "Fondos en banco: ejercicio de calistenia nivel intermedio enfocado en empuje, control corporal y técnica progresiva."],
+    ["Plancha con toque de hombros", "Core", "Intermedio", "Plancha con toque de hombros: ejercicio de calistenia nivel intermedio enfocado en core, control corporal y técnica progresiva."],
+    ["L-sit tuck", "Habilidad", "Intermedio", "L-sit tuck: ejercicio de calistenia nivel intermedio enfocado en habilidad, control corporal y técnica progresiva."],
+    ["Handstand asistido", "Habilidad", "Intermedio", "Handstand asistido: ejercicio de calistenia nivel intermedio enfocado en habilidad, control corporal y técnica progresiva."],
+    ["Bear crawl lateral", "Locomoción", "Intermedio", "Bear crawl lateral: ejercicio de calistenia nivel intermedio enfocado en locomoción, control corporal y técnica progresiva."],
+    ["Muscle-up estricto", "Habilidad", "Avanzado", "Muscle-up estricto: ejercicio de calistenia nivel avanzado enfocado en habilidad, control corporal y técnica progresiva."],
+    ["Muscle-up explosivo", "Habilidad", "Avanzado", "Muscle-up explosivo: ejercicio de calistenia nivel avanzado enfocado en habilidad, control corporal y técnica progresiva."],
+    ["Handstand push-up", "Empuje", "Avanzado", "Handstand push-up: ejercicio de calistenia nivel avanzado enfocado en empuje, control corporal y técnica progresiva."],
+    ["Handstand libre", "Habilidad", "Avanzado", "Handstand libre: ejercicio de calistenia nivel avanzado enfocado en habilidad, control corporal y técnica progresiva."],
+    ["Front lever tuck", "Habilidad", "Avanzado", "Front lever tuck: ejercicio de calistenia nivel avanzado enfocado en habilidad, control corporal y técnica progresiva."],
+    ["Front lever avanzado", "Habilidad", "Avanzado", "Front lever avanzado: ejercicio de calistenia nivel avanzado enfocado en habilidad, control corporal y técnica progresiva."],
+    ["Back lever tuck", "Habilidad", "Avanzado", "Back lever tuck: ejercicio de calistenia nivel avanzado enfocado en habilidad, control corporal y técnica progresiva."],
+    ["Back lever avanzado", "Habilidad", "Avanzado", "Back lever avanzado: ejercicio de calistenia nivel avanzado enfocado en habilidad, control corporal y técnica progresiva."],
+    ["Planche lean", "Habilidad", "Avanzado", "Planche lean: ejercicio de calistenia nivel avanzado enfocado en habilidad, control corporal y técnica progresiva."],
+    ["Tuck planche", "Habilidad", "Avanzado", "Tuck planche: ejercicio de calistenia nivel avanzado enfocado en habilidad, control corporal y técnica progresiva."],
+    ["Pseudo planche push-up", "Empuje", "Avanzado", "Pseudo planche push-up: ejercicio de calistenia nivel avanzado enfocado en empuje, control corporal y técnica progresiva."],
+    ["Flexiones archer", "Empuje", "Avanzado", "Flexiones archer: ejercicio de calistenia nivel avanzado enfocado en empuje, control corporal y técnica progresiva."],
+    ["Flexiones a una mano asistidas", "Empuje", "Avanzado", "Flexiones a una mano asistidas: ejercicio de calistenia nivel avanzado enfocado en empuje, control corporal y técnica progresiva."],
+    ["Flexiones a una mano", "Empuje", "Avanzado", "Flexiones a una mano: ejercicio de calistenia nivel avanzado enfocado en empuje, control corporal y técnica progresiva."],
+    ["Dominada explosiva al pecho", "Tirón", "Avanzado", "Dominada explosiva al pecho: ejercicio de calistenia nivel avanzado enfocado en tirón, control corporal y técnica progresiva."],
+    ["Dominada archer", "Tirón", "Avanzado", "Dominada archer: ejercicio de calistenia nivel avanzado enfocado en tirón, control corporal y técnica progresiva."],
+    ["Dominada typewriter", "Tirón", "Avanzado", "Dominada typewriter: ejercicio de calistenia nivel avanzado enfocado en tirón, control corporal y técnica progresiva."],
+    ["Dominada L-sit", "Tirón", "Avanzado", "Dominada L-sit: ejercicio de calistenia nivel avanzado enfocado en tirón, control corporal y técnica progresiva."],
+    ["Fondos coreanos", "Empuje", "Avanzado", "Fondos coreanos: ejercicio de calistenia nivel avanzado enfocado en empuje, control corporal y técnica progresiva."],
+    ["Fondos profundos", "Empuje", "Avanzado", "Fondos profundos: ejercicio de calistenia nivel avanzado enfocado en empuje, control corporal y técnica progresiva."],
+    ["Pistol squat", "Piernas", "Avanzado", "Pistol squat: ejercicio de calistenia nivel avanzado enfocado en piernas, control corporal y técnica progresiva."],
+    ["Shrimp squat", "Piernas", "Avanzado", "Shrimp squat: ejercicio de calistenia nivel avanzado enfocado en piernas, control corporal y técnica progresiva."],
+    ["Nordic curl asistido", "Piernas", "Avanzado", "Nordic curl asistido: ejercicio de calistenia nivel avanzado enfocado en piernas, control corporal y técnica progresiva."],
+    ["Nordic curl", "Piernas", "Avanzado", "Nordic curl: ejercicio de calistenia nivel avanzado enfocado en piernas, control corporal y técnica progresiva."],
+    ["Dragon flag", "Core", "Avanzado", "Dragon flag: ejercicio de calistenia nivel avanzado enfocado en core, control corporal y técnica progresiva."],
+    ["Toes to bar estricto", "Core", "Avanzado", "Toes to bar estricto: ejercicio de calistenia nivel avanzado enfocado en core, control corporal y técnica progresiva."],
+    ["L-sit completo", "Habilidad", "Avanzado", "L-sit completo: ejercicio de calistenia nivel avanzado enfocado en habilidad, control corporal y técnica progresiva."],
+    ["V-sit progresión", "Habilidad", "Avanzado", "V-sit progresión: ejercicio de calistenia nivel avanzado enfocado en habilidad, control corporal y técnica progresiva."],
+    ["Human flag tuck", "Habilidad", "Avanzado", "Human flag tuck: ejercicio de calistenia nivel avanzado enfocado en habilidad, control corporal y técnica progresiva."],
+    ["Human flag progresión", "Habilidad", "Avanzado", "Human flag progresión: ejercicio de calistenia nivel avanzado enfocado en habilidad, control corporal y técnica progresiva."],
   ],
   Boxeo: [
-    // PRINCIPIANTE
-    ["Guardia y movilidad", "Técnica", "Principiante", "Base de guardia, postura, movilidad y control de distancia."],
-    ["Jab directo", "Golpes", "Principiante", "Trabajo del jab con regreso rápido a guardia, precisión y distancia."],
-    ["Defensa en guardia", "Defensa", "Principiante", "Protección básica, lectura del golpe y mantenimiento de una guardia compacta."],
-    ["Sombra básica", "Sombra", "Principiante", "Sombra controlada para postura, coordinación, desplazamiento y técnica."],
-    ["Trabajo en saco básico", "Saco", "Principiante", "Golpes básicos al saco priorizando postura, control y respiración."],
-
-    // INTERMEDIO
-    ["Golpes de potencia", "Golpes", "Intermedio", "Trabajo de transferencia de peso y potencia manteniendo técnica y equilibrio."],
-    ["Saco con combinaciones", "Saco", "Intermedio", "Secuencias de golpes al saco con cambios de ritmo y recuperación de guardia."],
-    ["Combinaciones con pareja", "Combinaciones", "Intermedio", "Trabajo coordinado con compañero para precisión, distancia y respuesta."],
-    ["Manoplas - combinación", "Manoplas", "Intermedio", "Combinaciones sobre manoplas para precisión, coordinación y fluidez."],
-    ["Manoplas - velocidad", "Manoplas", "Intermedio", "Trabajo rápido de manos con enfoque en velocidad y reacción."],
-
-    // AVANZADO
-    ["Sparring defensa y contraataque", "Sparring", "Avanzado", "Lectura ofensiva, defensa activa y respuesta inmediata en situación de sparring."],
-    ["Sparring técnico", "Sparring", "Avanzado", "Trabajo técnico de distancia, ángulos, ritmo y toma de decisiones."],
-    ["Boxeo de potencia avanzado", "Potencia", "Avanzado", "Secuencias explosivas con control técnico, cadera y transferencia de fuerza."],
-    ["Manoplas de alta intensidad", "Manoplas", "Avanzado", "Combinaciones complejas a alta intensidad con reacción y precisión."],
-    ["Combinación avanzada", "Combinaciones", "Avanzado", "Secuencia avanzada de golpes, desplazamientos y cambios de ángulo."],
+    ["Guardia y movilidad", "Técnica", "Principiante", "Guardia y movilidad: ejercicio de boxeo nivel principiante enfocado en técnica, técnica, coordinación y control."],
+    ["Jab directo", "Golpes", "Principiante", "Jab directo: ejercicio de boxeo nivel principiante enfocado en golpes, técnica, coordinación y control."],
+    ["Defensa en guardia", "Defensa", "Principiante", "Defensa en guardia: ejercicio de boxeo nivel principiante enfocado en defensa, técnica, coordinación y control."],
+    ["Sombra básica", "Sombra", "Principiante", "Sombra básica: ejercicio de boxeo nivel principiante enfocado en sombra, técnica, coordinación y control."],
+    ["Trabajo en saco básico", "Saco", "Principiante", "Trabajo en saco básico: ejercicio de boxeo nivel principiante enfocado en saco, técnica, coordinación y control."],
+    ["Cross directo", "Golpes", "Principiante", "Cross directo: ejercicio de boxeo nivel principiante enfocado en golpes, técnica, coordinación y control."],
+    ["Jab-cross", "Combinaciones", "Principiante", "Jab-cross: ejercicio de boxeo nivel principiante enfocado en combinaciones, técnica, coordinación y control."],
+    ["Gancho de izquierda", "Golpes", "Principiante", "Gancho de izquierda: ejercicio de boxeo nivel principiante enfocado en golpes, técnica, coordinación y control."],
+    ["Gancho de derecha", "Golpes", "Principiante", "Gancho de derecha: ejercicio de boxeo nivel principiante enfocado en golpes, técnica, coordinación y control."],
+    ["Uppercut de izquierda", "Golpes", "Principiante", "Uppercut de izquierda: ejercicio de boxeo nivel principiante enfocado en golpes, técnica, coordinación y control."],
+    ["Uppercut de derecha", "Golpes", "Principiante", "Uppercut de derecha: ejercicio de boxeo nivel principiante enfocado en golpes, técnica, coordinación y control."],
+    ["Paso adelante y atrás", "Movilidad", "Principiante", "Paso adelante y atrás: ejercicio de boxeo nivel principiante enfocado en movilidad, técnica, coordinación y control."],
+    ["Desplazamiento lateral", "Movilidad", "Principiante", "Desplazamiento lateral: ejercicio de boxeo nivel principiante enfocado en movilidad, técnica, coordinación y control."],
+    ["Pivot básico", "Movilidad", "Principiante", "Pivot básico: ejercicio de boxeo nivel principiante enfocado en movilidad, técnica, coordinación y control."],
+    ["Slip izquierda-derecha", "Defensa", "Principiante", "Slip izquierda-derecha: ejercicio de boxeo nivel principiante enfocado en defensa, técnica, coordinación y control."],
+    ["Bloqueo de jab", "Defensa", "Principiante", "Bloqueo de jab: ejercicio de boxeo nivel principiante enfocado en defensa, técnica, coordinación y control."],
+    ["Bloqueo de cross", "Defensa", "Principiante", "Bloqueo de cross: ejercicio de boxeo nivel principiante enfocado en defensa, técnica, coordinación y control."],
+    ["Parry de jab", "Defensa", "Principiante", "Parry de jab: ejercicio de boxeo nivel principiante enfocado en defensa, técnica, coordinación y control."],
+    ["Roll bajo gancho", "Defensa", "Principiante", "Roll bajo gancho: ejercicio de boxeo nivel principiante enfocado en defensa, técnica, coordinación y control."],
+    ["Entrada con jab", "Técnica", "Principiante", "Entrada con jab: ejercicio de boxeo nivel principiante enfocado en técnica, técnica, coordinación y control."],
+    ["Salida con paso lateral", "Técnica", "Principiante", "Salida con paso lateral: ejercicio de boxeo nivel principiante enfocado en técnica, técnica, coordinación y control."],
+    ["Sombra 1-2", "Sombra", "Principiante", "Sombra 1-2: ejercicio de boxeo nivel principiante enfocado en sombra, técnica, coordinación y control."],
+    ["Sombra con desplazamiento", "Sombra", "Principiante", "Sombra con desplazamiento: ejercicio de boxeo nivel principiante enfocado en sombra, técnica, coordinación y control."],
+    ["Saco jab-cross", "Saco", "Principiante", "Saco jab-cross: ejercicio de boxeo nivel principiante enfocado en saco, técnica, coordinación y control."],
+    ["Saco golpes al cuerpo", "Saco", "Principiante", "Saco golpes al cuerpo: ejercicio de boxeo nivel principiante enfocado en saco, técnica, coordinación y control."],
+    ["Manoplas básicas 1-2", "Manoplas", "Principiante", "Manoplas básicas 1-2: ejercicio de boxeo nivel principiante enfocado en manoplas, técnica, coordinación y control."],
+    ["Coordinación mano-ojo", "Coordinación", "Principiante", "Coordinación mano-ojo: ejercicio de boxeo nivel principiante enfocado en coordinación, técnica, coordinación y control."],
+    ["Salto de cuerda básico", "Acondicionamiento", "Principiante", "Salto de cuerda básico: ejercicio de boxeo nivel principiante enfocado en acondicionamiento, técnica, coordinación y control."],
+    ["Guardia alta en movimiento", "Defensa", "Principiante", "Guardia alta en movimiento: ejercicio de boxeo nivel principiante enfocado en defensa, técnica, coordinación y control."],
+    ["Respiración y ritmo", "Técnica", "Principiante", "Respiración y ritmo: ejercicio de boxeo nivel principiante enfocado en técnica, técnica, coordinación y control."],
+    ["Golpes de potencia", "Golpes", "Intermedio", "Golpes de potencia: ejercicio de boxeo nivel intermedio enfocado en golpes, técnica, coordinación y control."],
+    ["Saco con combinaciones", "Saco", "Intermedio", "Saco con combinaciones: ejercicio de boxeo nivel intermedio enfocado en saco, técnica, coordinación y control."],
+    ["Combinaciones con pareja", "Combinaciones", "Intermedio", "Combinaciones con pareja: ejercicio de boxeo nivel intermedio enfocado en combinaciones, técnica, coordinación y control."],
+    ["Manoplas - combinación", "Manoplas", "Intermedio", "Manoplas - combinación: ejercicio de boxeo nivel intermedio enfocado en manoplas, técnica, coordinación y control."],
+    ["Manoplas - velocidad", "Manoplas", "Intermedio", "Manoplas - velocidad: ejercicio de boxeo nivel intermedio enfocado en manoplas, técnica, coordinación y control."],
+    ["Doble jab-cross", "Combinaciones", "Intermedio", "Doble jab-cross: ejercicio de boxeo nivel intermedio enfocado en combinaciones, técnica, coordinación y control."],
+    ["Jab-cross-gancho", "Combinaciones", "Intermedio", "Jab-cross-gancho: ejercicio de boxeo nivel intermedio enfocado en combinaciones, técnica, coordinación y control."],
+    ["Jab al cuerpo-cross arriba", "Combinaciones", "Intermedio", "Jab al cuerpo-cross arriba: ejercicio de boxeo nivel intermedio enfocado en combinaciones, técnica, coordinación y control."],
+    ["Cross-gancho-cross", "Combinaciones", "Intermedio", "Cross-gancho-cross: ejercicio de boxeo nivel intermedio enfocado en combinaciones, técnica, coordinación y control."],
+    ["Uppercut-gancho-cross", "Combinaciones", "Intermedio", "Uppercut-gancho-cross: ejercicio de boxeo nivel intermedio enfocado en combinaciones, técnica, coordinación y control."],
+    ["Slip y contra cross", "Contraataque", "Intermedio", "Slip y contra cross: ejercicio de boxeo nivel intermedio enfocado en contraataque, técnica, coordinación y control."],
+    ["Parry y contra jab", "Contraataque", "Intermedio", "Parry y contra jab: ejercicio de boxeo nivel intermedio enfocado en contraataque, técnica, coordinación y control."],
+    ["Roll y gancho al cuerpo", "Contraataque", "Intermedio", "Roll y gancho al cuerpo: ejercicio de boxeo nivel intermedio enfocado en contraataque, técnica, coordinación y control."],
+    ["Pivot con contraataque", "Contraataque", "Intermedio", "Pivot con contraataque: ejercicio de boxeo nivel intermedio enfocado en contraataque, técnica, coordinación y control."],
+    ["Cambio de ángulo 45 grados", "Movilidad", "Intermedio", "Cambio de ángulo 45 grados: ejercicio de boxeo nivel intermedio enfocado en movilidad, técnica, coordinación y control."],
+    ["Entrada-salida con combinación", "Técnica", "Intermedio", "Entrada-salida con combinación: ejercicio de boxeo nivel intermedio enfocado en técnica, técnica, coordinación y control."],
+    ["Sombra con defensa activa", "Sombra", "Intermedio", "Sombra con defensa activa: ejercicio de boxeo nivel intermedio enfocado en sombra, técnica, coordinación y control."],
+    ["Sombra por rounds", "Sombra", "Intermedio", "Sombra por rounds: ejercicio de boxeo nivel intermedio enfocado en sombra, técnica, coordinación y control."],
+    ["Saco intervalos 30-30", "Saco", "Intermedio", "Saco intervalos 30-30: ejercicio de boxeo nivel intermedio enfocado en saco, técnica, coordinación y control."],
+    ["Saco potencia al cuerpo", "Saco", "Intermedio", "Saco potencia al cuerpo: ejercicio de boxeo nivel intermedio enfocado en saco, técnica, coordinación y control."],
+    ["Saco precisión por zonas", "Saco", "Intermedio", "Saco precisión por zonas: ejercicio de boxeo nivel intermedio enfocado en saco, técnica, coordinación y control."],
+    ["Manoplas reacción", "Manoplas", "Intermedio", "Manoplas reacción: ejercicio de boxeo nivel intermedio enfocado en manoplas, técnica, coordinación y control."],
+    ["Manoplas defensa-contra", "Manoplas", "Intermedio", "Manoplas defensa-contra: ejercicio de boxeo nivel intermedio enfocado en manoplas, técnica, coordinación y control."],
+    ["Trabajo de cuerda intermedio", "Acondicionamiento", "Intermedio", "Trabajo de cuerda intermedio: ejercicio de boxeo nivel intermedio enfocado en acondicionamiento, técnica, coordinación y control."],
+    ["Footwork en escalera", "Movilidad", "Intermedio", "Footwork en escalera: ejercicio de boxeo nivel intermedio enfocado en movilidad, técnica, coordinación y control."],
+    ["Esquivas con cuerda", "Defensa", "Intermedio", "Esquivas con cuerda: ejercicio de boxeo nivel intermedio enfocado en defensa, técnica, coordinación y control."],
+    ["Combinación 1-2-3-2", "Combinaciones", "Intermedio", "Combinación 1-2-3-2: ejercicio de boxeo nivel intermedio enfocado en combinaciones, técnica, coordinación y control."],
+    ["Combinación 1-1-2-3", "Combinaciones", "Intermedio", "Combinación 1-1-2-3: ejercicio de boxeo nivel intermedio enfocado en combinaciones, técnica, coordinación y control."],
+    ["Combinación cuerpo-cabeza", "Combinaciones", "Intermedio", "Combinación cuerpo-cabeza: ejercicio de boxeo nivel intermedio enfocado en combinaciones, técnica, coordinación y control."],
+    ["Sparring técnico condicionado", "Sparring", "Intermedio", "Sparring técnico condicionado: ejercicio de boxeo nivel intermedio enfocado en sparring, técnica, coordinación y control."],
+    ["Sparring defensa y contraataque", "Sparring", "Avanzado", "Sparring defensa y contraataque: ejercicio de boxeo nivel avanzado enfocado en sparring, técnica, coordinación y control."],
+    ["Sparring técnico", "Sparring", "Avanzado", "Sparring técnico: ejercicio de boxeo nivel avanzado enfocado en sparring, técnica, coordinación y control."],
+    ["Boxeo de potencia avanzado", "Potencia", "Avanzado", "Boxeo de potencia avanzado: ejercicio de boxeo nivel avanzado enfocado en potencia, técnica, coordinación y control."],
+    ["Manoplas de alta intensidad", "Manoplas", "Avanzado", "Manoplas de alta intensidad: ejercicio de boxeo nivel avanzado enfocado en manoplas, técnica, coordinación y control."],
+    ["Combinación avanzada", "Combinaciones", "Avanzado", "Combinación avanzada: ejercicio de boxeo nivel avanzado enfocado en combinaciones, técnica, coordinación y control."],
+    ["Sparring libre controlado", "Sparring", "Avanzado", "Sparring libre controlado: ejercicio de boxeo nivel avanzado enfocado en sparring, técnica, coordinación y control."],
+    ["Sparring por objetivos", "Sparring", "Avanzado", "Sparring por objetivos: ejercicio de boxeo nivel avanzado enfocado en sparring, técnica, coordinación y control."],
+    ["Sparring solo contraataque", "Sparring", "Avanzado", "Sparring solo contraataque: ejercicio de boxeo nivel avanzado enfocado en sparring, técnica, coordinación y control."],
+    ["Sparring presión y salida", "Sparring", "Avanzado", "Sparring presión y salida: ejercicio de boxeo nivel avanzado enfocado en sparring, técnica, coordinación y control."],
+    ["Cambio de guardia en combinación", "Técnica", "Avanzado", "Cambio de guardia en combinación: ejercicio de boxeo nivel avanzado enfocado en técnica, técnica, coordinación y control."],
+    ["Contraataque en segundo tiempo", "Contraataque", "Avanzado", "Contraataque en segundo tiempo: ejercicio de boxeo nivel avanzado enfocado en contraataque, técnica, coordinación y control."],
+    ["Doble contraataque", "Contraataque", "Avanzado", "Doble contraataque: ejercicio de boxeo nivel avanzado enfocado en contraataque, técnica, coordinación y control."],
+    ["Check hook y salida", "Contraataque", "Avanzado", "Check hook y salida: ejercicio de boxeo nivel avanzado enfocado en contraataque, técnica, coordinación y control."],
+    ["Pull counter", "Contraataque", "Avanzado", "Pull counter: ejercicio de boxeo nivel avanzado enfocado en contraataque, técnica, coordinación y control."],
+    ["Slip-cross-gancho-cross", "Combinaciones", "Avanzado", "Slip-cross-gancho-cross: ejercicio de boxeo nivel avanzado enfocado en combinaciones, técnica, coordinación y control."],
+    ["Roll-gancho-uppercut-cross", "Combinaciones", "Avanzado", "Roll-gancho-uppercut-cross: ejercicio de boxeo nivel avanzado enfocado en combinaciones, técnica, coordinación y control."],
+    ["Combinación de 6 golpes", "Combinaciones", "Avanzado", "Combinación de 6 golpes: ejercicio de boxeo nivel avanzado enfocado en combinaciones, técnica, coordinación y control."],
+    ["Combinación de 8 golpes", "Combinaciones", "Avanzado", "Combinación de 8 golpes: ejercicio de boxeo nivel avanzado enfocado en combinaciones, técnica, coordinación y control."],
+    ["Ángulos después de combinación", "Movilidad", "Avanzado", "Ángulos después de combinación: ejercicio de boxeo nivel avanzado enfocado en movilidad, técnica, coordinación y control."],
+    ["Pivot ofensivo avanzado", "Movilidad", "Avanzado", "Pivot ofensivo avanzado: ejercicio de boxeo nivel avanzado enfocado en movilidad, técnica, coordinación y control."],
+    ["Footwork pendular avanzado", "Movilidad", "Avanzado", "Footwork pendular avanzado: ejercicio de boxeo nivel avanzado enfocado en movilidad, técnica, coordinación y control."],
+    ["Saco rounds de potencia", "Saco", "Avanzado", "Saco rounds de potencia: ejercicio de boxeo nivel avanzado enfocado en saco, técnica, coordinación y control."],
+    ["Saco rounds de velocidad", "Saco", "Avanzado", "Saco rounds de velocidad: ejercicio de boxeo nivel avanzado enfocado en saco, técnica, coordinación y control."],
+    ["Saco reacción por señal", "Saco", "Avanzado", "Saco reacción por señal: ejercicio de boxeo nivel avanzado enfocado en saco, técnica, coordinación y control."],
+    ["Manoplas abiertas avanzadas", "Manoplas", "Avanzado", "Manoplas abiertas avanzadas: ejercicio de boxeo nivel avanzado enfocado en manoplas, técnica, coordinación y control."],
+    ["Manoplas con desplazamiento", "Manoplas", "Avanzado", "Manoplas con desplazamiento: ejercicio de boxeo nivel avanzado enfocado en manoplas, técnica, coordinación y control."],
+    ["Defensa de múltiples golpes", "Defensa", "Avanzado", "Defensa de múltiples golpes: ejercicio de boxeo nivel avanzado enfocado en defensa, técnica, coordinación y control."],
+    ["Corte de ring", "Táctica", "Avanzado", "Corte de ring: ejercicio de boxeo nivel avanzado enfocado en táctica, técnica, coordinación y control."],
+    ["Control de distancia avanzado", "Táctica", "Avanzado", "Control de distancia avanzado: ejercicio de boxeo nivel avanzado enfocado en táctica, técnica, coordinación y control."],
+    ["Ritmo y cambios de tempo", "Táctica", "Avanzado", "Ritmo y cambios de tempo: ejercicio de boxeo nivel avanzado enfocado en táctica, técnica, coordinación y control."],
   ],
 };
 
@@ -122,49 +264,30 @@ async function ensureDisciplineModule() {
         await pool.query(
           `
           INSERT INTO disciplina_ejercicios
-          (disciplina_id, nombre, descripcion, nivel, categoria, video_url, imagen_url)
-          VALUES ($1,$2,$3,$4,$5,$6,$7)
+          (disciplina_id, nombre, descripcion, nivel, categoria, video_url, imagen_url, estado)
+          VALUES ($1,$2,$3,$4,$5,$6,$7,'ACTIVO')
           `,
           [disciplinaId, nombre, descripcion, nivel, categoria, "", ""]
+        );
+      } else {
+        await pool.query(
+          `
+          UPDATE disciplina_ejercicios
+          SET descripcion = $1,
+              nivel = $2,
+              categoria = $3,
+              estado = 'ACTIVO'
+          WHERE id = $4
+          `,
+          [descripcion, nivel, categoria, existe.rows[0].id]
         );
       }
     }
   }
 
 
-  const calisteniaRes = await pool.query(
-    `SELECT id FROM disciplinas WHERE LOWER(nombre) = LOWER('Calistenia') LIMIT 1`
-  );
-
-  if (calisteniaRes.rows.length) {
-    const disciplinaId = calisteniaRes.rows[0].id;
-
-    const reemplazos = [
-      ["Hollow body hold", "V-Up", "Core", "Intermedio", "Flexión dinámica de tronco y piernas para fortalecer el core."],
-      ["Pike push-up", "Flexiones cerradas", "Empuje", "Intermedio", "Flexión con agarre cerrado para reforzar tríceps, pecho y control corporal."],
-      ["L-sit tuck", "Elevación vertical de piernas", "Core", "Intermedio", "Elevación de piernas en paralelas para core y flexores de cadera."],
-      ["Handstand asistido", "Plancha lateral", "Core", "Intermedio", "Estabilidad lateral para mejorar control corporal y cintura escapular."],
-      ["Muscle-up progresión", "Dominada commando", "Tirón", "Avanzado", "Dominada avanzada con agarre alterno para fuerza de tirón y control."],
-      ["Handstand push-up asistido", "Fondos escapulares", "Empuje", "Avanzado", "Trabajo avanzado de control escapular y estabilidad de hombros."],
-      ["Front lever tuck", "Dominada supina", "Tirón", "Avanzado", "Dominada supina avanzada para dorsal, bíceps y control corporal."],
-    ];
-
-    for (const [anterior, nuevo, categoria, nivel, descripcion] of reemplazos) {
-      await pool.query(
-        `
-        UPDATE disciplina_ejercicios
-        SET nombre = $1,
-            categoria = $2,
-            nivel = $3,
-            descripcion = $4
-        WHERE disciplina_id = $5
-          AND LOWER(nombre) = LOWER($6)
-        `,
-        [nuevo, categoria, nivel, descripcion, disciplinaId, anterior]
-      );
-    }
-  }
-
+  // Catálogo 2026: no se realizan renombres heredados.
+  // Los nombres, niveles y categorías se controlan directamente desde DISCIPLINE_SEED.
 
   // =========================================================
   // CALISTENIA: CATÁLOGO AUTORITATIVO SIN DUPLICADOS
@@ -176,27 +299,9 @@ async function ensureDisciplineModule() {
   if (calisteniaCatalogoRes.rows.length) {
     const calisteniaId = calisteniaCatalogoRes.rows[0].id;
 
-    const nombresCalisteniaActuales = [
-      "Flexiones inclinadas",
-      "Sentadilla al aire",
-      "Plancha frontal",
-      "Remo australiano",
-      "Puente de glúteos",
-      "Flexiones clásicas",
-      "Dominada asistida",
-      "Fondos asistidos",
-      "Zancadas alternas",
-      "V-Up",
-      "Dominadas estrictas",
-      "Fondos en paralelas",
-      "Flexiones cerradas",
-      "Elevación vertical de piernas",
-      "Plancha lateral",
-      "Dominada commando",
-      "Fondos escapulares",
-      "Dominada supina",
-      "Dominada ancho de hombros"
-    ];
+    const nombresCalisteniaActuales = DISCIPLINE_SEED.Calistenia.map(
+      ([nombre]) => nombre
+    );
 
     await pool.query(
       `
@@ -234,23 +339,9 @@ async function ensureDisciplineModule() {
   if (boxeoRes.rows.length) {
     const boxeoId = boxeoRes.rows[0].id;
 
-    const nombresBoxeoActuales = [
-      "Guardia y movilidad",
-      "Jab directo",
-      "Defensa en guardia",
-      "Sombra básica",
-      "Trabajo en saco básico",
-      "Golpes de potencia",
-      "Saco con combinaciones",
-      "Combinaciones con pareja",
-      "Manoplas - combinación",
-      "Manoplas - velocidad",
-      "Sparring defensa y contraataque",
-      "Sparring técnico",
-      "Boxeo de potencia avanzado",
-      "Manoplas de alta intensidad",
-      "Combinación avanzada",
-    ];
+    const nombresBoxeoActuales = DISCIPLINE_SEED.Boxeo.map(
+      ([nombre]) => nombre
+    );
 
     await pool.query(
       `
@@ -263,9 +354,38 @@ async function ensureDisciplineModule() {
       `,
       [boxeoId, nombresBoxeoActuales]
     );
+
+    await pool.query(
+      `
+      UPDATE disciplina_ejercicios de
+      SET estado = 'INACTIVO'
+      WHERE de.disciplina_id = $1
+        AND de.id NOT IN (
+          SELECT MIN(id)
+          FROM disciplina_ejercicios
+          WHERE disciplina_id = $1
+            AND nombre = ANY($2::text[])
+          GROUP BY LOWER(nombre)
+        )
+      `,
+      [boxeoId, nombresBoxeoActuales]
+    );
   }
 
-  console.log("✅ Módulos Calistenia y Boxeo preparados");
+  const conteoCatalogo = await pool.query(`
+    SELECT
+      d.nombre AS disciplina,
+      de.nivel,
+      COUNT(*)::int AS total
+    FROM disciplina_ejercicios de
+    INNER JOIN disciplinas d ON d.id = de.disciplina_id
+    WHERE d.nombre IN ('Calistenia', 'Boxeo')
+      AND de.estado = 'ACTIVO'
+    GROUP BY d.nombre, de.nivel
+    ORDER BY d.nombre, de.nivel
+  `);
+
+  console.log("✅ Módulos Calistenia y Boxeo preparados", conteoCatalogo.rows);
 }
 
 const allowedOrigins = [
