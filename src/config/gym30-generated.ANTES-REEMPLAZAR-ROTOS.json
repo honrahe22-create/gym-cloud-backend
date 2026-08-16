@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T22:13:03.863Z",
+  "generatedAt": "2026-08-16T22:05:48.209Z",
   "total": 480,
   "resumen": {
     "Pecho alto": 30,
@@ -70,35 +70,34 @@
       "nivel": "Principiante"
     },
     {
-      "nombre": "dumbbell incline palm-in press",
+      "nombre": "balance cable incline fly",
       "descripcion": "Pecho alto",
-      "video_url": "/videos/gym30-external/pecho-alto-ovlmuul.gif",
+      "video_url": "https://static.exercisedb.dev/media/drfGhTV.gif",
       "nivel": "Principiante",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "OVLmUuL",
+      "source": "ExerciseDB V1",
+      "source_id": "drfGhTV",
       "instrucciones": [
-        "Step:1 Set up an incline bench at a 45-degree angle.",
-        "Step:2 Sit on the bench with a dumbbell in each hand, palms facing each other.",
-        "Step:3 Plant your feet firmly on the ground and keep your back straight against the bench.",
-        "Step:4 Start with the dumbbells at shoulder level, elbows bent and palms facing each other.",
-        "Step:5 Press the dumbbells up and away from your body, extending your arms fully.",
-        "Step:6 Pause for a moment at the top, then slowly lower the dumbbells back to the starting position.",
-        "Step:7 Repeat for the desired number of repetitions."
+        "Step:1 Adjust the cable machine to a low position and attach the handles.",
+        "Step:2 Sit on an incline bench with your back against the pad and feet flat on the floor. Perform with balance intensity.",
+        "Step:3 Grasp the handles with an overhand grip and extend your arms straight out in front of you.",
+        "Step:4 Keeping a slight bend in your elbows, open your arms out to the sides in a controlled motion.",
+        "Step:5 Pause for a moment at the fully extended position, then slowly return to the starting position.",
+        "Step:6 Repeat for the desired number of repetitions."
       ]
     },
     {
-      "nombre": "dumbbell incline press on exercise ball",
+      "nombre": "barbell incline bench press seated",
       "descripcion": "Pecho alto",
-      "video_url": "/videos/gym30-external/pecho-alto-bfihmpi.gif",
+      "video_url": "https://static.exercisedb.dev/media/9Z23cLE.gif",
       "nivel": "Principiante",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "bfiHMpI",
+      "source": "ExerciseDB V1",
+      "source_id": "9Z23cLE",
       "instrucciones": [
-        "Step:1 Sit on an exercise ball with a dumbbell in each hand, palms facing forward.",
-        "Step:2 Slowly walk your feet forward, rolling your body down the ball until your head, neck, and upper back are supported on the ball.",
-        "Step:3 Hold the dumbbells at shoulder level, elbows bent and pointing out to the sides.",
-        "Step:4 Press the dumbbells upward, extending your arms fully.",
-        "Step:5 Pause for a moment at the top, then slowly lower the dumbbells back to the starting position.",
+        "Step:1 Set up an incline bench at a 45-degree angle.",
+        "Step:2 (seated variation) Lie down on the bench with your feet flat on the ground.",
+        "Step:3 Grasp the barbell with an overhand grip, slightly wider than shoulder-width apart.",
+        "Step:4 Unrack the barbell and lower it slowly towards your chest, keeping your elbows at a 45-degree angle.",
+        "Step:5 Pause for a moment at the bottom, then push the barbell back up to the starting position.",
         "Step:6 Repeat for the desired number of repetitions."
       ]
     },
@@ -251,19 +250,20 @@
       ]
     },
     {
-      "nombre": "dumbbell incline twisted flyes",
+      "nombre": "cable one arm incline press with rigid",
       "descripcion": "Pecho alto",
-      "video_url": "/videos/gym30-external/pecho-alto-1ple8e9.gif",
+      "video_url": "https://static.exercisedb.dev/media/QoSZo2Y.gif",
       "nivel": "Intermedio",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "1PLE8e9",
+      "source": "ExerciseDB V1",
+      "source_id": "QoSZo2Y",
       "instrucciones": [
-        "Step:1 Set an incline bench to a 45-degree angle and sit on it with a dumbbell in each hand, palms facing each other.",
-        "Step:2 Lie back on the bench and press the dumbbells up to the starting position, directly above your chest, with your arms extended.",
-        "Step:3 Lower the dumbbells out to the sides in a wide arc until you feel a stretch in your chest.",
-        "Step:4 As you lower the dumbbells, rotate your wrists so that your palms face forward at the bottom of the movement.",
-        "Step:5 Reverse the motion and bring the dumbbells back up to the starting position, squeezing your chest muscles together at the top.",
-        "Step:6 Repeat for the desired number of repetitions."
+        "Step:1 Adjust the cable machine to a low pulley position.",
+        "Step:2 Sit on an incline bench facing away from the cable machine.",
+        "Step:3 Grasp the handle with one hand and bring it up to shoulder height. Emphasize rigid control.",
+        "Step:4 Position your feet firmly on the ground and maintain a stable position.",
+        "Step:5 Press the handle forward and upward, extending your arm fully.",
+        "Step:6 Pause for a moment at the top, then slowly lower the handle back to the starting position.",
+        "Step:7 Repeat for the desired number of repetitions, then switch sides."
       ]
     },
     {
@@ -601,17 +601,19 @@
       ]
     },
     {
-      "nombre": "deep push up",
+      "nombre": "barbell wide reverse grip bench press horizontal",
       "descripcion": "Pecho medio",
-      "video_url": "/videos/gym30-external/pecho-medio-vptoq4n.gif",
+      "video_url": "https://static.exercisedb.dev/media/3QgteDK.gif",
       "nivel": "Intermedio",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "vptOQ4N",
+      "source": "ExerciseDB V1",
+      "source_id": "3QgteDK",
       "instrucciones": [
-        "Step:1 Start in a high plank position with your hands slightly wider than shoulder-width apart and your body in a straight line.",
-        "Step:2 Lower your chest towards the ground by bending your elbows, keeping them close to your body.",
-        "Step:3 Push through your palms to extend your arms and return to the starting position.",
-        "Step:4 Repeat for the desired number of repetitions."
+        "Step:1 Lie flat on a bench with your feet flat on the ground and your back pressed against the bench.",
+        "Step:2 Grasp the barbell with a wide reverse grip, slightly wider than shoulder-width apart.",
+        "Step:3 Lift the barbell off the rack and hold it directly above your chest with your arms fully extended.",
+        "Step:4 Lower the barbell slowly towards your chest, keeping your elbows tucked in and your wrists straight. Focus on horizontal movement.",
+        "Step:5 Pause for a moment when the barbell touches your chest, then push it back up to the starting position.",
+        "Step:6 Repeat for the desired number of repetitions."
       ]
     },
     {
@@ -1110,18 +1112,19 @@
       ]
     },
     {
-      "nombre": "dumbbell one arm decline chest press",
+      "nombre": "deep smith machine reverse decline close grip bench press",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-regm1de.gif",
+      "video_url": "https://static.exercisedb.dev/media/Gu2ENkm.gif",
       "nivel": "Avanzado",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "REGM1dE",
+      "source": "ExerciseDB V1",
+      "source_id": "Gu2ENkm",
       "instrucciones": [
-        "Step:1 Lie on a decline bench with a dumbbell in one hand, resting on your chest.",
-        "Step:2 Place your feet flat on the ground and keep your back pressed against the bench.",
-        "Step:3 Extend your arm and push the dumbbell up towards the ceiling, fully extending your elbow.",
-        "Step:4 Pause for a moment at the top, then slowly lower the dumbbell back down to the starting position.",
-        "Step:5 Repeat for the desired number of repetitions, then switch to the other arm."
+        "Step:1 Adjust the smith machine to a decline position.",
+        "Step:2 Lie down on the bench with your feet secured under the foot pads.",
+        "Step:3 Grasp the barbell with a close grip, slightly narrower than shoulder-width apart.",
+        "Step:4 Unrack the barbell and lower it slowly towards your chest, keeping your elbows tucked in. Focus on deep movement.",
+        "Step:5 Pause for a moment at the bottom, then push the barbell back up to the starting position.",
+        "Step:6 Repeat for the desired number of repetitions."
       ]
     },
     {
@@ -1627,18 +1630,22 @@
       ]
     },
     {
-      "nombre": "barbell seated close-grip concentration curl",
+      "nombre": "barbell prone incline curl with intensive",
       "descripcion": "Bíceps",
-      "video_url": "/videos/gym30-external/biceps-1v1gj1u.gif",
+      "video_url": "https://static.exercisedb.dev/media/Um8xUAc.gif",
       "nivel": "Avanzado",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "1V1gj1u",
+      "source": "ExerciseDB V1",
+      "source_id": "Um8xUAc",
       "instrucciones": [
-        "Step:1 Sit on a bench with your feet flat on the floor and hold a barbell with an underhand grip, hands shoulder-width apart.",
-        "Step:2 Rest your upper arms against your inner thighs, just above your knees, and let the barbell hang down in front of you.",
-        "Step:3 Keeping your upper arms stationary, exhale and curl the barbell up towards your shoulders, contracting your biceps.",
-        "Step:4 Hold the contracted position for a brief pause, then inhale and slowly lower the barbell back down to the starting position.",
-        "Step:5 Repeat for the desired number of repetitions."
+        "Step:1 Set up an incline bench at a 45-degree angle.",
+        "Step:2 Lie face down on the bench with your chest and stomach resting against it.",
+        "Step:3 Hold a barbell with an underhand grip, shoulder-width apart.",
+        "Step:4 Extend your arms fully, allowing the barbell to hang down towards the floor.",
+        "Step:5 Keeping your upper arms stationary, exhale and curl the weights while contracting your biceps.",
+        "Step:6 Continue to raise the barbell until your biceps are fully contracted and the bar is at shoulder level.",
+        "Step:7 (intensive variation) Hold the contracted position for a brief pause as you squeeze your biceps.",
+        "Step:8 Inhale and slowly begin to lower the barbell back to the starting position.",
+        "Step:9 Repeat for the desired number of repetitions."
       ]
     },
     {
@@ -1983,21 +1990,18 @@
       ]
     },
     {
-      "nombre": "barbell bench squat",
+      "nombre": "all fours squad stretch - elevated variation",
       "descripcion": "Cuádriceps",
-      "video_url": "/videos/gym30-external/cuadriceps-w9pfvv1.gif",
+      "video_url": "https://static.exercisedb.dev/media/LzX8YEz.gif",
       "nivel": "Avanzado",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "W9pFVv1",
+      "source": "ExerciseDB V1",
+      "source_id": "LzX8YEz",
       "instrucciones": [
-        "Step:1 Set up a barbell on a squat rack at chest height.",
-        "Step:2 Stand facing away from the rack, with your feet shoulder-width apart.",
-        "Step:3 Bend your knees and lower your body down into a squat position, keeping your back straight and chest up.",
-        "Step:4 Grasp the barbell with an overhand grip, slightly wider than shoulder-width apart.",
-        "Step:5 Lift the barbell off the rack and step back, ensuring your feet are still shoulder-width apart.",
-        "Step:6 Lower your body down into a squat, keeping your knees in line with your toes.",
-        "Step:7 Pause for a moment at the bottom, then push through your heels to return to the starting position.",
-        "Step:8 Repeat for the desired number of repetitions."
+        "Step:1 Start on all fours with your hands directly under your shoulders and your knees directly under your hips.",
+        "Step:2 Extend one leg straight back, keeping your knee bent and your foot flexed. Maintain elevated form throughout.",
+        "Step:3 Slowly lower your hips towards the ground, feeling a stretch in your quads.",
+        "Step:4 Hold this position for 20-30 seconds.",
+        "Step:5 Switch legs and repeat the stretch on the other side."
       ]
     },
     {
@@ -2708,18 +2712,19 @@
       ]
     },
     {
-      "nombre": "dumbbell lying rear delt row",
+      "nombre": "cable kneeling rear delt row (with rope) (male) expanded",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-xuud0fs.gif",
+      "video_url": "https://static.exercisedb.dev/media/eZ79rbI.gif",
       "nivel": "Intermedio",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "XUUD0Fs",
+      "source": "ExerciseDB V1",
+      "source_id": "eZ79rbI",
       "instrucciones": [
-        "Step:1 Lie face down on a flat bench with a dumbbell in each hand, palms facing inwards.",
-        "Step:2 Extend your arms straight down towards the floor, keeping a slight bend in your elbows.",
-        "Step:3 Engaging your back muscles, lift the dumbbells up towards your chest, squeezing your shoulder blades together.",
-        "Step:4 Pause for a moment at the top, then slowly lower the dumbbells back down to the starting position.",
-        "Step:5 Repeat for the desired number of repetitions."
+        "Step:1 Attach a rope handle to a low cable pulley and kneel down facing the machine.",
+        "Step:2 (expanded variation) Grasp the rope with a neutral grip (palms facing each other) and extend your arms fully in front of you.",
+        "Step:3 Keeping your back straight and core engaged, pull the rope towards your body by retracting your shoulder blades.",
+        "Step:4 Squeeze your shoulder blades together at the end of the movement and hold for a brief pause.",
+        "Step:5 Slowly release the tension and return to the starting position.",
+        "Step:6 Repeat for the desired number of repetitions."
       ]
     },
     {
@@ -2870,19 +2875,18 @@
       ]
     },
     {
-      "nombre": "dumbbell one arm reverse fly (with support)",
+      "nombre": "core barbell upright row v. 2",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-e25f58f.gif",
+      "video_url": "https://static.exercisedb.dev/media/1oE78pm.gif",
       "nivel": "Avanzado",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "e25F58f",
+      "source": "ExerciseDB V1",
+      "source_id": "1oE78pm",
       "instrucciones": [
-        "Step:1 Sit on a bench with your feet flat on the ground and your back straight.",
-        "Step:2 Hold a dumbbell in one hand with your palm facing inwards.",
-        "Step:3 Lean forward and place your free hand on the bench for support.",
-        "Step:4 Keep your arm slightly bent and raise it out to the side until it is parallel to the ground.",
-        "Step:5 Pause for a moment at the top, then slowly lower your arm back down to the starting position.",
-        "Step:6 Repeat for the desired number of repetitions, then switch arms."
+        "Step:1 Stand with your feet shoulder-width apart and hold a barbell with an overhand grip, hands slightly wider than shoulder-width apart.",
+        "Step:2 Let the barbell hang in front of your thighs, arms fully extended. Perform with core intensity.",
+        "Step:3 Keeping your back straight, exhale and lift the barbell straight up towards your chin, leading with your elbows.",
+        "Step:4 Pause for a moment at the top, then inhale and slowly lower the barbell back down to the starting position.",
+        "Step:5 Repeat for the desired number of repetitions."
       ]
     },
     {
@@ -2902,18 +2906,19 @@
       ]
     },
     {
-      "nombre": "dumbbell one arm upright row",
+      "nombre": "dumbbell decline shrug - rigid variation",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-6ckqc5e.gif",
+      "video_url": "https://static.exercisedb.dev/media/IH2kr7n.gif",
       "nivel": "Avanzado",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "6cKQC5E",
+      "source": "ExerciseDB V1",
+      "source_id": "IH2kr7n",
       "instrucciones": [
-        "Step:1 Stand with your feet shoulder-width apart, holding a dumbbell in one hand with an overhand grip.",
-        "Step:2 Let the dumbbell hang at arm's length in front of your thighs, with your palm facing your body.",
-        "Step:3 Keeping your back straight and your core engaged, exhale and lift the dumbbell straight up towards your chin, leading with your elbow.",
-        "Step:4 Pause for a moment at the top, then inhale and slowly lower the dumbbell back down to the starting position.",
-        "Step:5 Repeat for the desired number of repetitions, then switch to the other arm."
+        "Step:1 Set up a decline bench at a 45-degree angle.",
+        "Step:2 Lie face down on the bench with your chest and stomach resting against it.",
+        "Step:3 (rigid variation) Hold a dumbbell in each hand with your arms fully extended towards the floor.",
+        "Step:4 Keeping your arms straight, raise your shoulders towards your ears as high as possible.",
+        "Step:5 Hold the contraction for a moment, then slowly lower the dumbbells back to the starting position.",
+        "Step:6 Repeat for the desired number of repetitions."
       ]
     },
     {
@@ -3139,21 +3144,20 @@
       ]
     },
     {
-      "nombre": "band fixed back close grip pulldown",
+      "nombre": "assisted pull-up inclined",
       "descripcion": "Espalda alta",
-      "video_url": "/videos/gym30-external/espalda-alta-4lowllp.gif",
+      "video_url": "https://static.exercisedb.dev/media/5ipN0iE.gif",
       "nivel": "Avanzado",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "4LoWllp",
+      "source": "ExerciseDB V1",
+      "source_id": "5ipN0iE",
       "instrucciones": [
-        "Step:1 Attach the band to a fixed point above you, such as a pull-up bar or sturdy beam.",
-        "Step:2 Sit down on a bench or chair facing the band, with your feet flat on the ground and your knees bent.",
-        "Step:3 Grasp the band with a close grip, palms facing towards you.",
-        "Step:4 Keep your back straight and engage your core.",
-        "Step:5 Pull the band down towards your chest, squeezing your shoulder blades together.",
-        "Step:6 Pause for a moment at the bottom of the movement, feeling the contraction in your lats.",
-        "Step:7 Slowly release the band back to the starting position, maintaining control throughout the movement.",
-        "Step:8 Repeat for the desired number of repetitions."
+        "Step:1 Adjust the machine to your desired weight and height settings.",
+        "Step:2 Grasp the handles with an overhand grip, slightly wider than shoulder-width apart.",
+        "Step:3 Hang with your arms fully extended and your feet off the ground.",
+        "Step:4 Engage your back muscles and pull your body up towards the handles, keeping your elbows close to your body.",
+        "Step:5 Continue pulling until your chin is above the handles.",
+        "Step:6 Pause for a moment at the top, then slowly lower your body back down to the starting position.",
+        "Step:7 Repeat for the desired number of repetitions. Maintain inclined form throughout."
       ]
     },
     {
@@ -3174,22 +3178,20 @@
       ]
     },
     {
-      "nombre": "band fixed back underhand pulldown",
+      "nombre": "assisted standing chin-up with focused",
       "descripcion": "Espalda alta",
-      "video_url": "/videos/gym30-external/espalda-alta-zh68exz.gif",
+      "video_url": "https://static.exercisedb.dev/media/LlSe9IK.gif",
       "nivel": "Avanzado",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "ZH68exZ",
+      "source": "ExerciseDB V1",
+      "source_id": "LlSe9IK",
       "instrucciones": [
-        "Step:1 Attach the band to a sturdy anchor point above your head.",
-        "Step:2 Stand facing the anchor point with your feet shoulder-width apart.",
-        "Step:3 Grasp the band with an underhand grip, hands slightly wider than shoulder-width apart.",
-        "Step:4 Step back to create tension in the band, keeping your arms fully extended.",
-        "Step:5 Engage your core and squeeze your shoulder blades together.",
-        "Step:6 Pull the band down towards your chest, leading with your elbows.",
-        "Step:7 Pause for a moment at the bottom of the movement, feeling the contraction in your lats.",
-        "Step:8 Slowly release the tension in the band and return to the starting position.",
-        "Step:9 Repeat for the desired number of repetitions."
+        "Step:1 Adjust the machine to your desired assistance level.",
+        "Step:2 (focused variation) Stand on the foot platform and grip the handles with an overhand grip, slightly wider than shoulder-width apart.",
+        "Step:3 Keep your chest up and shoulders back, engage your core, and slightly bend your knees.",
+        "Step:4 Pull your body up by flexing your elbows and driving your elbows down towards your sides.",
+        "Step:5 Continue pulling until your chin is above the bar.",
+        "Step:6 Pause for a moment at the top, then slowly lower your body back down to the starting position.",
+        "Step:7 Repeat for the desired number of repetitions."
       ]
     },
     {
@@ -3351,19 +3353,20 @@
       ]
     },
     {
-      "nombre": "bodyweight standing close-grip row",
+      "nombre": "band one arm standing low row - lateral variation",
       "descripcion": "Espalda media",
-      "video_url": "/videos/gym30-external/espalda-media-tig3pxb.gif",
+      "video_url": "https://static.exercisedb.dev/media/pgIdT6i.gif",
       "nivel": "Intermedio",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "tig3PXb",
+      "source": "ExerciseDB V1",
+      "source_id": "pgIdT6i",
       "instrucciones": [
-        "Step:1 Stand with your feet shoulder-width apart and knees slightly bent.",
-        "Step:2 Bend forward at the waist, keeping your back straight and your core engaged.",
-        "Step:3 Extend your arms straight in front of you, gripping the bar or handles with a close grip.",
-        "Step:4 Pull the bar or handles towards your body, squeezing your shoulder blades together.",
-        "Step:5 Pause for a moment at the top of the movement, then slowly release and return to the starting position.",
-        "Step:6 Repeat for the desired number of repetitions."
+        "Step:1 Attach the band to a stable anchor point at waist height.",
+        "Step:2 Stand facing the anchor point with your feet shoulder-width apart.",
+        "Step:3 Hold the band with one hand, palm facing inward, and step back to create tension in the band.",
+        "Step:4 Bend your knees slightly and hinge forward at the hips, keeping your back straight.",
+        "Step:5 Pull the band towards your waist, squeezing your shoulder blades together.",
+        "Step:6 Pause for a moment at the top of the movement, then slowly release the band back to the starting position.",
+        "Step:7 Repeat for the desired number of repetitions, then switch sides. Emphasize lateral control."
       ]
     },
     {
@@ -3574,18 +3577,17 @@
       "nivel": "Intermedio"
     },
     {
-      "nombre": "exercise ball back extension with knees off ground",
+      "nombre": "advanced dumbbell stiff leg deadlift",
       "descripcion": "Espalda baja",
-      "video_url": "/videos/gym30-external/espalda-baja-wme869u.gif",
+      "video_url": "https://static.exercisedb.dev/media/2Ty4idJ.gif",
       "nivel": "Principiante",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "WME869U",
+      "source": "ExerciseDB V1",
+      "source_id": "2Ty4idJ",
       "instrucciones": [
-        "Step:1 Place the stability ball on the ground and lie face down on top of it, with your hips resting on the ball and your feet against a wall for stability.",
-        "Step:2 Position your hands behind your head or crossed over your chest.",
-        "Step:3 Engage your core and slowly lift your upper body off the ball, extending your back until your body forms a straight line from your head to your heels.",
-        "Step:4 Pause for a moment at the top, then slowly lower your upper body back down to the starting position.",
-        "Step:5 Repeat for the desired number of repetitions."
+        "Step:1 Stand with your feet shoulder-width apart, holding a dumbbell in each hand with an overhand grip.",
+        "Step:2 Keeping your back straight and your core engaged, hinge at the hips and lower the dumbbells towards the ground, allowing a slight bend in your knees. Focus on advanced movement.",
+        "Step:3 Lower the dumbbells until you feel a stretch in your hamstrings, then squeeze your glutes and push through your heels to return to the starting position.",
+        "Step:4 Repeat for the desired number of repetitions."
       ]
     },
     {
@@ -3815,19 +3817,19 @@
       ]
     },
     {
-      "nombre": "exercise ball back extension with rotation",
+      "nombre": "controlled band straight back stiff leg deadlift",
       "descripcion": "Espalda baja",
-      "video_url": "/videos/gym30-external/espalda-baja-wvd66ff.gif",
+      "video_url": "https://static.exercisedb.dev/media/PDHE73u.gif",
       "nivel": "Avanzado",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "WVD66ff",
+      "source": "ExerciseDB V1",
+      "source_id": "PDHE73u",
       "instrucciones": [
-        "Step:1 Start by lying face down on the stability ball with your hips resting on the ball and your feet firmly planted on the ground.",
-        "Step:2 Place your hands behind your head or cross them over your chest.",
-        "Step:3 Engage your core and slowly lift your upper body off the ball, extending your back until your body forms a straight line from your head to your heels.",
-        "Step:4 Pause for a moment at the top, then slowly rotate your torso to one side, keeping your hips and legs stable.",
-        "Step:5 Return to the center and repeat the rotation to the other side.",
-        "Step:6 Lower your upper body back down to the starting position and repeat for the desired number of repetitions."
+        "Step:1 Stand with your feet shoulder-width apart and place the band around your upper legs.",
+        "Step:2 Hold the band with both hands in front of your thighs, palms facing your body.",
+        "Step:3 Keeping your back straight and your knees slightly bent, hinge at the hips and lower the band towards the ground. Focus on controlled movement.",
+        "Step:4 Feel the stretch in your hamstrings as you lower the band.",
+        "Step:5 Engage your glutes and hamstrings to lift your body back up to the starting position.",
+        "Step:6 Repeat for the desired number of repetitions."
       ]
     },
     {
@@ -4068,19 +4070,20 @@
       "nivel": "Intermedio"
     },
     {
-      "nombre": "barbell close-grip bench press",
+      "nombre": "active style cable pushdown",
       "descripcion": "Tríceps",
-      "video_url": "/videos/gym30-external/triceps-j6dx1mu.gif",
+      "video_url": "https://static.exercisedb.dev/media/w7obpWd.gif",
       "nivel": "Avanzado",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "J6Dx1Mu",
+      "source": "ExerciseDB V1",
+      "source_id": "w7obpWd",
       "instrucciones": [
-        "Step:1 Lie flat on a bench with your feet flat on the ground and your back pressed against the bench.",
-        "Step:2 Grasp the barbell with a close grip, slightly narrower than shoulder-width apart.",
-        "Step:3 Unrack the barbell and lower it slowly towards your chest, keeping your elbows close to your body.",
-        "Step:4 Pause for a moment when the barbell touches your chest.",
-        "Step:5 Push the barbell back up to the starting position, fully extending your arms.",
-        "Step:6 Repeat for the desired number of repetitions."
+        "Step:1 Attach a straight bar to a high pulley cable machine.",
+        "Step:2 Stand facing the machine with your feet shoulder-width apart and a slight bend in your knees.",
+        "Step:3 Grasp the bar with an overhand grip, hands shoulder-width apart.",
+        "Step:4 Keep your elbows close to your sides and your upper arms stationary.",
+        "Step:5 Exhale and push the bar down until your elbows are fully extended.",
+        "Step:6 Pause for a moment, then inhale and slowly return the bar to the starting position. Maintain active form throughout.",
+        "Step:7 Repeat for the desired number of repetitions."
       ]
     },
     {
@@ -4099,17 +4102,18 @@
       ]
     },
     {
-      "nombre": "barbell decline close grip to skull press",
+      "nombre": "assisted standing triceps extension (with towel) with horizontal",
       "descripcion": "Tríceps",
-      "video_url": "/videos/gym30-external/triceps-lmgxzn8.gif",
+      "video_url": "https://static.exercisedb.dev/media/7R4NIjL.gif",
       "nivel": "Avanzado",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "LMGXZn8",
+      "source": "ExerciseDB V1",
+      "source_id": "7R4NIjL",
       "instrucciones": [
-        "Step:1 Lie on a decline bench with your head lower than your feet and hold a barbell with a close grip.",
-        "Step:2 Lower the barbell towards your forehead by bending your elbows, keeping your upper arms stationary.",
-        "Step:3 Pause for a moment, then extend your arms to press the barbell back up to the starting position.",
-        "Step:4 Repeat for the desired number of repetitions."
+        "Step:1 Stand with your feet shoulder-width apart and hold a towel with both hands behind your head.",
+        "Step:2 Keep your elbows close to your ears and your upper arms stationary.",
+        "Step:3 (horizontal variation) Slowly extend your forearms upward, squeezing your triceps at the top.",
+        "Step:4 Pause for a moment, then slowly lower the towel back down to the starting position.",
+        "Step:5 Repeat for the desired number of repetitions."
       ]
     },
     {
@@ -4260,20 +4264,17 @@
       "nivel": "Avanzado"
     },
     {
-      "nombre": "band step-up",
+      "nombre": "advanced dumbbell stiff leg deadlift — Glúteos",
       "descripcion": "Glúteos",
-      "video_url": "/videos/gym30-external/gluteos-d5btepv.gif",
+      "video_url": "https://static.exercisedb.dev/media/2Ty4idJ.gif",
       "nivel": "Intermedio",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "d5bTEPV",
+      "source": "ExerciseDB V1",
+      "source_id": "2Ty4idJ",
       "instrucciones": [
-        "Step:1 Place a band around your thighs, just above your knees.",
-        "Step:2 Stand facing a step or platform with your feet hip-width apart.",
-        "Step:3 Step up onto the platform with your right foot, pushing through your heel.",
-        "Step:4 Extend your left leg behind you, keeping it straight.",
-        "Step:5 Lower your left foot back down to the ground.",
-        "Step:6 Repeat with your left foot stepping up onto the platform.",
-        "Step:7 Continue alternating legs for the desired number of repetitions."
+        "Step:1 Stand with your feet shoulder-width apart, holding a dumbbell in each hand with an overhand grip.",
+        "Step:2 Keeping your back straight and your core engaged, hinge at the hips and lower the dumbbells towards the ground, allowing a slight bend in your knees. Focus on advanced movement.",
+        "Step:3 Lower the dumbbells until you feel a stretch in your hamstrings, then squeeze your glutes and push through your heels to return to the starting position.",
+        "Step:4 Repeat for the desired number of repetitions."
       ]
     },
     {
@@ -4538,18 +4539,17 @@
       "nivel": "Principiante"
     },
     {
-      "nombre": "dumbbell deadlift",
+      "nombre": "advanced dumbbell stiff leg deadlift — Isquiotibiales",
       "descripcion": "Isquiotibiales",
-      "video_url": "/videos/gym30-external/isquiotibiales-nuwvh7b.gif",
+      "video_url": "https://static.exercisedb.dev/media/2Ty4idJ.gif",
       "nivel": "Intermedio",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "nUwVh7b",
+      "source": "ExerciseDB V1",
+      "source_id": "2Ty4idJ",
       "instrucciones": [
-        "Step:1 Stand with your feet shoulder-width apart, toes pointing forward.",
-        "Step:2 Hold a dumbbell in each hand, palms facing your body, arms extended downwards.",
-        "Step:3 Bend at your hips and knees, lowering the dumbbells towards the ground while keeping your back straight.",
-        "Step:4 Push through your heels and extend your hips and knees, lifting the dumbbells back up to the starting position.",
-        "Step:5 Repeat for the desired number of repetitions."
+        "Step:1 Stand with your feet shoulder-width apart, holding a dumbbell in each hand with an overhand grip.",
+        "Step:2 Keeping your back straight and your core engaged, hinge at the hips and lower the dumbbells towards the ground, allowing a slight bend in your knees. Focus on advanced movement.",
+        "Step:3 Lower the dumbbells until you feel a stretch in your hamstrings, then squeeze your glutes and push through your heels to return to the starting position.",
+        "Step:4 Repeat for the desired number of repetitions."
       ]
     },
     {
@@ -4827,17 +4827,19 @@
       "source_media_url": "https://static.exercisedb.dev/media/OM46QHm.gif"
     },
     {
-      "nombre": "dumbbell lying femoral",
+      "nombre": "controlled band straight back stiff leg deadlift — Isquiotibiales",
       "descripcion": "Isquiotibiales",
-      "video_url": "/videos/gym30-external/isquiotibiales-fkbie6a.gif",
+      "video_url": "https://static.exercisedb.dev/media/PDHE73u.gif",
       "nivel": "Avanzado",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "FkBIE6a",
+      "source": "ExerciseDB V1",
+      "source_id": "PDHE73u",
       "instrucciones": [
-        "Step:1 Lie flat on your back with your legs extended and a dumbbell resting on your lower abdomen.",
-        "Step:2 Bend your knees and bring the dumbbell towards your glutes, keeping your feet flat on the ground.",
-        "Step:3 Pause for a moment at the top, then slowly lower the dumbbell back to the starting position.",
-        "Step:4 Repeat for the desired number of repetitions."
+        "Step:1 Stand with your feet shoulder-width apart and place the band around your upper legs.",
+        "Step:2 Hold the band with both hands in front of your thighs, palms facing your body.",
+        "Step:3 Keeping your back straight and your knees slightly bent, hinge at the hips and lower the band towards the ground. Focus on controlled movement.",
+        "Step:4 Feel the stretch in your hamstrings as you lower the band.",
+        "Step:5 Engage your glutes and hamstrings to lift your body back up to the starting position.",
+        "Step:6 Repeat for the desired number of repetitions."
       ]
     },
     {
@@ -5242,88 +5244,5 @@
     "descargados": 0,
     "yaExistian": 0,
     "errores": 20
-  },
-  "resumenMediaLocal": {
-    "Pecho alto": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Pecho medio": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Pecho bajo": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Hombros": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Bíceps": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Abdomen": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Cuádriceps": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Pantorrillas": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Trapecio": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Espalda alta": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Espalda media": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Espalda baja": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Tríceps": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Glúteos": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Isquiotibiales": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Pantorrillas posterior": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    }
-  },
-  "mediaLocalReady": true
+  }
 }

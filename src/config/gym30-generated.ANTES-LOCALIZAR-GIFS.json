@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T22:13:03.863Z",
+  "generatedAt": "2026-08-16T00:28:30.006Z",
   "total": 480,
   "resumen": {
     "Pecho alto": 30,
@@ -70,42 +70,41 @@
       "nivel": "Principiante"
     },
     {
-      "nombre": "dumbbell incline palm-in press",
+      "nombre": "balance cable incline fly",
       "descripcion": "Pecho alto",
-      "video_url": "/videos/gym30-external/pecho-alto-ovlmuul.gif",
+      "video_url": "https://static.exercisedb.dev/media/drfGhTV.gif",
       "nivel": "Principiante",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "OVLmUuL",
+      "source": "ExerciseDB V1",
+      "source_id": "drfGhTV",
       "instrucciones": [
-        "Step:1 Set up an incline bench at a 45-degree angle.",
-        "Step:2 Sit on the bench with a dumbbell in each hand, palms facing each other.",
-        "Step:3 Plant your feet firmly on the ground and keep your back straight against the bench.",
-        "Step:4 Start with the dumbbells at shoulder level, elbows bent and palms facing each other.",
-        "Step:5 Press the dumbbells up and away from your body, extending your arms fully.",
-        "Step:6 Pause for a moment at the top, then slowly lower the dumbbells back to the starting position.",
-        "Step:7 Repeat for the desired number of repetitions."
+        "Step:1 Adjust the cable machine to a low position and attach the handles.",
+        "Step:2 Sit on an incline bench with your back against the pad and feet flat on the floor. Perform with balance intensity.",
+        "Step:3 Grasp the handles with an overhand grip and extend your arms straight out in front of you.",
+        "Step:4 Keeping a slight bend in your elbows, open your arms out to the sides in a controlled motion.",
+        "Step:5 Pause for a moment at the fully extended position, then slowly return to the starting position.",
+        "Step:6 Repeat for the desired number of repetitions."
       ]
     },
     {
-      "nombre": "dumbbell incline press on exercise ball",
+      "nombre": "barbell incline bench press seated",
       "descripcion": "Pecho alto",
-      "video_url": "/videos/gym30-external/pecho-alto-bfihmpi.gif",
+      "video_url": "https://static.exercisedb.dev/media/9Z23cLE.gif",
       "nivel": "Principiante",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "bfiHMpI",
+      "source": "ExerciseDB V1",
+      "source_id": "9Z23cLE",
       "instrucciones": [
-        "Step:1 Sit on an exercise ball with a dumbbell in each hand, palms facing forward.",
-        "Step:2 Slowly walk your feet forward, rolling your body down the ball until your head, neck, and upper back are supported on the ball.",
-        "Step:3 Hold the dumbbells at shoulder level, elbows bent and pointing out to the sides.",
-        "Step:4 Press the dumbbells upward, extending your arms fully.",
-        "Step:5 Pause for a moment at the top, then slowly lower the dumbbells back to the starting position.",
+        "Step:1 Set up an incline bench at a 45-degree angle.",
+        "Step:2 (seated variation) Lie down on the bench with your feet flat on the ground.",
+        "Step:3 Grasp the barbell with an overhand grip, slightly wider than shoulder-width apart.",
+        "Step:4 Unrack the barbell and lower it slowly towards your chest, keeping your elbows at a 45-degree angle.",
+        "Step:5 Pause for a moment at the bottom, then push the barbell back up to the starting position.",
         "Step:6 Repeat for the desired number of repetitions."
       ]
     },
     {
       "nombre": "barbell incline close grip bench press",
       "descripcion": "Pecho alto",
-      "video_url": "/videos/gym30-external/pecho-alto-gx7s7uf.gif",
+      "video_url": "https://static.exercisedb.dev/media/gx7s7uF.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "gx7s7uF",
@@ -122,7 +121,7 @@
     {
       "nombre": "barbell incline reverse-grip press",
       "descripcion": "Pecho alto",
-      "video_url": "/videos/gym30-external/pecho-alto-641mifk.gif",
+      "video_url": "https://static.exercisedb.dev/media/641mIfk.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "641mIfk",
@@ -137,7 +136,7 @@
     {
       "nombre": "barbell reverse grip incline bench press",
       "descripcion": "Pecho alto",
-      "video_url": "/videos/gym30-external/pecho-alto-du7i633.gif",
+      "video_url": "https://static.exercisedb.dev/media/DU7I633.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "DU7I633",
@@ -154,7 +153,7 @@
     {
       "nombre": "cable incline bench press",
       "descripcion": "Pecho alto",
-      "video_url": "/videos/gym30-external/pecho-alto-vh0gsk4.gif",
+      "video_url": "https://static.exercisedb.dev/media/Vh0GsK4.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "Vh0GsK4",
@@ -171,7 +170,7 @@
     {
       "nombre": "cable incline fly",
       "descripcion": "Pecho alto",
-      "video_url": "/videos/gym30-external/pecho-alto-tbwxbit.gif",
+      "video_url": "https://static.exercisedb.dev/media/tBWXbIT.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "tBWXbIT",
@@ -187,7 +186,7 @@
     {
       "nombre": "cable incline fly (on stability ball)",
       "descripcion": "Pecho alto",
-      "video_url": "/videos/gym30-external/pecho-alto-27nngfr.gif",
+      "video_url": "https://static.exercisedb.dev/media/27NNGFr.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "27NNGFr",
@@ -206,7 +205,7 @@
     {
       "nombre": "cable one arm incline fly on exercise ball",
       "descripcion": "Pecho alto",
-      "video_url": "/videos/gym30-external/pecho-alto-p14dz9d.gif",
+      "video_url": "https://static.exercisedb.dev/media/P14Dz9D.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "P14Dz9D",
@@ -221,7 +220,7 @@
     {
       "nombre": "cable one arm incline press",
       "descripcion": "Pecho alto",
-      "video_url": "/videos/gym30-external/pecho-alto-gkeh6jj.gif",
+      "video_url": "https://static.exercisedb.dev/media/GKEH6jj.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "GKEH6jj",
@@ -238,7 +237,7 @@
     {
       "nombre": "cable one arm incline press on exercise ball",
       "descripcion": "Pecho alto",
-      "video_url": "/videos/gym30-external/pecho-alto-6t00bsf.gif",
+      "video_url": "https://static.exercisedb.dev/media/6t00BsF.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "6t00BsF",
@@ -251,25 +250,26 @@
       ]
     },
     {
-      "nombre": "dumbbell incline twisted flyes",
+      "nombre": "cable one arm incline press with rigid",
       "descripcion": "Pecho alto",
-      "video_url": "/videos/gym30-external/pecho-alto-1ple8e9.gif",
+      "video_url": "https://static.exercisedb.dev/media/QoSZo2Y.gif",
       "nivel": "Intermedio",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "1PLE8e9",
+      "source": "ExerciseDB V1",
+      "source_id": "QoSZo2Y",
       "instrucciones": [
-        "Step:1 Set an incline bench to a 45-degree angle and sit on it with a dumbbell in each hand, palms facing each other.",
-        "Step:2 Lie back on the bench and press the dumbbells up to the starting position, directly above your chest, with your arms extended.",
-        "Step:3 Lower the dumbbells out to the sides in a wide arc until you feel a stretch in your chest.",
-        "Step:4 As you lower the dumbbells, rotate your wrists so that your palms face forward at the bottom of the movement.",
-        "Step:5 Reverse the motion and bring the dumbbells back up to the starting position, squeezing your chest muscles together at the top.",
-        "Step:6 Repeat for the desired number of repetitions."
+        "Step:1 Adjust the cable machine to a low pulley position.",
+        "Step:2 Sit on an incline bench facing away from the cable machine.",
+        "Step:3 Grasp the handle with one hand and bring it up to shoulder height. Emphasize rigid control.",
+        "Step:4 Position your feet firmly on the ground and maintain a stable position.",
+        "Step:5 Press the handle forward and upward, extending your arm fully.",
+        "Step:6 Pause for a moment at the top, then slowly lower the handle back to the starting position.",
+        "Step:7 Repeat for the desired number of repetitions, then switch sides."
       ]
     },
     {
       "nombre": "cable upper chest crossovers",
       "descripcion": "Pecho alto",
-      "video_url": "/videos/gym30-external/pecho-alto-j7xmayn.gif",
+      "video_url": "https://static.exercisedb.dev/media/j7XMAyn.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "j7XMAyn",
@@ -287,7 +287,7 @@
     {
       "nombre": "dumbbell incline alternate press",
       "descripcion": "Pecho alto",
-      "video_url": "/videos/gym30-external/pecho-alto-tvdivgy.gif",
+      "video_url": "https://static.exercisedb.dev/media/TVdivgY.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "TVdivgY",
@@ -303,7 +303,7 @@
     {
       "nombre": "dumbbell incline breeding",
       "descripcion": "Pecho alto",
-      "video_url": "/videos/gym30-external/pecho-alto-b3rxp6l.gif",
+      "video_url": "https://static.exercisedb.dev/media/B3Rxp6L.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "B3Rxp6L",
@@ -320,7 +320,7 @@
     {
       "nombre": "dumbbell incline hammer press on exercise ball",
       "descripcion": "Pecho alto",
-      "video_url": "/videos/gym30-external/pecho-alto-wkgngfb.gif",
+      "video_url": "https://static.exercisedb.dev/media/wkgnGfb.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "wkgnGfb",
@@ -337,7 +337,7 @@
     {
       "nombre": "dumbbell incline one arm fly",
       "descripcion": "Pecho alto",
-      "video_url": "/videos/gym30-external/pecho-alto-gw2hfvw.gif",
+      "video_url": "https://static.exercisedb.dev/media/Gw2HFvW.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "Gw2HFvW",
@@ -354,7 +354,7 @@
     {
       "nombre": "dumbbell incline one arm fly on exercise ball",
       "descripcion": "Pecho alto",
-      "video_url": "/videos/gym30-external/pecho-alto-llnh6q5.gif",
+      "video_url": "https://static.exercisedb.dev/media/LLNh6q5.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "LLNh6q5",
@@ -371,7 +371,7 @@
     {
       "nombre": "dumbbell incline one arm hammer press",
       "descripcion": "Pecho alto",
-      "video_url": "/videos/gym30-external/pecho-alto-ll1uitx.gif",
+      "video_url": "https://static.exercisedb.dev/media/LL1UiTX.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "LL1UiTX",
@@ -387,7 +387,7 @@
     {
       "nombre": "dumbbell incline one arm hammer press on exercise ball",
       "descripcion": "Pecho alto",
-      "video_url": "/videos/gym30-external/pecho-alto-jdnrkar.gif",
+      "video_url": "https://static.exercisedb.dev/media/jDnrkar.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "jDnrkar",
@@ -403,7 +403,7 @@
     {
       "nombre": "dumbbell incline one arm press",
       "descripcion": "Pecho alto",
-      "video_url": "/videos/gym30-external/pecho-alto-rdairf9.gif",
+      "video_url": "https://static.exercisedb.dev/media/rDAiRf9.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "rDAiRf9",
@@ -418,7 +418,7 @@
     {
       "nombre": "dumbbell incline one arm press on exercise ball",
       "descripcion": "Pecho alto",
-      "video_url": "/videos/gym30-external/pecho-alto-bg5jksh.gif",
+      "video_url": "https://static.exercisedb.dev/media/Bg5JKSH.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "Bg5JKSH",
@@ -506,7 +506,7 @@
     {
       "nombre": "archer push up",
       "descripcion": "Pecho medio",
-      "video_url": "/videos/gym30-external/pecho-medio-a9qxk2f.gif",
+      "video_url": "https://static.exercisedb.dev/media/A9qxk2F.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "A9qxk2F",
@@ -522,7 +522,7 @@
     {
       "nombre": "band bench press",
       "descripcion": "Pecho medio",
-      "video_url": "/videos/gym30-external/pecho-medio-khlhmqs.gif",
+      "video_url": "https://static.exercisedb.dev/media/khlHMqs.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "khlHMqs",
@@ -537,7 +537,7 @@
     {
       "nombre": "band one arm twisting chest press",
       "descripcion": "Pecho medio",
-      "video_url": "/videos/gym30-external/pecho-medio-c16nyga.gif",
+      "video_url": "https://static.exercisedb.dev/media/c16nYGA.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "c16nYGA",
@@ -555,7 +555,7 @@
     {
       "nombre": "barbell guillotine bench press",
       "descripcion": "Pecho medio",
-      "video_url": "/videos/gym30-external/pecho-medio-gxoasgn.gif",
+      "video_url": "https://static.exercisedb.dev/media/GXoaSgn.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "GXoaSgn",
@@ -571,7 +571,7 @@
     {
       "nombre": "barbell wide bench press",
       "descripcion": "Pecho medio",
-      "video_url": "/videos/gym30-external/pecho-medio-jskq9so.gif",
+      "video_url": "https://static.exercisedb.dev/media/JsKq9so.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "JsKq9so",
@@ -587,7 +587,7 @@
     {
       "nombre": "barbell wide reverse grip bench press",
       "descripcion": "Pecho medio",
-      "video_url": "/videos/gym30-external/pecho-medio-945zprg.gif",
+      "video_url": "https://static.exercisedb.dev/media/945zpRg.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "945zpRg",
@@ -601,23 +601,25 @@
       ]
     },
     {
-      "nombre": "deep push up",
+      "nombre": "barbell wide reverse grip bench press horizontal",
       "descripcion": "Pecho medio",
-      "video_url": "/videos/gym30-external/pecho-medio-vptoq4n.gif",
+      "video_url": "https://static.exercisedb.dev/media/3QgteDK.gif",
       "nivel": "Intermedio",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "vptOQ4N",
+      "source": "ExerciseDB V1",
+      "source_id": "3QgteDK",
       "instrucciones": [
-        "Step:1 Start in a high plank position with your hands slightly wider than shoulder-width apart and your body in a straight line.",
-        "Step:2 Lower your chest towards the ground by bending your elbows, keeping them close to your body.",
-        "Step:3 Push through your palms to extend your arms and return to the starting position.",
-        "Step:4 Repeat for the desired number of repetitions."
+        "Step:1 Lie flat on a bench with your feet flat on the ground and your back pressed against the bench.",
+        "Step:2 Grasp the barbell with a wide reverse grip, slightly wider than shoulder-width apart.",
+        "Step:3 Lift the barbell off the rack and hold it directly above your chest with your arms fully extended.",
+        "Step:4 Lower the barbell slowly towards your chest, keeping your elbows tucked in and your wrists straight. Focus on horizontal movement.",
+        "Step:5 Pause for a moment when the barbell touches your chest, then push it back up to the starting position.",
+        "Step:6 Repeat for the desired number of repetitions."
       ]
     },
     {
       "nombre": "cable bench press",
       "descripcion": "Pecho medio",
-      "video_url": "/videos/gym30-external/pecho-medio-7xi5mxa.gif",
+      "video_url": "https://static.exercisedb.dev/media/7xI5MXA.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "7xI5MXA",
@@ -635,7 +637,7 @@
     {
       "nombre": "cable cross-over variation",
       "descripcion": "Pecho medio",
-      "video_url": "/videos/gym30-external/pecho-medio-0cxghya.gif",
+      "video_url": "https://static.exercisedb.dev/media/0CXGHya.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "0CXGHya",
@@ -652,7 +654,7 @@
     {
       "nombre": "cable low fly",
       "descripcion": "Pecho medio",
-      "video_url": "/videos/gym30-external/pecho-medio-fvmzvhk.gif",
+      "video_url": "https://static.exercisedb.dev/media/FVmZVhk.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "FVmZVhk",
@@ -669,7 +671,7 @@
     {
       "nombre": "cable lying fly",
       "descripcion": "Pecho medio",
-      "video_url": "/videos/gym30-external/pecho-medio-ljj7yq8.gif",
+      "video_url": "https://static.exercisedb.dev/media/lJJ7Yq8.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "lJJ7Yq8",
@@ -684,7 +686,7 @@
     {
       "nombre": "cable middle fly",
       "descripcion": "Pecho medio",
-      "video_url": "/videos/gym30-external/pecho-medio-xlysdtg.gif",
+      "video_url": "https://static.exercisedb.dev/media/xLYSdtg.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "xLYSdtg",
@@ -701,7 +703,7 @@
     {
       "nombre": "cable one arm fly on exercise ball",
       "descripcion": "Pecho medio",
-      "video_url": "/videos/gym30-external/pecho-medio-hhy8tqg.gif",
+      "video_url": "https://static.exercisedb.dev/media/hHy8tQG.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "hHy8tQG",
@@ -717,7 +719,7 @@
     {
       "nombre": "cable seated chest press",
       "descripcion": "Pecho medio",
-      "video_url": "/videos/gym30-external/pecho-medio-nir4rwl.gif",
+      "video_url": "https://static.exercisedb.dev/media/nIR4Rwl.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "nIR4Rwl",
@@ -733,7 +735,7 @@
     {
       "nombre": "cable standing up straight crossovers",
       "descripcion": "Pecho medio",
-      "video_url": "/videos/gym30-external/pecho-medio-ukwtjwr.gif",
+      "video_url": "https://static.exercisedb.dev/media/UKWTJWR.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "UKWTJWR",
@@ -748,7 +750,7 @@
     {
       "nombre": "chest tap push-up (male)",
       "descripcion": "Pecho medio",
-      "video_url": "/videos/gym30-external/pecho-medio-7e06s6d.gif",
+      "video_url": "https://static.exercisedb.dev/media/7E06s6d.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "7E06s6d",
@@ -764,7 +766,7 @@
     {
       "nombre": "clap push up",
       "descripcion": "Pecho medio",
-      "video_url": "/videos/gym30-external/pecho-medio-wigsg76.gif",
+      "video_url": "https://static.exercisedb.dev/media/wigSg76.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "wigSg76",
@@ -779,7 +781,7 @@
     {
       "nombre": "clock push-up",
       "descripcion": "Pecho medio",
-      "video_url": "/videos/gym30-external/pecho-medio-cmaxnsg.gif",
+      "video_url": "https://static.exercisedb.dev/media/CMAxnsG.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "CMAxnsG",
@@ -819,7 +821,7 @@
     {
       "nombre": "assisted chest dip (kneeling)",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-pagtvak.gif",
+      "video_url": "https://static.exercisedb.dev/media/PAgTVaK.gif",
       "nivel": "Principiante",
       "source": "ExerciseDB V1",
       "source_id": "PAgTVaK",
@@ -834,7 +836,7 @@
     {
       "nombre": "assisted triceps dip (kneeling)",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-j60bn17.gif",
+      "video_url": "https://static.exercisedb.dev/media/J60bN17.gif",
       "nivel": "Principiante",
       "source": "ExerciseDB V1",
       "source_id": "J60bN17",
@@ -849,7 +851,7 @@
     {
       "nombre": "assisted wide-grip chest dip (kneeling)",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-pnzjirk.gif",
+      "video_url": "https://static.exercisedb.dev/media/PnZJIrk.gif",
       "nivel": "Principiante",
       "source": "ExerciseDB V1",
       "source_id": "PnZJIrk",
@@ -864,7 +866,7 @@
     {
       "nombre": "barbell decline bent arm pullover",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-hmeptv0.gif",
+      "video_url": "https://static.exercisedb.dev/media/hMEptv0.gif",
       "nivel": "Principiante",
       "source": "ExerciseDB V1",
       "source_id": "hMEptv0",
@@ -879,7 +881,7 @@
     {
       "nombre": "barbell decline close grip to skull press",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-lmgxzn8.gif",
+      "video_url": "https://static.exercisedb.dev/media/LMGXZn8.gif",
       "nivel": "Principiante",
       "source": "ExerciseDB V1",
       "source_id": "LMGXZn8",
@@ -893,7 +895,7 @@
     {
       "nombre": "barbell decline pullover",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-9sgne2o.gif",
+      "video_url": "https://static.exercisedb.dev/media/9sgNE2O.gif",
       "nivel": "Principiante",
       "source": "ExerciseDB V1",
       "source_id": "9sgNE2O",
@@ -909,7 +911,7 @@
     {
       "nombre": "barbell decline wide-grip press",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-hl8duh8.gif",
+      "video_url": "https://static.exercisedb.dev/media/hl8DUh8.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "hl8DUh8",
@@ -924,7 +926,7 @@
     {
       "nombre": "barbell decline wide-grip pullover",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-hj4focd.gif",
+      "video_url": "https://static.exercisedb.dev/media/Hj4FOCd.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "Hj4FOCd",
@@ -939,7 +941,7 @@
     {
       "nombre": "barbell reverse grip decline bench press",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-dotagef.gif",
+      "video_url": "https://static.exercisedb.dev/media/DotAgEF.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "DotAgEF",
@@ -954,7 +956,7 @@
     {
       "nombre": "bench dip (knees bent)",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-rrlske5.gif",
+      "video_url": "https://static.exercisedb.dev/media/RrLske5.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "RrLske5",
@@ -969,7 +971,7 @@
     {
       "nombre": "bench dip on floor",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-9rt8oqw.gif",
+      "video_url": "https://static.exercisedb.dev/media/9RT8oQW.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "9RT8oQW",
@@ -984,7 +986,7 @@
     {
       "nombre": "cable decline fly",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-7sac5zz.gif",
+      "video_url": "https://static.exercisedb.dev/media/7saC5zz.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "7saC5zz",
@@ -1000,7 +1002,7 @@
     {
       "nombre": "cable decline one arm press",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-khgna16.gif",
+      "video_url": "https://static.exercisedb.dev/media/KHGNa16.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "KHGNa16",
@@ -1016,7 +1018,7 @@
     {
       "nombre": "cable decline press",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-2pya1cp.gif",
+      "video_url": "https://static.exercisedb.dev/media/2Pya1cP.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "2Pya1cP",
@@ -1034,7 +1036,7 @@
     {
       "nombre": "cable one arm decline chest fly",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-w4dlzsx.gif",
+      "video_url": "https://static.exercisedb.dev/media/w4dLzSx.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "w4dLzSx",
@@ -1050,7 +1052,7 @@
     {
       "nombre": "chest dip",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-9wtm7dq.gif",
+      "video_url": "https://static.exercisedb.dev/media/9WTm7dq.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "9WTm7dq",
@@ -1064,7 +1066,7 @@
     {
       "nombre": "chest dip (on dip-pull-up cage)",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-xgwyaia.gif",
+      "video_url": "https://static.exercisedb.dev/media/XgWyAiA.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "XgWyAiA",
@@ -1082,7 +1084,7 @@
     {
       "nombre": "chest dip on straight bar",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-lqformn.gif",
+      "video_url": "https://static.exercisedb.dev/media/LQFOrMn.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "LQFOrMn",
@@ -1097,7 +1099,7 @@
     {
       "nombre": "decline push-up",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-i5cehka.gif",
+      "video_url": "https://static.exercisedb.dev/media/i5cEhka.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "i5cEhka",
@@ -1110,24 +1112,25 @@
       ]
     },
     {
-      "nombre": "dumbbell one arm decline chest press",
+      "nombre": "deep smith machine reverse decline close grip bench press",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-regm1de.gif",
+      "video_url": "https://static.exercisedb.dev/media/Gu2ENkm.gif",
       "nivel": "Avanzado",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "REGM1dE",
+      "source": "ExerciseDB V1",
+      "source_id": "Gu2ENkm",
       "instrucciones": [
-        "Step:1 Lie on a decline bench with a dumbbell in one hand, resting on your chest.",
-        "Step:2 Place your feet flat on the ground and keep your back pressed against the bench.",
-        "Step:3 Extend your arm and push the dumbbell up towards the ceiling, fully extending your elbow.",
-        "Step:4 Pause for a moment at the top, then slowly lower the dumbbell back down to the starting position.",
-        "Step:5 Repeat for the desired number of repetitions, then switch to the other arm."
+        "Step:1 Adjust the smith machine to a decline position.",
+        "Step:2 Lie down on the bench with your feet secured under the foot pads.",
+        "Step:3 Grasp the barbell with a close grip, slightly narrower than shoulder-width apart.",
+        "Step:4 Unrack the barbell and lower it slowly towards your chest, keeping your elbows tucked in. Focus on deep movement.",
+        "Step:5 Pause for a moment at the bottom, then push the barbell back up to the starting position.",
+        "Step:6 Repeat for the desired number of repetitions."
       ]
     },
     {
       "nombre": "dumbbell decline bench press",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-dwhemme.gif",
+      "video_url": "https://static.exercisedb.dev/media/DwhEmmE.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "DwhEmmE",
@@ -1142,7 +1145,7 @@
     {
       "nombre": "dumbbell decline fly",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-xxm4nyq.gif",
+      "video_url": "https://static.exercisedb.dev/media/xXm4nYq.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "xXm4nYq",
@@ -1157,7 +1160,7 @@
     {
       "nombre": "dumbbell decline hammer press",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-1qrwgz2.gif",
+      "video_url": "https://static.exercisedb.dev/media/1qrWgZ2.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "1qrWgZ2",
@@ -1172,7 +1175,7 @@
     {
       "nombre": "dumbbell decline one arm fly",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-nl6ybwn.gif",
+      "video_url": "https://static.exercisedb.dev/media/NL6YBwN.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "NL6YBwN",
@@ -1188,7 +1191,7 @@
     {
       "nombre": "dumbbell decline one arm hammer press",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-shump5h.gif",
+      "video_url": "https://static.exercisedb.dev/media/SHUMp5H.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "SHUMp5H",
@@ -1203,7 +1206,7 @@
     {
       "nombre": "dumbbell decline twist fly",
       "descripcion": "Pecho bajo",
-      "video_url": "/videos/gym30-external/pecho-bajo-refhapa.gif",
+      "video_url": "https://static.exercisedb.dev/media/reFHapa.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "reFHapa",
@@ -1519,7 +1522,7 @@
     {
       "nombre": "band alternating biceps curl",
       "descripcion": "Bíceps",
-      "video_url": "/videos/gym30-external/biceps-3omwx6p.gif",
+      "video_url": "https://static.exercisedb.dev/media/3omWx6P.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "3omWx6P",
@@ -1533,7 +1536,7 @@
     {
       "nombre": "band concentration curl",
       "descripcion": "Bíceps",
-      "video_url": "/videos/gym30-external/biceps-kmvvafu.gif",
+      "video_url": "https://static.exercisedb.dev/media/kmVVAfu.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "kmVVAfu",
@@ -1549,7 +1552,7 @@
     {
       "nombre": "band one arm overhead biceps curl",
       "descripcion": "Bíceps",
-      "video_url": "/videos/gym30-external/biceps-unab8ak.gif",
+      "video_url": "https://static.exercisedb.dev/media/UNAB8ak.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "UNAB8ak",
@@ -1564,7 +1567,7 @@
     {
       "nombre": "barbell alternate biceps curl",
       "descripcion": "Bíceps",
-      "video_url": "/videos/gym30-external/biceps-yza7xrq.gif",
+      "video_url": "https://static.exercisedb.dev/media/Yza7XrQ.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "Yza7XrQ",
@@ -1580,7 +1583,7 @@
     {
       "nombre": "barbell biceps curl (with arm blaster)",
       "descripcion": "Bíceps",
-      "video_url": "/videos/gym30-external/biceps-aee2fcj.gif",
+      "video_url": "https://static.exercisedb.dev/media/aee2Fcj.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "aee2Fcj",
@@ -1597,7 +1600,7 @@
     {
       "nombre": "barbell lying preacher curl",
       "descripcion": "Bíceps",
-      "video_url": "/videos/gym30-external/biceps-syj4bkt.gif",
+      "video_url": "https://static.exercisedb.dev/media/SYJ4Bkt.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "SYJ4Bkt",
@@ -1613,7 +1616,7 @@
     {
       "nombre": "barbell preacher curl",
       "descripcion": "Bíceps",
-      "video_url": "/videos/gym30-external/biceps-qogpvf6.gif",
+      "video_url": "https://static.exercisedb.dev/media/qOgPVf6.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "qOgPVf6",
@@ -1627,24 +1630,28 @@
       ]
     },
     {
-      "nombre": "barbell seated close-grip concentration curl",
+      "nombre": "barbell prone incline curl with intensive",
       "descripcion": "Bíceps",
-      "video_url": "/videos/gym30-external/biceps-1v1gj1u.gif",
+      "video_url": "https://static.exercisedb.dev/media/Um8xUAc.gif",
       "nivel": "Avanzado",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "1V1gj1u",
+      "source": "ExerciseDB V1",
+      "source_id": "Um8xUAc",
       "instrucciones": [
-        "Step:1 Sit on a bench with your feet flat on the floor and hold a barbell with an underhand grip, hands shoulder-width apart.",
-        "Step:2 Rest your upper arms against your inner thighs, just above your knees, and let the barbell hang down in front of you.",
-        "Step:3 Keeping your upper arms stationary, exhale and curl the barbell up towards your shoulders, contracting your biceps.",
-        "Step:4 Hold the contracted position for a brief pause, then inhale and slowly lower the barbell back down to the starting position.",
-        "Step:5 Repeat for the desired number of repetitions."
+        "Step:1 Set up an incline bench at a 45-degree angle.",
+        "Step:2 Lie face down on the bench with your chest and stomach resting against it.",
+        "Step:3 Hold a barbell with an underhand grip, shoulder-width apart.",
+        "Step:4 Extend your arms fully, allowing the barbell to hang down towards the floor.",
+        "Step:5 Keeping your upper arms stationary, exhale and curl the weights while contracting your biceps.",
+        "Step:6 Continue to raise the barbell until your biceps are fully contracted and the bar is at shoulder level.",
+        "Step:7 (intensive variation) Hold the contracted position for a brief pause as you squeeze your biceps.",
+        "Step:8 Inhale and slowly begin to lower the barbell back to the starting position.",
+        "Step:9 Repeat for the desired number of repetitions."
       ]
     },
     {
       "nombre": "barbell reverse curl",
       "descripcion": "Bíceps",
-      "video_url": "/videos/gym30-external/biceps-xnrs20v.gif",
+      "video_url": "https://static.exercisedb.dev/media/xNrS20v.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "xNrS20v",
@@ -1660,7 +1667,7 @@
     {
       "nombre": "barbell reverse preacher curl",
       "descripcion": "Bíceps",
-      "video_url": "/videos/gym30-external/biceps-4lig9xr.gif",
+      "video_url": "https://static.exercisedb.dev/media/4LIG9xr.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "4LIG9xr",
@@ -1970,7 +1977,7 @@
     {
       "nombre": "all fours squad stretch",
       "descripcion": "Cuádriceps",
-      "video_url": "/videos/gym30-external/cuadriceps-qbckorm.gif",
+      "video_url": "https://static.exercisedb.dev/media/qBcKorM.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "qBcKorM",
@@ -1983,27 +1990,24 @@
       ]
     },
     {
-      "nombre": "barbell bench squat",
+      "nombre": "all fours squad stretch - elevated variation",
       "descripcion": "Cuádriceps",
-      "video_url": "/videos/gym30-external/cuadriceps-w9pfvv1.gif",
+      "video_url": "https://static.exercisedb.dev/media/LzX8YEz.gif",
       "nivel": "Avanzado",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "W9pFVv1",
+      "source": "ExerciseDB V1",
+      "source_id": "LzX8YEz",
       "instrucciones": [
-        "Step:1 Set up a barbell on a squat rack at chest height.",
-        "Step:2 Stand facing away from the rack, with your feet shoulder-width apart.",
-        "Step:3 Bend your knees and lower your body down into a squat position, keeping your back straight and chest up.",
-        "Step:4 Grasp the barbell with an overhand grip, slightly wider than shoulder-width apart.",
-        "Step:5 Lift the barbell off the rack and step back, ensuring your feet are still shoulder-width apart.",
-        "Step:6 Lower your body down into a squat, keeping your knees in line with your toes.",
-        "Step:7 Pause for a moment at the bottom, then push through your heels to return to the starting position.",
-        "Step:8 Repeat for the desired number of repetitions."
+        "Step:1 Start on all fours with your hands directly under your shoulders and your knees directly under your hips.",
+        "Step:2 Extend one leg straight back, keeping your knee bent and your foot flexed. Maintain elevated form throughout.",
+        "Step:3 Slowly lower your hips towards the ground, feeling a stretch in your quads.",
+        "Step:4 Hold this position for 20-30 seconds.",
+        "Step:5 Switch legs and repeat the stretch on the other side."
       ]
     },
     {
       "nombre": "assisted prone lying quads stretch",
       "descripcion": "Cuádriceps",
-      "video_url": "/videos/gym30-external/cuadriceps-yuyamej.gif",
+      "video_url": "https://static.exercisedb.dev/media/YUYAMEj.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "YUYAMEj",
@@ -2018,7 +2022,7 @@
     {
       "nombre": "backward jump",
       "descripcion": "Cuádriceps",
-      "video_url": "/videos/gym30-external/cuadriceps-sadowk7.gif",
+      "video_url": "https://static.exercisedb.dev/media/SaDOwk7.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "SaDOwk7",
@@ -2032,7 +2036,7 @@
     {
       "nombre": "balance board",
       "descripcion": "Cuádriceps",
-      "video_url": "/videos/gym30-external/cuadriceps-xaysmb0.gif",
+      "video_url": "https://static.exercisedb.dev/media/xAySMB0.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "xAySMB0",
@@ -2047,7 +2051,7 @@
     {
       "nombre": "band one arm single leg split squat",
       "descripcion": "Cuádriceps",
-      "video_url": "/videos/gym30-external/cuadriceps-arsyed3.gif",
+      "video_url": "https://static.exercisedb.dev/media/arsYEd3.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "arsYEd3",
@@ -2063,7 +2067,7 @@
     {
       "nombre": "band single leg split squat",
       "descripcion": "Cuádriceps",
-      "video_url": "/videos/gym30-external/cuadriceps-y8bym8w.gif",
+      "video_url": "https://static.exercisedb.dev/media/y8bYM8w.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "y8bYM8w",
@@ -2078,7 +2082,7 @@
     {
       "nombre": "band squat",
       "descripcion": "Cuádriceps",
-      "video_url": "/videos/gym30-external/cuadriceps-tuzlh71.gif",
+      "video_url": "https://static.exercisedb.dev/media/TUZLh71.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "TUZLh71",
@@ -2093,7 +2097,7 @@
     {
       "nombre": "band squat row",
       "descripcion": "Cuádriceps",
-      "video_url": "/videos/gym30-external/cuadriceps-w1nobyi.gif",
+      "video_url": "https://static.exercisedb.dev/media/w1NOByi.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "w1NOByi",
@@ -2110,7 +2114,7 @@
     {
       "nombre": "band step-up",
       "descripcion": "Cuádriceps",
-      "video_url": "/videos/gym30-external/cuadriceps-d5btepv.gif",
+      "video_url": "https://static.exercisedb.dev/media/d5bTEPV.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "d5bTEPV",
@@ -2127,7 +2131,7 @@
     {
       "nombre": "barbell bench front squat",
       "descripcion": "Cuádriceps",
-      "video_url": "/videos/gym30-external/cuadriceps-y7ycmij.gif",
+      "video_url": "https://static.exercisedb.dev/media/Y7YcmIJ.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "Y7YcmIJ",
@@ -2196,7 +2200,7 @@
     {
       "nombre": "ankle circles",
       "descripcion": "Pantorrillas",
-      "video_url": "/videos/gym30-external/pantorrillas-ul9cskm.gif",
+      "video_url": "https://static.exercisedb.dev/media/uL9CsKm.gif",
       "nivel": "Principiante",
       "source": "ExerciseDB V1",
       "source_id": "uL9CsKm",
@@ -2210,7 +2214,7 @@
     {
       "nombre": "assisted lying calves stretch",
       "descripcion": "Pantorrillas",
-      "video_url": "/videos/gym30-external/pantorrillas-gxdwdx0.gif",
+      "video_url": "https://static.exercisedb.dev/media/GxDwDX0.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "GxDwDX0",
@@ -2225,7 +2229,7 @@
     {
       "nombre": "astride jumps (male)",
       "descripcion": "Pantorrillas",
-      "video_url": "/videos/gym30-external/pantorrillas-f9lvssi.gif",
+      "video_url": "https://static.exercisedb.dev/media/f9lVSSI.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "f9lVSSI",
@@ -2241,7 +2245,7 @@
     {
       "nombre": "backward jump — Pantorrillas",
       "descripcion": "Pantorrillas",
-      "video_url": "/videos/gym30-external/pantorrillas-sadowk7.gif",
+      "video_url": "https://static.exercisedb.dev/media/SaDOwk7.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "SaDOwk7",
@@ -2255,7 +2259,7 @@
     {
       "nombre": "band single leg calf raise",
       "descripcion": "Pantorrillas",
-      "video_url": "/videos/gym30-external/pantorrillas-9jprnph.gif",
+      "video_url": "https://static.exercisedb.dev/media/9JprnPh.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "9JprnPh",
@@ -2270,7 +2274,7 @@
     {
       "nombre": "band single leg reverse calf raise",
       "descripcion": "Pantorrillas",
-      "video_url": "/videos/gym30-external/pantorrillas-qssqwbf.gif",
+      "video_url": "https://static.exercisedb.dev/media/QsSQWbf.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "QsSQWbf",
@@ -2285,7 +2289,7 @@
     {
       "nombre": "band two legs calf raise - (band under both legs) v. 2",
       "descripcion": "Pantorrillas",
-      "video_url": "/videos/gym30-external/pantorrillas-jl6uxzv.gif",
+      "video_url": "https://static.exercisedb.dev/media/jl6uxZV.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "jl6uxZV",
@@ -2300,7 +2304,7 @@
     {
       "nombre": "barbell floor calf raise",
       "descripcion": "Pantorrillas",
-      "video_url": "/videos/gym30-external/pantorrillas-2ihea2t.gif",
+      "video_url": "https://static.exercisedb.dev/media/2IHEa2T.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "2IHEa2T",
@@ -2316,7 +2320,7 @@
     {
       "nombre": "barbell jump squat",
       "descripcion": "Pantorrillas",
-      "video_url": "/videos/gym30-external/pantorrillas-1gfntzv.gif",
+      "video_url": "https://static.exercisedb.dev/media/1gFNTZV.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "1gFNTZV",
@@ -2331,7 +2335,7 @@
     {
       "nombre": "barbell seated calf raise",
       "descripcion": "Pantorrillas",
-      "video_url": "/videos/gym30-external/pantorrillas-ipvgbnc.gif",
+      "video_url": "https://static.exercisedb.dev/media/ipvgBnC.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "ipvgBnC",
@@ -2346,7 +2350,7 @@
     {
       "nombre": "barbell seated calf raise — Pantorrillas",
       "descripcion": "Pantorrillas",
-      "video_url": "/videos/gym30-external/pantorrillas-ktsfqaz.gif",
+      "video_url": "https://static.exercisedb.dev/media/ktsFQAZ.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "ktsFQAZ",
@@ -2362,7 +2366,7 @@
     {
       "nombre": "barbell squat jump step rear lunge",
       "descripcion": "Pantorrillas",
-      "video_url": "/videos/gym30-external/pantorrillas-rycv1kh.gif",
+      "video_url": "https://static.exercisedb.dev/media/RYcV1kH.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "RYcV1kH",
@@ -2380,7 +2384,7 @@
     {
       "nombre": "barbell standing calf raise",
       "descripcion": "Pantorrillas",
-      "video_url": "/videos/gym30-external/pantorrillas-8ozhuiz.gif",
+      "video_url": "https://static.exercisedb.dev/media/8ozhUIZ.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "8ozhUIZ",
@@ -2394,7 +2398,7 @@
     {
       "nombre": "barbell standing leg calf raise",
       "descripcion": "Pantorrillas",
-      "video_url": "/videos/gym30-external/pantorrillas-rgwhj5o.gif",
+      "video_url": "https://static.exercisedb.dev/media/rGwhJ5o.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "rGwhJ5o",
@@ -2408,7 +2412,7 @@
     {
       "nombre": "barbell standing rocking leg calf raise",
       "descripcion": "Pantorrillas",
-      "video_url": "/videos/gym30-external/pantorrillas-6hihhe0.gif",
+      "video_url": "https://static.exercisedb.dev/media/6HiHHe0.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "6HiHHe0",
@@ -2422,7 +2426,7 @@
     {
       "nombre": "bodyweight drop jump squat",
       "descripcion": "Pantorrillas",
-      "video_url": "/videos/gym30-external/pantorrillas-wfotm7s.gif",
+      "video_url": "https://static.exercisedb.dev/media/wfotm7S.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "wfotm7S",
@@ -2438,7 +2442,7 @@
     {
       "nombre": "bodyweight standing calf raise",
       "descripcion": "Pantorrillas",
-      "video_url": "/videos/gym30-external/pantorrillas-bjyhbin.gif",
+      "video_url": "https://static.exercisedb.dev/media/bJYHBIN.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "bJYHBIN",
@@ -2453,7 +2457,7 @@
     {
       "nombre": "box jump down with one leg stabilization",
       "descripcion": "Pantorrillas",
-      "video_url": "/videos/gym30-external/pantorrillas-ipm26qu.gif",
+      "video_url": "https://static.exercisedb.dev/media/iPm26QU.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "iPm26QU",
@@ -2469,7 +2473,7 @@
     {
       "nombre": "cable standing calf raise",
       "descripcion": "Pantorrillas",
-      "video_url": "/videos/gym30-external/pantorrillas-yl2iyyy.gif",
+      "video_url": "https://static.exercisedb.dev/media/yl2IYyy.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "yl2IYyy",
@@ -2484,7 +2488,7 @@
     {
       "nombre": "cable standing one leg calf raise",
       "descripcion": "Pantorrillas",
-      "video_url": "/videos/gym30-external/pantorrillas-fgc9xdl.gif",
+      "video_url": "https://static.exercisedb.dev/media/fgc9Xdl.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "fgc9Xdl",
@@ -2500,7 +2504,7 @@
     {
       "nombre": "calf push stretch with hands against wall",
       "descripcion": "Pantorrillas",
-      "video_url": "/videos/gym30-external/pantorrillas-pznxakt.gif",
+      "video_url": "https://static.exercisedb.dev/media/PzNxakt.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "PzNxakt",
@@ -2540,7 +2544,7 @@
     {
       "nombre": "band reverse fly",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-stfvvsg.gif",
+      "video_url": "https://static.exercisedb.dev/media/sTfvVsG.gif",
       "nivel": "Principiante",
       "source": "ExerciseDB V1",
       "source_id": "sTfvVsG",
@@ -2556,7 +2560,7 @@
     {
       "nombre": "band shrug",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-trmte8s.gif",
+      "video_url": "https://static.exercisedb.dev/media/trmte8s.gif",
       "nivel": "Principiante",
       "source": "ExerciseDB V1",
       "source_id": "trmte8s",
@@ -2571,7 +2575,7 @@
     {
       "nombre": "band standing rear delt row — Trapecio",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-tc5dyrf.gif",
+      "video_url": "https://static.exercisedb.dev/media/tc5dYrf.gif",
       "nivel": "Principiante",
       "source": "ExerciseDB V1",
       "source_id": "tc5dYrf",
@@ -2587,7 +2591,7 @@
     {
       "nombre": "barbell rear delt raise — Trapecio",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-ln9itbu.gif",
+      "video_url": "https://static.exercisedb.dev/media/Ln9iTbU.gif",
       "nivel": "Principiante",
       "source": "ExerciseDB V1",
       "source_id": "Ln9iTbU",
@@ -2602,7 +2606,7 @@
     {
       "nombre": "barbell rear delt row",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-s9zhivu.gif",
+      "video_url": "https://static.exercisedb.dev/media/S9zHIvU.gif",
       "nivel": "Principiante",
       "source": "ExerciseDB V1",
       "source_id": "S9zHIvU",
@@ -2618,7 +2622,7 @@
     {
       "nombre": "barbell upright row",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-udlhco8.gif",
+      "video_url": "https://static.exercisedb.dev/media/UDlhcO8.gif",
       "nivel": "Principiante",
       "source": "ExerciseDB V1",
       "source_id": "UDlhcO8",
@@ -2633,7 +2637,7 @@
     {
       "nombre": "barbell upright row v. 2",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-83how9x.gif",
+      "video_url": "https://static.exercisedb.dev/media/83HoW9X.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "83HoW9X",
@@ -2648,7 +2652,7 @@
     {
       "nombre": "barbell upright row v. 3",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-fi18rbc.gif",
+      "video_url": "https://static.exercisedb.dev/media/fI18Rbc.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "fI18Rbc",
@@ -2663,7 +2667,7 @@
     {
       "nombre": "barbell wide-grip upright row — Trapecio",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-rgjdrr1.gif",
+      "video_url": "https://static.exercisedb.dev/media/RgJDRR1.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "RgJDRR1",
@@ -2678,7 +2682,7 @@
     {
       "nombre": "cable high row (kneeling)",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-zsjnetl.gif",
+      "video_url": "https://static.exercisedb.dev/media/ZSJNetl.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "ZSJNetl",
@@ -2694,7 +2698,7 @@
     {
       "nombre": "cable kneeling rear delt row (with rope) (male)",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-g61cxlk.gif",
+      "video_url": "https://static.exercisedb.dev/media/G61cXLk.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "G61cXLk",
@@ -2708,24 +2712,25 @@
       ]
     },
     {
-      "nombre": "dumbbell lying rear delt row",
+      "nombre": "cable kneeling rear delt row (with rope) (male) expanded",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-xuud0fs.gif",
+      "video_url": "https://static.exercisedb.dev/media/eZ79rbI.gif",
       "nivel": "Intermedio",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "XUUD0Fs",
+      "source": "ExerciseDB V1",
+      "source_id": "eZ79rbI",
       "instrucciones": [
-        "Step:1 Lie face down on a flat bench with a dumbbell in each hand, palms facing inwards.",
-        "Step:2 Extend your arms straight down towards the floor, keeping a slight bend in your elbows.",
-        "Step:3 Engaging your back muscles, lift the dumbbells up towards your chest, squeezing your shoulder blades together.",
-        "Step:4 Pause for a moment at the top, then slowly lower the dumbbells back down to the starting position.",
-        "Step:5 Repeat for the desired number of repetitions."
+        "Step:1 Attach a rope handle to a low cable pulley and kneel down facing the machine.",
+        "Step:2 (expanded variation) Grasp the rope with a neutral grip (palms facing each other) and extend your arms fully in front of you.",
+        "Step:3 Keeping your back straight and core engaged, pull the rope towards your body by retracting your shoulder blades.",
+        "Step:4 Squeeze your shoulder blades together at the end of the movement and hold for a brief pause.",
+        "Step:5 Slowly release the tension and return to the starting position.",
+        "Step:6 Repeat for the desired number of repetitions."
       ]
     },
     {
       "nombre": "cable one arm straight back high row (kneeling)",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-wrypp2g.gif",
+      "video_url": "https://static.exercisedb.dev/media/WrYPP2g.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "WrYPP2g",
@@ -2743,7 +2748,7 @@
     {
       "nombre": "cable rear delt row (stirrups)",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-yudigns.gif",
+      "video_url": "https://static.exercisedb.dev/media/yUdIGNs.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "yUdIGNs",
@@ -2760,7 +2765,7 @@
     {
       "nombre": "cable rear delt row (with rope) — Trapecio",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-wqnpgcg.gif",
+      "video_url": "https://static.exercisedb.dev/media/wqNPGCg.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "wqNPGCg",
@@ -2777,7 +2782,7 @@
     {
       "nombre": "cable reverse-grip straight back seated high row",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-pntsx17.gif",
+      "video_url": "https://static.exercisedb.dev/media/PNtsX17.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "PNtsX17",
@@ -2793,7 +2798,7 @@
     {
       "nombre": "cable shrug",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-eg98ft9.gif",
+      "video_url": "https://static.exercisedb.dev/media/Eg98Ft9.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "Eg98Ft9",
@@ -2808,7 +2813,7 @@
     {
       "nombre": "cable standing cross-over high reverse fly",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-p5p0j8b.gif",
+      "video_url": "https://static.exercisedb.dev/media/P5p0j8B.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "P5p0j8B",
@@ -2825,7 +2830,7 @@
     {
       "nombre": "cable standing rear delt row (with rope)",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-zfyaghk.gif",
+      "video_url": "https://static.exercisedb.dev/media/ZfyAGhK.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "ZfyAGhK",
@@ -2841,7 +2846,7 @@
     {
       "nombre": "cable supine reverse fly",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-pqculdi.gif",
+      "video_url": "https://static.exercisedb.dev/media/PQcUlDi.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "PQcUlDi",
@@ -2856,7 +2861,7 @@
     {
       "nombre": "cable upright row",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-calkspw.gif",
+      "video_url": "https://static.exercisedb.dev/media/cALKspW.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "cALKspW",
@@ -2870,25 +2875,24 @@
       ]
     },
     {
-      "nombre": "dumbbell one arm reverse fly (with support)",
+      "nombre": "core barbell upright row v. 2",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-e25f58f.gif",
+      "video_url": "https://static.exercisedb.dev/media/1oE78pm.gif",
       "nivel": "Avanzado",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "e25F58f",
+      "source": "ExerciseDB V1",
+      "source_id": "1oE78pm",
       "instrucciones": [
-        "Step:1 Sit on a bench with your feet flat on the ground and your back straight.",
-        "Step:2 Hold a dumbbell in one hand with your palm facing inwards.",
-        "Step:3 Lean forward and place your free hand on the bench for support.",
-        "Step:4 Keep your arm slightly bent and raise it out to the side until it is parallel to the ground.",
-        "Step:5 Pause for a moment at the top, then slowly lower your arm back down to the starting position.",
-        "Step:6 Repeat for the desired number of repetitions, then switch arms."
+        "Step:1 Stand with your feet shoulder-width apart and hold a barbell with an overhand grip, hands slightly wider than shoulder-width apart.",
+        "Step:2 Let the barbell hang in front of your thighs, arms fully extended. Perform with core intensity.",
+        "Step:3 Keeping your back straight, exhale and lift the barbell straight up towards your chin, leading with your elbows.",
+        "Step:4 Pause for a moment at the top, then inhale and slowly lower the barbell back down to the starting position.",
+        "Step:5 Repeat for the desired number of repetitions."
       ]
     },
     {
       "nombre": "dumbbell decline shrug",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-cwsai4g.gif",
+      "video_url": "https://static.exercisedb.dev/media/cwsAI4G.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "cwsAI4G",
@@ -2902,24 +2906,25 @@
       ]
     },
     {
-      "nombre": "dumbbell one arm upright row",
+      "nombre": "dumbbell decline shrug - rigid variation",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-6ckqc5e.gif",
+      "video_url": "https://static.exercisedb.dev/media/IH2kr7n.gif",
       "nivel": "Avanzado",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "6cKQC5E",
+      "source": "ExerciseDB V1",
+      "source_id": "IH2kr7n",
       "instrucciones": [
-        "Step:1 Stand with your feet shoulder-width apart, holding a dumbbell in one hand with an overhand grip.",
-        "Step:2 Let the dumbbell hang at arm's length in front of your thighs, with your palm facing your body.",
-        "Step:3 Keeping your back straight and your core engaged, exhale and lift the dumbbell straight up towards your chin, leading with your elbow.",
-        "Step:4 Pause for a moment at the top, then inhale and slowly lower the dumbbell back down to the starting position.",
-        "Step:5 Repeat for the desired number of repetitions, then switch to the other arm."
+        "Step:1 Set up a decline bench at a 45-degree angle.",
+        "Step:2 Lie face down on the bench with your chest and stomach resting against it.",
+        "Step:3 (rigid variation) Hold a dumbbell in each hand with your arms fully extended towards the floor.",
+        "Step:4 Keeping your arms straight, raise your shoulders towards your ears as high as possible.",
+        "Step:5 Hold the contraction for a moment, then slowly lower the dumbbells back to the starting position.",
+        "Step:6 Repeat for the desired number of repetitions."
       ]
     },
     {
       "nombre": "dumbbell decline shrug v. 2",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-brlbdjk.gif",
+      "video_url": "https://static.exercisedb.dev/media/bRlbdjK.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "bRlbdjK",
@@ -2935,7 +2940,7 @@
     {
       "nombre": "dumbbell lying on floor rear delt raise",
       "descripcion": "Trapecio",
-      "video_url": "/videos/gym30-external/trapecio-ion0xwz.gif",
+      "video_url": "https://static.exercisedb.dev/media/Ion0XWz.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "Ion0XWz",
@@ -3076,7 +3081,7 @@
     {
       "nombre": "alternate lateral pulldown",
       "descripcion": "Espalda alta",
-      "video_url": "/videos/gym30-external/espalda-alta-4ikbhhv.gif",
+      "video_url": "https://static.exercisedb.dev/media/4IKbhHV.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "4IKbhHV",
@@ -3091,7 +3096,7 @@
     {
       "nombre": "archer pull up",
       "descripcion": "Espalda alta",
-      "video_url": "/videos/gym30-external/espalda-alta-72bc5za.gif",
+      "video_url": "https://static.exercisedb.dev/media/72BC5Za.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "72BC5Za",
@@ -3107,7 +3112,7 @@
     {
       "nombre": "assisted parallel close grip pull-up",
       "descripcion": "Espalda alta",
-      "video_url": "/videos/gym30-external/espalda-alta-vrhha6d.gif",
+      "video_url": "https://static.exercisedb.dev/media/vrhHa6D.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "vrhHa6D",
@@ -3124,7 +3129,7 @@
     {
       "nombre": "assisted pull-up",
       "descripcion": "Espalda alta",
-      "video_url": "/videos/gym30-external/espalda-alta-kij4z2k.gif",
+      "video_url": "https://static.exercisedb.dev/media/kiJ4Z2K.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "kiJ4Z2K",
@@ -3139,27 +3144,26 @@
       ]
     },
     {
-      "nombre": "band fixed back close grip pulldown",
+      "nombre": "assisted pull-up inclined",
       "descripcion": "Espalda alta",
-      "video_url": "/videos/gym30-external/espalda-alta-4lowllp.gif",
+      "video_url": "https://static.exercisedb.dev/media/5ipN0iE.gif",
       "nivel": "Avanzado",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "4LoWllp",
+      "source": "ExerciseDB V1",
+      "source_id": "5ipN0iE",
       "instrucciones": [
-        "Step:1 Attach the band to a fixed point above you, such as a pull-up bar or sturdy beam.",
-        "Step:2 Sit down on a bench or chair facing the band, with your feet flat on the ground and your knees bent.",
-        "Step:3 Grasp the band with a close grip, palms facing towards you.",
-        "Step:4 Keep your back straight and engage your core.",
-        "Step:5 Pull the band down towards your chest, squeezing your shoulder blades together.",
-        "Step:6 Pause for a moment at the bottom of the movement, feeling the contraction in your lats.",
-        "Step:7 Slowly release the band back to the starting position, maintaining control throughout the movement.",
-        "Step:8 Repeat for the desired number of repetitions."
+        "Step:1 Adjust the machine to your desired weight and height settings.",
+        "Step:2 Grasp the handles with an overhand grip, slightly wider than shoulder-width apart.",
+        "Step:3 Hang with your arms fully extended and your feet off the ground.",
+        "Step:4 Engage your back muscles and pull your body up towards the handles, keeping your elbows close to your body.",
+        "Step:5 Continue pulling until your chin is above the handles.",
+        "Step:6 Pause for a moment at the top, then slowly lower your body back down to the starting position.",
+        "Step:7 Repeat for the desired number of repetitions. Maintain inclined form throughout."
       ]
     },
     {
       "nombre": "assisted standing chin-up",
       "descripcion": "Espalda alta",
-      "video_url": "/videos/gym30-external/espalda-alta-7oehptv.gif",
+      "video_url": "https://static.exercisedb.dev/media/7OeHptV.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "7OeHptV",
@@ -3174,28 +3178,26 @@
       ]
     },
     {
-      "nombre": "band fixed back underhand pulldown",
+      "nombre": "assisted standing chin-up with focused",
       "descripcion": "Espalda alta",
-      "video_url": "/videos/gym30-external/espalda-alta-zh68exz.gif",
+      "video_url": "https://static.exercisedb.dev/media/LlSe9IK.gif",
       "nivel": "Avanzado",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "ZH68exZ",
+      "source": "ExerciseDB V1",
+      "source_id": "LlSe9IK",
       "instrucciones": [
-        "Step:1 Attach the band to a sturdy anchor point above your head.",
-        "Step:2 Stand facing the anchor point with your feet shoulder-width apart.",
-        "Step:3 Grasp the band with an underhand grip, hands slightly wider than shoulder-width apart.",
-        "Step:4 Step back to create tension in the band, keeping your arms fully extended.",
-        "Step:5 Engage your core and squeeze your shoulder blades together.",
-        "Step:6 Pull the band down towards your chest, leading with your elbows.",
-        "Step:7 Pause for a moment at the bottom of the movement, feeling the contraction in your lats.",
-        "Step:8 Slowly release the tension in the band and return to the starting position.",
-        "Step:9 Repeat for the desired number of repetitions."
+        "Step:1 Adjust the machine to your desired assistance level.",
+        "Step:2 (focused variation) Stand on the foot platform and grip the handles with an overhand grip, slightly wider than shoulder-width apart.",
+        "Step:3 Keep your chest up and shoulders back, engage your core, and slightly bend your knees.",
+        "Step:4 Pull your body up by flexing your elbows and driving your elbows down towards your sides.",
+        "Step:5 Continue pulling until your chin is above the bar.",
+        "Step:6 Pause for a moment at the top, then slowly lower your body back down to the starting position.",
+        "Step:7 Repeat for the desired number of repetitions."
       ]
     },
     {
       "nombre": "assisted standing pull-up",
       "descripcion": "Espalda alta",
-      "video_url": "/videos/gym30-external/espalda-alta-f4xtkbj.gif",
+      "video_url": "https://static.exercisedb.dev/media/f4xtKBj.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "f4xtKBj",
@@ -3212,7 +3214,7 @@
     {
       "nombre": "band close-grip pulldown",
       "descripcion": "Espalda alta",
-      "video_url": "/videos/gym30-external/espalda-alta-dptummx.gif",
+      "video_url": "https://static.exercisedb.dev/media/DptumMx.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "DptumMx",
@@ -3336,7 +3338,7 @@
     {
       "nombre": "band one arm standing low row",
       "descripcion": "Espalda media",
-      "video_url": "/videos/gym30-external/espalda-media-km0sqc0.gif",
+      "video_url": "https://static.exercisedb.dev/media/km0sQC0.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "km0sQC0",
@@ -3351,25 +3353,26 @@
       ]
     },
     {
-      "nombre": "bodyweight standing close-grip row",
+      "nombre": "band one arm standing low row - lateral variation",
       "descripcion": "Espalda media",
-      "video_url": "/videos/gym30-external/espalda-media-tig3pxb.gif",
+      "video_url": "https://static.exercisedb.dev/media/pgIdT6i.gif",
       "nivel": "Intermedio",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "tig3PXb",
+      "source": "ExerciseDB V1",
+      "source_id": "pgIdT6i",
       "instrucciones": [
-        "Step:1 Stand with your feet shoulder-width apart and knees slightly bent.",
-        "Step:2 Bend forward at the waist, keeping your back straight and your core engaged.",
-        "Step:3 Extend your arms straight in front of you, gripping the bar or handles with a close grip.",
-        "Step:4 Pull the bar or handles towards your body, squeezing your shoulder blades together.",
-        "Step:5 Pause for a moment at the top of the movement, then slowly release and return to the starting position.",
-        "Step:6 Repeat for the desired number of repetitions."
+        "Step:1 Attach the band to a stable anchor point at waist height.",
+        "Step:2 Stand facing the anchor point with your feet shoulder-width apart.",
+        "Step:3 Hold the band with one hand, palm facing inward, and step back to create tension in the band.",
+        "Step:4 Bend your knees slightly and hinge forward at the hips, keeping your back straight.",
+        "Step:5 Pull the band towards your waist, squeezing your shoulder blades together.",
+        "Step:6 Pause for a moment at the top of the movement, then slowly release the band back to the starting position.",
+        "Step:7 Repeat for the desired number of repetitions, then switch sides. Emphasize lateral control."
       ]
     },
     {
       "nombre": "band one arm twisting seated row",
       "descripcion": "Espalda media",
-      "video_url": "/videos/gym30-external/espalda-media-dkbwjrl.gif",
+      "video_url": "https://static.exercisedb.dev/media/DKBwJrL.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "DKBwJrL",
@@ -3385,7 +3388,7 @@
     {
       "nombre": "barbell bent over row",
       "descripcion": "Espalda media",
-      "video_url": "/videos/gym30-external/espalda-media-ezybc3j.gif",
+      "video_url": "https://static.exercisedb.dev/media/eZyBC3j.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "eZyBC3j",
@@ -3401,7 +3404,7 @@
     {
       "nombre": "barbell incline row",
       "descripcion": "Espalda media",
-      "video_url": "/videos/gym30-external/espalda-media-dmgmp3n.gif",
+      "video_url": "https://static.exercisedb.dev/media/dmgMp3n.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "dmgMp3n",
@@ -3418,7 +3421,7 @@
     {
       "nombre": "barbell one arm bent over row",
       "descripcion": "Espalda media",
-      "video_url": "/videos/gym30-external/espalda-media-jsgsc27.gif",
+      "video_url": "https://static.exercisedb.dev/media/Jsgsc27.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "Jsgsc27",
@@ -3433,7 +3436,7 @@
     {
       "nombre": "barbell pendlay row",
       "descripcion": "Espalda media",
-      "video_url": "/videos/gym30-external/espalda-media-r0z6xzq.gif",
+      "video_url": "https://static.exercisedb.dev/media/r0z6xzQ.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "r0z6xzQ",
@@ -3449,7 +3452,7 @@
     {
       "nombre": "barbell reverse grip bent over row",
       "descripcion": "Espalda media",
-      "video_url": "/videos/gym30-external/espalda-media-szx3uzm.gif",
+      "video_url": "https://static.exercisedb.dev/media/SzX3uzM.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "SzX3uzM",
@@ -3465,7 +3468,7 @@
     {
       "nombre": "barbell reverse grip incline bench row",
       "descripcion": "Espalda media",
-      "video_url": "/videos/gym30-external/espalda-media-8d8qjqi.gif",
+      "video_url": "https://static.exercisedb.dev/media/8d8qJQI.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "8d8qJQI",
@@ -3483,7 +3486,7 @@
     {
       "nombre": "bodyweight squatting row",
       "descripcion": "Espalda media",
-      "video_url": "/videos/gym30-external/espalda-media-3xk09sk.gif",
+      "video_url": "https://static.exercisedb.dev/media/3xK09Sk.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "3xK09Sk",
@@ -3498,7 +3501,7 @@
     {
       "nombre": "bodyweight squatting row (with towel)",
       "descripcion": "Espalda media",
-      "video_url": "/videos/gym30-external/espalda-media-brecuon.gif",
+      "video_url": "https://static.exercisedb.dev/media/BReCuOn.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "BReCuOn",
@@ -3513,7 +3516,7 @@
     {
       "nombre": "bodyweight standing close-grip one arm row",
       "descripcion": "Espalda media",
-      "video_url": "/videos/gym30-external/espalda-media-v2dfh14.gif",
+      "video_url": "https://static.exercisedb.dev/media/v2DfH14.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "v2DfH14",
@@ -3574,24 +3577,23 @@
       "nivel": "Intermedio"
     },
     {
-      "nombre": "exercise ball back extension with knees off ground",
+      "nombre": "advanced dumbbell stiff leg deadlift",
       "descripcion": "Espalda baja",
-      "video_url": "/videos/gym30-external/espalda-baja-wme869u.gif",
+      "video_url": "https://static.exercisedb.dev/media/2Ty4idJ.gif",
       "nivel": "Principiante",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "WME869U",
+      "source": "ExerciseDB V1",
+      "source_id": "2Ty4idJ",
       "instrucciones": [
-        "Step:1 Place the stability ball on the ground and lie face down on top of it, with your hips resting on the ball and your feet against a wall for stability.",
-        "Step:2 Position your hands behind your head or crossed over your chest.",
-        "Step:3 Engage your core and slowly lift your upper body off the ball, extending your back until your body forms a straight line from your head to your heels.",
-        "Step:4 Pause for a moment at the top, then slowly lower your upper body back down to the starting position.",
-        "Step:5 Repeat for the desired number of repetitions."
+        "Step:1 Stand with your feet shoulder-width apart, holding a dumbbell in each hand with an overhand grip.",
+        "Step:2 Keeping your back straight and your core engaged, hinge at the hips and lower the dumbbells towards the ground, allowing a slight bend in your knees. Focus on advanced movement.",
+        "Step:3 Lower the dumbbells until you feel a stretch in your hamstrings, then squeeze your glutes and push through your heels to return to the starting position.",
+        "Step:4 Repeat for the desired number of repetitions."
       ]
     },
     {
       "nombre": "back extension on exercise ball",
       "descripcion": "Espalda baja",
-      "video_url": "/videos/gym30-external/espalda-baja-qlpo4vv.gif",
+      "video_url": "https://static.exercisedb.dev/media/qLpO4vV.gif",
       "nivel": "Principiante",
       "source": "ExerciseDB V1",
       "source_id": "qLpO4vV",
@@ -3606,7 +3608,7 @@
     {
       "nombre": "band stiff leg deadlift",
       "descripcion": "Espalda baja",
-      "video_url": "/videos/gym30-external/espalda-baja-kumir2t.gif",
+      "video_url": "https://static.exercisedb.dev/media/kuMiR2T.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "kuMiR2T",
@@ -3623,7 +3625,7 @@
     {
       "nombre": "band straight back stiff leg deadlift",
       "descripcion": "Espalda baja",
-      "video_url": "/videos/gym30-external/espalda-baja-lheuulr.gif",
+      "video_url": "https://static.exercisedb.dev/media/lHeUULr.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "lHeUULr",
@@ -3639,7 +3641,7 @@
     {
       "nombre": "band straight leg deadlift",
       "descripcion": "Espalda baja",
-      "video_url": "/videos/gym30-external/espalda-baja-kuaouv8.gif",
+      "video_url": "https://static.exercisedb.dev/media/KUaoUV8.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "KUaoUV8",
@@ -3656,7 +3658,7 @@
     {
       "nombre": "barbell deadlift",
       "descripcion": "Espalda baja",
-      "video_url": "/videos/gym30-external/espalda-baja-ila4nzs.gif",
+      "video_url": "https://static.exercisedb.dev/media/ila4NZS.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "ila4NZS",
@@ -3672,7 +3674,7 @@
     {
       "nombre": "barbell good morning",
       "descripcion": "Espalda baja",
-      "video_url": "/videos/gym30-external/espalda-baja-xlz4lac.gif",
+      "video_url": "https://static.exercisedb.dev/media/XlZ4lAC.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "XlZ4lAC",
@@ -3687,7 +3689,7 @@
     {
       "nombre": "barbell one arm side deadlift",
       "descripcion": "Espalda baja",
-      "video_url": "/videos/gym30-external/espalda-baja-2dxtqhl.gif",
+      "video_url": "https://static.exercisedb.dev/media/2DxtqHL.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "2DxtqHL",
@@ -3703,7 +3705,7 @@
     {
       "nombre": "barbell rack pull",
       "descripcion": "Espalda baja",
-      "video_url": "/videos/gym30-external/espalda-baja-za9ni4z.gif",
+      "video_url": "https://static.exercisedb.dev/media/za9Ni4z.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "za9Ni4z",
@@ -3719,7 +3721,7 @@
     {
       "nombre": "barbell romanian deadlift",
       "descripcion": "Espalda baja",
-      "video_url": "/videos/gym30-external/espalda-baja-wq2c4xd.gif",
+      "video_url": "https://static.exercisedb.dev/media/wQ2c4XD.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "wQ2c4XD",
@@ -3737,7 +3739,7 @@
     {
       "nombre": "barbell seated good morning",
       "descripcion": "Espalda baja",
-      "video_url": "/videos/gym30-external/espalda-baja-d960pge.gif",
+      "video_url": "https://static.exercisedb.dev/media/d960PgE.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "d960PgE",
@@ -3752,7 +3754,7 @@
     {
       "nombre": "barbell single leg deadlift",
       "descripcion": "Espalda baja",
-      "video_url": "/videos/gym30-external/espalda-baja-geyural.gif",
+      "video_url": "https://static.exercisedb.dev/media/gEyURal.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "gEyURal",
@@ -3768,7 +3770,7 @@
     {
       "nombre": "barbell stiff leg good morning",
       "descripcion": "Espalda baja",
-      "video_url": "/videos/gym30-external/espalda-baja-jrohazc.gif",
+      "video_url": "https://static.exercisedb.dev/media/JrOHAZc.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "JrOHAZc",
@@ -3784,7 +3786,7 @@
     {
       "nombre": "barbell sumo deadlift",
       "descripcion": "Espalda baja",
-      "video_url": "/videos/gym30-external/espalda-baja-kgi0tqw.gif",
+      "video_url": "https://static.exercisedb.dev/media/KgI0tqW.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "KgI0tqW",
@@ -3801,7 +3803,7 @@
     {
       "nombre": "cable deadlift",
       "descripcion": "Espalda baja",
-      "video_url": "/videos/gym30-external/espalda-baja-egduduv.gif",
+      "video_url": "https://static.exercisedb.dev/media/eGDudUV.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "eGDudUV",
@@ -3815,25 +3817,25 @@
       ]
     },
     {
-      "nombre": "exercise ball back extension with rotation",
+      "nombre": "controlled band straight back stiff leg deadlift",
       "descripcion": "Espalda baja",
-      "video_url": "/videos/gym30-external/espalda-baja-wvd66ff.gif",
+      "video_url": "https://static.exercisedb.dev/media/PDHE73u.gif",
       "nivel": "Avanzado",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "WVD66ff",
+      "source": "ExerciseDB V1",
+      "source_id": "PDHE73u",
       "instrucciones": [
-        "Step:1 Start by lying face down on the stability ball with your hips resting on the ball and your feet firmly planted on the ground.",
-        "Step:2 Place your hands behind your head or cross them over your chest.",
-        "Step:3 Engage your core and slowly lift your upper body off the ball, extending your back until your body forms a straight line from your head to your heels.",
-        "Step:4 Pause for a moment at the top, then slowly rotate your torso to one side, keeping your hips and legs stable.",
-        "Step:5 Return to the center and repeat the rotation to the other side.",
-        "Step:6 Lower your upper body back down to the starting position and repeat for the desired number of repetitions."
+        "Step:1 Stand with your feet shoulder-width apart and place the band around your upper legs.",
+        "Step:2 Hold the band with both hands in front of your thighs, palms facing your body.",
+        "Step:3 Keeping your back straight and your knees slightly bent, hinge at the hips and lower the band towards the ground. Focus on controlled movement.",
+        "Step:4 Feel the stretch in your hamstrings as you lower the band.",
+        "Step:5 Engage your glutes and hamstrings to lift your body back up to the starting position.",
+        "Step:6 Repeat for the desired number of repetitions."
       ]
     },
     {
       "nombre": "dumbbell romanian deadlift",
       "descripcion": "Espalda baja",
-      "video_url": "/videos/gym30-external/espalda-baja-rr0ljzx.gif",
+      "video_url": "https://static.exercisedb.dev/media/rR0LJzx.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "rR0LJzx",
@@ -3847,7 +3849,7 @@
     {
       "nombre": "dumbbell single leg deadlift",
       "descripcion": "Espalda baja",
-      "video_url": "/videos/gym30-external/espalda-baja-gkozt8x.gif",
+      "video_url": "https://static.exercisedb.dev/media/gKozT8X.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "gKozT8X",
@@ -3864,7 +3866,7 @@
     {
       "nombre": "dumbbell single leg deadlift with stepbox support",
       "descripcion": "Espalda baja",
-      "video_url": "/videos/gym30-external/espalda-baja-dabmy1y.gif",
+      "video_url": "https://static.exercisedb.dev/media/daBmy1Y.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "daBmy1Y",
@@ -3880,7 +3882,7 @@
     {
       "nombre": "dumbbell straight leg deadlift",
       "descripcion": "Espalda baja",
-      "video_url": "/videos/gym30-external/espalda-baja-oom75kc.gif",
+      "video_url": "https://static.exercisedb.dev/media/oom75KC.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "oom75KC",
@@ -3895,7 +3897,7 @@
     {
       "nombre": "exercise ball back extension with arms extended",
       "descripcion": "Espalda baja",
-      "video_url": "/videos/gym30-external/espalda-baja-perjvm8.gif",
+      "video_url": "https://static.exercisedb.dev/media/PERjVm8.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "PERjVm8",
@@ -3910,7 +3912,7 @@
     {
       "nombre": "exercise ball back extension with hands behind head",
       "descripcion": "Espalda baja",
-      "video_url": "/videos/gym30-external/espalda-baja-o1hgdsq.gif",
+      "video_url": "https://static.exercisedb.dev/media/o1HGDSq.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "o1HGDSq",
@@ -4068,25 +4070,26 @@
       "nivel": "Intermedio"
     },
     {
-      "nombre": "barbell close-grip bench press",
+      "nombre": "active style cable pushdown",
       "descripcion": "Tríceps",
-      "video_url": "/videos/gym30-external/triceps-j6dx1mu.gif",
+      "video_url": "https://static.exercisedb.dev/media/w7obpWd.gif",
       "nivel": "Avanzado",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "J6Dx1Mu",
+      "source": "ExerciseDB V1",
+      "source_id": "w7obpWd",
       "instrucciones": [
-        "Step:1 Lie flat on a bench with your feet flat on the ground and your back pressed against the bench.",
-        "Step:2 Grasp the barbell with a close grip, slightly narrower than shoulder-width apart.",
-        "Step:3 Unrack the barbell and lower it slowly towards your chest, keeping your elbows close to your body.",
-        "Step:4 Pause for a moment when the barbell touches your chest.",
-        "Step:5 Push the barbell back up to the starting position, fully extending your arms.",
-        "Step:6 Repeat for the desired number of repetitions."
+        "Step:1 Attach a straight bar to a high pulley cable machine.",
+        "Step:2 Stand facing the machine with your feet shoulder-width apart and a slight bend in your knees.",
+        "Step:3 Grasp the bar with an overhand grip, hands shoulder-width apart.",
+        "Step:4 Keep your elbows close to your sides and your upper arms stationary.",
+        "Step:5 Exhale and push the bar down until your elbows are fully extended.",
+        "Step:6 Pause for a moment, then inhale and slowly return the bar to the starting position. Maintain active form throughout.",
+        "Step:7 Repeat for the desired number of repetitions."
       ]
     },
     {
       "nombre": "assisted standing triceps extension (with towel)",
       "descripcion": "Tríceps",
-      "video_url": "/videos/gym30-external/triceps-7hcfmbp.gif",
+      "video_url": "https://static.exercisedb.dev/media/7HcfMBP.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "7HcfMBP",
@@ -4099,23 +4102,24 @@
       ]
     },
     {
-      "nombre": "barbell decline close grip to skull press",
+      "nombre": "assisted standing triceps extension (with towel) with horizontal",
       "descripcion": "Tríceps",
-      "video_url": "/videos/gym30-external/triceps-lmgxzn8.gif",
+      "video_url": "https://static.exercisedb.dev/media/7R4NIjL.gif",
       "nivel": "Avanzado",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "LMGXZn8",
+      "source": "ExerciseDB V1",
+      "source_id": "7R4NIjL",
       "instrucciones": [
-        "Step:1 Lie on a decline bench with your head lower than your feet and hold a barbell with a close grip.",
-        "Step:2 Lower the barbell towards your forehead by bending your elbows, keeping your upper arms stationary.",
-        "Step:3 Pause for a moment, then extend your arms to press the barbell back up to the starting position.",
-        "Step:4 Repeat for the desired number of repetitions."
+        "Step:1 Stand with your feet shoulder-width apart and hold a towel with both hands behind your head.",
+        "Step:2 Keep your elbows close to your ears and your upper arms stationary.",
+        "Step:3 (horizontal variation) Slowly extend your forearms upward, squeezing your triceps at the top.",
+        "Step:4 Pause for a moment, then slowly lower the towel back down to the starting position.",
+        "Step:5 Repeat for the desired number of repetitions."
       ]
     },
     {
       "nombre": "assisted triceps dip (kneeling) — Tríceps",
       "descripcion": "Tríceps",
-      "video_url": "/videos/gym30-external/triceps-j60bn17.gif",
+      "video_url": "https://static.exercisedb.dev/media/J60bN17.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "J60bN17",
@@ -4130,7 +4134,7 @@
     {
       "nombre": "band close-grip push-up",
       "descripcion": "Tríceps",
-      "video_url": "/videos/gym30-external/triceps-ufaxb52.gif",
+      "video_url": "https://static.exercisedb.dev/media/ufaxB52.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "ufaxB52",
@@ -4145,7 +4149,7 @@
     {
       "nombre": "band side triceps extension",
       "descripcion": "Tríceps",
-      "video_url": "/videos/gym30-external/triceps-obe5lmq.gif",
+      "video_url": "https://static.exercisedb.dev/media/obe5LMq.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "obe5LMq",
@@ -4260,26 +4264,23 @@
       "nivel": "Avanzado"
     },
     {
-      "nombre": "band step-up",
+      "nombre": "advanced dumbbell stiff leg deadlift — Glúteos",
       "descripcion": "Glúteos",
-      "video_url": "/videos/gym30-external/gluteos-d5btepv.gif",
+      "video_url": "https://static.exercisedb.dev/media/2Ty4idJ.gif",
       "nivel": "Intermedio",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "d5bTEPV",
+      "source": "ExerciseDB V1",
+      "source_id": "2Ty4idJ",
       "instrucciones": [
-        "Step:1 Place a band around your thighs, just above your knees.",
-        "Step:2 Stand facing a step or platform with your feet hip-width apart.",
-        "Step:3 Step up onto the platform with your right foot, pushing through your heel.",
-        "Step:4 Extend your left leg behind you, keeping it straight.",
-        "Step:5 Lower your left foot back down to the ground.",
-        "Step:6 Repeat with your left foot stepping up onto the platform.",
-        "Step:7 Continue alternating legs for the desired number of repetitions."
+        "Step:1 Stand with your feet shoulder-width apart, holding a dumbbell in each hand with an overhand grip.",
+        "Step:2 Keeping your back straight and your core engaged, hinge at the hips and lower the dumbbells towards the ground, allowing a slight bend in your knees. Focus on advanced movement.",
+        "Step:3 Lower the dumbbells until you feel a stretch in your hamstrings, then squeeze your glutes and push through your heels to return to the starting position.",
+        "Step:4 Repeat for the desired number of repetitions."
       ]
     },
     {
       "nombre": "arms apart circular toe touch (male)",
       "descripcion": "Glúteos",
-      "video_url": "/videos/gym30-external/gluteos-rtyasy1.gif",
+      "video_url": "https://static.exercisedb.dev/media/RtyAsy1.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "RtyAsy1",
@@ -4294,7 +4295,7 @@
     {
       "nombre": "assisted lying glutes stretch",
       "descripcion": "Glúteos",
-      "video_url": "/videos/gym30-external/gluteos-yn0ljwl.gif",
+      "video_url": "https://static.exercisedb.dev/media/yn0LjwL.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "yn0LjwL",
@@ -4309,7 +4310,7 @@
     {
       "nombre": "assisted lying gluteus and piriformis stretch",
       "descripcion": "Glúteos",
-      "video_url": "/videos/gym30-external/gluteos-rqnvt10.gif",
+      "video_url": "https://static.exercisedb.dev/media/RQNVT10.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "RQNVT10",
@@ -4324,7 +4325,7 @@
     {
       "nombre": "band bent-over hip extension",
       "descripcion": "Glúteos",
-      "video_url": "/videos/gym30-external/gluteos-wsscovh.gif",
+      "video_url": "https://static.exercisedb.dev/media/wSScovH.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "wSScovH",
@@ -4341,7 +4342,7 @@
     {
       "nombre": "band hip lift",
       "descripcion": "Glúteos",
-      "video_url": "/videos/gym30-external/gluteos-e4r8hz1.gif",
+      "video_url": "https://static.exercisedb.dev/media/E4R8Hz1.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "E4R8Hz1",
@@ -4357,7 +4358,7 @@
     {
       "nombre": "band lying hip internal rotation",
       "descripcion": "Glúteos",
-      "video_url": "/videos/gym30-external/gluteos-viicelp.gif",
+      "video_url": "https://static.exercisedb.dev/media/vIICElP.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "vIICElP",
@@ -4372,7 +4373,7 @@
     {
       "nombre": "band one arm single leg split squat — Glúteos",
       "descripcion": "Glúteos",
-      "video_url": "/videos/gym30-external/gluteos-arsyed3.gif",
+      "video_url": "https://static.exercisedb.dev/media/arsYEd3.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "arsYEd3",
@@ -4388,7 +4389,7 @@
     {
       "nombre": "band pull through — Glúteos",
       "descripcion": "Glúteos",
-      "video_url": "/videos/gym30-external/gluteos-vttbip3.gif",
+      "video_url": "https://static.exercisedb.dev/media/VtTbiP3.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "VtTbiP3",
@@ -4405,7 +4406,7 @@
     {
       "nombre": "band seated hip internal rotation",
       "descripcion": "Glúteos",
-      "video_url": "/videos/gym30-external/gluteos-9gbyykk.gif",
+      "video_url": "https://static.exercisedb.dev/media/9gbyYKk.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "9gbyYKk",
@@ -4421,7 +4422,7 @@
     {
       "nombre": "band single leg split squat — Glúteos",
       "descripcion": "Glúteos",
-      "video_url": "/videos/gym30-external/gluteos-y8bym8w.gif",
+      "video_url": "https://static.exercisedb.dev/media/y8bYM8w.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "y8bYM8w",
@@ -4436,7 +4437,7 @@
     {
       "nombre": "band squat — Glúteos",
       "descripcion": "Glúteos",
-      "video_url": "/videos/gym30-external/gluteos-tuzlh71.gif",
+      "video_url": "https://static.exercisedb.dev/media/TUZLh71.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "TUZLh71",
@@ -4451,7 +4452,7 @@
     {
       "nombre": "band squat row — Glúteos",
       "descripcion": "Glúteos",
-      "video_url": "/videos/gym30-external/gluteos-w1nobyi.gif",
+      "video_url": "https://static.exercisedb.dev/media/w1NOByi.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "w1NOByi",
@@ -4538,24 +4539,23 @@
       "nivel": "Principiante"
     },
     {
-      "nombre": "dumbbell deadlift",
+      "nombre": "advanced dumbbell stiff leg deadlift — Isquiotibiales",
       "descripcion": "Isquiotibiales",
-      "video_url": "/videos/gym30-external/isquiotibiales-nuwvh7b.gif",
+      "video_url": "https://static.exercisedb.dev/media/2Ty4idJ.gif",
       "nivel": "Intermedio",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "nUwVh7b",
+      "source": "ExerciseDB V1",
+      "source_id": "2Ty4idJ",
       "instrucciones": [
-        "Step:1 Stand with your feet shoulder-width apart, toes pointing forward.",
-        "Step:2 Hold a dumbbell in each hand, palms facing your body, arms extended downwards.",
-        "Step:3 Bend at your hips and knees, lowering the dumbbells towards the ground while keeping your back straight.",
-        "Step:4 Push through your heels and extend your hips and knees, lifting the dumbbells back up to the starting position.",
-        "Step:5 Repeat for the desired number of repetitions."
+        "Step:1 Stand with your feet shoulder-width apart, holding a dumbbell in each hand with an overhand grip.",
+        "Step:2 Keeping your back straight and your core engaged, hinge at the hips and lower the dumbbells towards the ground, allowing a slight bend in your knees. Focus on advanced movement.",
+        "Step:3 Lower the dumbbells until you feel a stretch in your hamstrings, then squeeze your glutes and push through your heels to return to the starting position.",
+        "Step:4 Repeat for the desired number of repetitions."
       ]
     },
     {
       "nombre": "assisted prone hamstring",
       "descripcion": "Isquiotibiales",
-      "video_url": "/videos/gym30-external/isquiotibiales-vedgsby.gif",
+      "video_url": "https://static.exercisedb.dev/media/VedGSby.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "VedGSby",
@@ -4565,13 +4565,12 @@
         "Step:3 Engage your hamstrings and lift your legs towards your glutes, keeping your knees straight.",
         "Step:4 Pause for a moment at the top, then slowly lower your legs back down to the starting position.",
         "Step:5 Repeat for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/VedGSby.gif"
+      ]
     },
     {
       "nombre": "band stiff leg deadlift — Isquiotibiales",
       "descripcion": "Isquiotibiales",
-      "video_url": "/videos/gym30-external/isquiotibiales-kumir2t.gif",
+      "video_url": "https://static.exercisedb.dev/media/kuMiR2T.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "kuMiR2T",
@@ -4583,13 +4582,12 @@
         "Step:5 Lower the band towards the ground, feeling a stretch in your hamstrings.",
         "Step:6 Pause for a moment at the bottom, then engage your glutes and hamstrings to lift your upper body back up to the starting position.",
         "Step:7 Repeat for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/kuMiR2T.gif"
+      ]
     },
     {
       "nombre": "band straight back stiff leg deadlift — Isquiotibiales",
       "descripcion": "Isquiotibiales",
-      "video_url": "/videos/gym30-external/isquiotibiales-lheuulr.gif",
+      "video_url": "https://static.exercisedb.dev/media/lHeUULr.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "lHeUULr",
@@ -4600,13 +4598,12 @@
         "Step:4 Feel the stretch in your hamstrings as you lower the band.",
         "Step:5 Engage your glutes and hamstrings to lift your body back up to the starting position.",
         "Step:6 Repeat for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/lHeUULr.gif"
+      ]
     },
     {
       "nombre": "band straight leg deadlift — Isquiotibiales",
       "descripcion": "Isquiotibiales",
-      "video_url": "/videos/gym30-external/isquiotibiales-kuaouv8.gif",
+      "video_url": "https://static.exercisedb.dev/media/KUaoUV8.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "KUaoUV8",
@@ -4618,13 +4615,12 @@
         "Step:5 Lower the band towards the ground while keeping your legs straight.",
         "Step:6 Pause for a moment at the bottom, then squeeze your glutes and hamstrings to return to the starting position.",
         "Step:7 Repeat for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/KUaoUV8.gif"
+      ]
     },
     {
       "nombre": "barbell deadlift — Isquiotibiales",
       "descripcion": "Isquiotibiales",
-      "video_url": "/videos/gym30-external/isquiotibiales-ila4nzs.gif",
+      "video_url": "https://static.exercisedb.dev/media/ila4NZS.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "ila4NZS",
@@ -4635,13 +4631,12 @@
         "Step:4 As you stand up straight, squeeze your glutes and keep your core engaged.",
         "Step:5 Lower the barbell back down to the ground by bending at the hips and knees, keeping your back straight.",
         "Step:6 Repeat for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/ila4NZS.gif"
+      ]
     },
     {
       "nombre": "barbell good morning — Isquiotibiales",
       "descripcion": "Isquiotibiales",
-      "video_url": "/videos/gym30-external/isquiotibiales-xlz4lac.gif",
+      "video_url": "https://static.exercisedb.dev/media/XlZ4lAC.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "XlZ4lAC",
@@ -4651,13 +4646,12 @@
         "Step:3 Lower your torso until it is parallel to the ground, feeling a stretch in your hamstrings.",
         "Step:4 Pause for a moment, then return to the starting position by squeezing your glutes and pushing your hips forward.",
         "Step:5 Repeat for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/XlZ4lAC.gif"
+      ]
     },
     {
       "nombre": "barbell one arm side deadlift — Isquiotibiales",
       "descripcion": "Isquiotibiales",
-      "video_url": "/videos/gym30-external/isquiotibiales-2dxtqhl.gif",
+      "video_url": "https://static.exercisedb.dev/media/2DxtqHL.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "2DxtqHL",
@@ -4668,13 +4662,12 @@
         "Step:4 Lower the barbell as far as you can while maintaining good form.",
         "Step:5 Pause for a moment, then slowly return to the starting position.",
         "Step:6 Repeat for the desired number of repetitions, then switch sides."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/2DxtqHL.gif"
+      ]
     },
     {
       "nombre": "barbell romanian deadlift — Isquiotibiales",
       "descripcion": "Isquiotibiales",
-      "video_url": "/videos/gym30-external/isquiotibiales-wq2c4xd.gif",
+      "video_url": "https://static.exercisedb.dev/media/wQ2c4XD.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "wQ2c4XD",
@@ -4687,13 +4680,12 @@
         "Step:6 Once you feel a stretch in your hamstrings, push your hips forward and stand up straight.",
         "Step:7 Squeeze your glutes at the top of the movement.",
         "Step:8 Lower the barbell back down to the starting position and repeat for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/wQ2c4XD.gif"
+      ]
     },
     {
       "nombre": "barbell seated good morning — Isquiotibiales",
       "descripcion": "Isquiotibiales",
-      "video_url": "/videos/gym30-external/isquiotibiales-d960pge.gif",
+      "video_url": "https://static.exercisedb.dev/media/d960PgE.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "d960PgE",
@@ -4703,13 +4695,12 @@
         "Step:3 Slowly hinge forward at the hips, lowering your torso towards the ground.",
         "Step:4 Pause for a moment at the bottom, then push through your heels to return to the starting position.",
         "Step:5 Repeat for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/d960PgE.gif"
+      ]
     },
     {
       "nombre": "barbell single leg deadlift — Isquiotibiales",
       "descripcion": "Isquiotibiales",
-      "video_url": "/videos/gym30-external/isquiotibiales-geyural.gif",
+      "video_url": "https://static.exercisedb.dev/media/gEyURal.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "gEyURal",
@@ -4720,13 +4711,12 @@
         "Step:4 Lower the barbell towards the ground, keeping it close to your body and your left leg slightly bent.",
         "Step:5 Pause for a moment at the bottom, then engage your glutes and hamstrings to lift your torso back up to the starting position.",
         "Step:6 Repeat for the desired number of repetitions, then switch sides."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/gEyURal.gif"
+      ]
     },
     {
       "nombre": "barbell stiff leg good morning — Isquiotibiales",
       "descripcion": "Isquiotibiales",
-      "video_url": "/videos/gym30-external/isquiotibiales-jrohazc.gif",
+      "video_url": "https://static.exercisedb.dev/media/JrOHAZc.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "JrOHAZc",
@@ -4737,13 +4727,12 @@
         "Step:4 Lower your torso until it is parallel to the ground, feeling a stretch in your hamstrings.",
         "Step:5 Engage your glutes and hamstrings to return to the starting position.",
         "Step:6 Repeat for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/JrOHAZc.gif"
+      ]
     },
     {
       "nombre": "barbell straight leg deadlift — Isquiotibiales 2",
       "descripcion": "Isquiotibiales",
-      "video_url": "/videos/gym30-external/isquiotibiales-hrvqwve.gif",
+      "video_url": "https://static.exercisedb.dev/media/hrVQWvE.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "hrVQWvE",
@@ -4754,13 +4743,12 @@
         "Step:4 Lower the barbell until you feel a stretch in your hamstrings.",
         "Step:5 Engage your hamstrings and glutes to lift the barbell back up to the starting position.",
         "Step:6 Repeat for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/hrVQWvE.gif"
+      ]
     },
     {
       "nombre": "barbell sumo deadlift — Isquiotibiales",
       "descripcion": "Isquiotibiales",
-      "video_url": "/videos/gym30-external/isquiotibiales-kgi0tqw.gif",
+      "video_url": "https://static.exercisedb.dev/media/KgI0tqW.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "KgI0tqW",
@@ -4772,13 +4760,12 @@
         "Step:5 As you lift, keep your chest up and back straight, and push your hips forward to fully engage your glutes.",
         "Step:6 Pause for a moment at the top, then slowly lower the barbell back down to the starting position, maintaining control throughout the movement.",
         "Step:7 Repeat for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/KgI0tqW.gif"
+      ]
     },
     {
       "nombre": "cable assisted inverse leg curl",
       "descripcion": "Isquiotibiales",
-      "video_url": "/videos/gym30-external/isquiotibiales-zhepuuc.gif",
+      "video_url": "https://static.exercisedb.dev/media/zHEpuuc.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "zHEpuuc",
@@ -4790,13 +4777,12 @@
         "Step:5 Pause for a moment at the top of the movement, squeezing your hamstrings.",
         "Step:6 Inhale and slowly lower your legs back to the starting position.",
         "Step:7 Repeat for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/zHEpuuc.gif"
+      ]
     },
     {
       "nombre": "cable deadlift — Isquiotibiales",
       "descripcion": "Isquiotibiales",
-      "video_url": "/videos/gym30-external/isquiotibiales-egduduv.gif",
+      "video_url": "https://static.exercisedb.dev/media/eGDudUV.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "eGDudUV",
@@ -4807,13 +4793,12 @@
         "Step:4 Engage your glutes and hamstrings to lift the cable handles, extending your hips and standing up straight.",
         "Step:5 Pause for a moment at the top, then slowly lower the cable handles back down to the starting position.",
         "Step:6 Repeat for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/eGDudUV.gif"
+      ]
     },
     {
       "nombre": "cable pull through (with rope)",
       "descripcion": "Isquiotibiales",
-      "video_url": "/videos/gym30-external/isquiotibiales-om46qhm.gif",
+      "video_url": "https://static.exercisedb.dev/media/OM46QHm.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "OM46QHm",
@@ -4823,21 +4808,22 @@
         "Step:3 Bend at the hips and lower your upper body until it is parallel to the ground, keeping your back straight.",
         "Step:4 Engage your glutes and hamstrings to pull your body back up to the starting position.",
         "Step:5 Repeat for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/OM46QHm.gif"
+      ]
     },
     {
-      "nombre": "dumbbell lying femoral",
+      "nombre": "controlled band straight back stiff leg deadlift — Isquiotibiales",
       "descripcion": "Isquiotibiales",
-      "video_url": "/videos/gym30-external/isquiotibiales-fkbie6a.gif",
+      "video_url": "https://static.exercisedb.dev/media/PDHE73u.gif",
       "nivel": "Avanzado",
-      "source": "ExerciseDB V1 reemplazo validado",
-      "source_id": "FkBIE6a",
+      "source": "ExerciseDB V1",
+      "source_id": "PDHE73u",
       "instrucciones": [
-        "Step:1 Lie flat on your back with your legs extended and a dumbbell resting on your lower abdomen.",
-        "Step:2 Bend your knees and bring the dumbbell towards your glutes, keeping your feet flat on the ground.",
-        "Step:3 Pause for a moment at the top, then slowly lower the dumbbell back to the starting position.",
-        "Step:4 Repeat for the desired number of repetitions."
+        "Step:1 Stand with your feet shoulder-width apart and place the band around your upper legs.",
+        "Step:2 Hold the band with both hands in front of your thighs, palms facing your body.",
+        "Step:3 Keeping your back straight and your knees slightly bent, hinge at the hips and lower the band towards the ground. Focus on controlled movement.",
+        "Step:4 Feel the stretch in your hamstrings as you lower the band.",
+        "Step:5 Engage your glutes and hamstrings to lift your body back up to the starting position.",
+        "Step:6 Repeat for the desired number of repetitions."
       ]
     },
     {
@@ -4897,7 +4883,7 @@
     {
       "nombre": "ankle circles — Pantorrillas posterior",
       "descripcion": "Pantorrillas posterior",
-      "video_url": "/videos/gym30-external/pantorrillas-posterior-ul9cskm.gif",
+      "video_url": "https://static.exercisedb.dev/media/uL9CsKm.gif",
       "nivel": "Principiante",
       "source": "ExerciseDB V1",
       "source_id": "uL9CsKm",
@@ -4906,13 +4892,12 @@
         "Step:2 Lift one leg off the ground and rotate your ankle in a circular motion.",
         "Step:3 Perform the desired number of circles in one direction, then switch to the other direction.",
         "Step:4 Repeat with the other leg."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/uL9CsKm.gif"
+      ]
     },
     {
       "nombre": "assisted lying calves stretch — Pantorrillas posterior",
       "descripcion": "Pantorrillas posterior",
-      "video_url": "/videos/gym30-external/pantorrillas-posterior-gxdwdx0.gif",
+      "video_url": "https://static.exercisedb.dev/media/GxDwDX0.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "GxDwDX0",
@@ -4922,13 +4907,12 @@
         "Step:3 Using your hands or a towel, gently pull your toes towards your body, feeling a stretch in your calf.",
         "Step:4 Hold the stretch for 20-30 seconds.",
         "Step:5 Release the stretch and repeat on the other leg."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/GxDwDX0.gif"
+      ]
     },
     {
       "nombre": "astride jumps (male) — Pantorrillas posterior",
       "descripcion": "Pantorrillas posterior",
-      "video_url": "/videos/gym30-external/pantorrillas-posterior-f9lvssi.gif",
+      "video_url": "https://static.exercisedb.dev/media/f9lVSSI.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "f9lVSSI",
@@ -4939,13 +4923,12 @@
         "Step:4 While in the air, spread your legs apart and bring your arms out to the sides.",
         "Step:5 Land softly with your feet shoulder-width apart, bending your knees to absorb the impact.",
         "Step:6 Repeat for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/f9lVSSI.gif"
+      ]
     },
     {
       "nombre": "backward jump — Pantorrillas posterior",
       "descripcion": "Pantorrillas posterior",
-      "video_url": "/videos/gym30-external/pantorrillas-posterior-sadowk7.gif",
+      "video_url": "https://static.exercisedb.dev/media/SaDOwk7.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "SaDOwk7",
@@ -4954,13 +4937,12 @@
         "Step:2 Bend your knees slightly and jump backwards, pushing off with both feet.",
         "Step:3 Land softly on the balls of your feet, bending your knees to absorb the impact.",
         "Step:4 Repeat for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/SaDOwk7.gif"
+      ]
     },
     {
       "nombre": "band single leg calf raise — Pantorrillas posterior",
       "descripcion": "Pantorrillas posterior",
-      "video_url": "/videos/gym30-external/pantorrillas-posterior-9jprnph.gif",
+      "video_url": "https://static.exercisedb.dev/media/9JprnPh.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "9JprnPh",
@@ -4970,13 +4952,12 @@
         "Step:3 Slowly raise your left heel off the ground, lifting your body weight onto the ball of your foot.",
         "Step:4 Pause for a moment at the top, then slowly lower your left heel back down to the starting position.",
         "Step:5 Repeat for the desired number of repetitions, then switch to the right leg."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/9JprnPh.gif"
+      ]
     },
     {
       "nombre": "band single leg reverse calf raise — Pantorrillas posterior",
       "descripcion": "Pantorrillas posterior",
-      "video_url": "/videos/gym30-external/pantorrillas-posterior-qssqwbf.gif",
+      "video_url": "https://static.exercisedb.dev/media/QsSQWbf.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "QsSQWbf",
@@ -4986,13 +4967,12 @@
         "Step:3 Slowly raise your heel off the ground, lifting your body weight onto the ball of your foot.",
         "Step:4 Pause for a moment at the top, then slowly lower your heel back down to the starting position.",
         "Step:5 Repeat for the desired number of repetitions, then switch to the other leg."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/QsSQWbf.gif"
+      ]
     },
     {
       "nombre": "band two legs calf raise - (band under both legs) v. 2 — Pantorrillas posterior",
       "descripcion": "Pantorrillas posterior",
-      "video_url": "/videos/gym30-external/pantorrillas-posterior-jl6uxzv.gif",
+      "video_url": "https://static.exercisedb.dev/media/jl6uxZV.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "jl6uxZV",
@@ -5002,13 +4982,12 @@
         "Step:3 Raise your heels off the ground as high as possible, using your calves.",
         "Step:4 Pause for a moment at the top, then slowly lower your heels back down to the starting position.",
         "Step:5 Repeat for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/jl6uxZV.gif"
+      ]
     },
     {
       "nombre": "barbell floor calf raise — Pantorrillas posterior",
       "descripcion": "Pantorrillas posterior",
-      "video_url": "/videos/gym30-external/pantorrillas-posterior-2ihea2t.gif",
+      "video_url": "https://static.exercisedb.dev/media/2IHEa2T.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "2IHEa2T",
@@ -5019,13 +4998,12 @@
         "Step:4 Raise your heels as high as possible, using your calves to lift your body.",
         "Step:5 Pause for a moment at the top, then slowly lower your heels back down to the starting position.",
         "Step:6 Repeat for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/2IHEa2T.gif"
+      ]
     },
     {
       "nombre": "barbell jump squat — Pantorrillas posterior",
       "descripcion": "Pantorrillas posterior",
-      "video_url": "/videos/gym30-external/pantorrillas-posterior-1gfntzv.gif",
+      "video_url": "https://static.exercisedb.dev/media/1gFNTZV.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "1gFNTZV",
@@ -5035,13 +5013,12 @@
         "Step:3 Once you reach the bottom of the squat, explode upwards by jumping off the ground.",
         "Step:4 As you jump, extend your hips, knees, and ankles, pushing through your toes.",
         "Step:5 Land softly back into the squat position and immediately repeat the movement for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/1gFNTZV.gif"
+      ]
     },
     {
       "nombre": "barbell seated calf raise — Pantorrillas posterior",
       "descripcion": "Pantorrillas posterior",
-      "video_url": "/videos/gym30-external/pantorrillas-posterior-ipvgbnc.gif",
+      "video_url": "https://static.exercisedb.dev/media/ipvgBnC.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "ipvgBnC",
@@ -5051,13 +5028,12 @@
         "Step:3 Lower your heels as far as possible, feeling a stretch in your calves.",
         "Step:4 Raise your heels as high as possible, contracting your calves.",
         "Step:5 Repeat for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/ipvgBnC.gif"
+      ]
     },
     {
       "nombre": "barbell seated calf raise — Pantorrillas posterior 2",
       "descripcion": "Pantorrillas posterior",
-      "video_url": "/videos/gym30-external/pantorrillas-posterior-ktsfqaz.gif",
+      "video_url": "https://static.exercisedb.dev/media/ktsFQAZ.gif",
       "nivel": "Intermedio",
       "source": "ExerciseDB V1",
       "source_id": "ktsFQAZ",
@@ -5068,13 +5044,12 @@
         "Step:4 Keeping your back straight and your core engaged, lift your heels off the ground by extending your ankles.",
         "Step:5 Pause for a moment at the top, then slowly lower your heels back down to the starting position.",
         "Step:6 Repeat for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/ktsFQAZ.gif"
+      ]
     },
     {
       "nombre": "barbell squat jump step rear lunge — Pantorrillas posterior",
       "descripcion": "Pantorrillas posterior",
-      "video_url": "/videos/gym30-external/pantorrillas-posterior-rycv1kh.gif",
+      "video_url": "https://static.exercisedb.dev/media/RYcV1kH.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "RYcV1kH",
@@ -5087,13 +5062,12 @@
         "Step:6 Push through your front heel to return to the starting position.",
         "Step:7 Repeat the jump and lunge sequence on the other leg.",
         "Step:8 Continue alternating legs for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/RYcV1kH.gif"
+      ]
     },
     {
       "nombre": "barbell standing calf raise — Pantorrillas posterior",
       "descripcion": "Pantorrillas posterior",
-      "video_url": "/videos/gym30-external/pantorrillas-posterior-8ozhuiz.gif",
+      "video_url": "https://static.exercisedb.dev/media/8ozhUIZ.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "8ozhUIZ",
@@ -5102,13 +5076,12 @@
         "Step:2 Raise your heels off the ground as high as possible, using only your toes.",
         "Step:3 Pause for a moment at the top, then slowly lower your heels back down to the starting position.",
         "Step:4 Repeat for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/8ozhUIZ.gif"
+      ]
     },
     {
       "nombre": "barbell standing leg calf raise — Pantorrillas posterior",
       "descripcion": "Pantorrillas posterior",
-      "video_url": "/videos/gym30-external/pantorrillas-posterior-rgwhj5o.gif",
+      "video_url": "https://static.exercisedb.dev/media/rGwhJ5o.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "rGwhJ5o",
@@ -5117,13 +5090,12 @@
         "Step:2 Raise your heels off the ground as high as possible, using your calves.",
         "Step:3 Pause for a moment at the top, then slowly lower your heels back down to the starting position.",
         "Step:4 Repeat for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/rGwhJ5o.gif"
+      ]
     },
     {
       "nombre": "barbell standing rocking leg calf raise — Pantorrillas posterior",
       "descripcion": "Pantorrillas posterior",
-      "video_url": "/videos/gym30-external/pantorrillas-posterior-6hihhe0.gif",
+      "video_url": "https://static.exercisedb.dev/media/6HiHHe0.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "6HiHHe0",
@@ -5132,13 +5104,12 @@
         "Step:2 Raise your heels off the ground as high as possible, balancing on the balls of your feet.",
         "Step:3 Slowly lower your heels back down to the starting position.",
         "Step:4 Repeat for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/6HiHHe0.gif"
+      ]
     },
     {
       "nombre": "bodyweight drop jump squat — Pantorrillas posterior",
       "descripcion": "Pantorrillas posterior",
-      "video_url": "/videos/gym30-external/pantorrillas-posterior-wfotm7s.gif",
+      "video_url": "https://static.exercisedb.dev/media/wfotm7S.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "wfotm7S",
@@ -5149,13 +5120,12 @@
         "Step:4 While in mid-air, quickly bring your feet together.",
         "Step:5 Land softly on the balls of your feet and immediately drop back into a squat position.",
         "Step:6 Repeat for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/wfotm7S.gif"
+      ]
     },
     {
       "nombre": "bodyweight standing calf raise — Pantorrillas posterior",
       "descripcion": "Pantorrillas posterior",
-      "video_url": "/videos/gym30-external/pantorrillas-posterior-bjyhbin.gif",
+      "video_url": "https://static.exercisedb.dev/media/bJYHBIN.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "bJYHBIN",
@@ -5165,13 +5135,12 @@
         "Step:3 Slowly raise your heels off the ground, lifting your body weight onto the balls of your feet.",
         "Step:4 Pause for a moment at the top, then slowly lower your heels back down to the starting position.",
         "Step:5 Repeat for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/bJYHBIN.gif"
+      ]
     },
     {
       "nombre": "box jump down with one leg stabilization — Pantorrillas posterior",
       "descripcion": "Pantorrillas posterior",
-      "video_url": "/videos/gym30-external/pantorrillas-posterior-ipm26qu.gif",
+      "video_url": "https://static.exercisedb.dev/media/iPm26QU.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "iPm26QU",
@@ -5182,13 +5151,12 @@
         "Step:4 Hold this position for a few seconds, engaging your calf muscles to maintain balance.",
         "Step:5 Slowly step down with the foot that is on the box, returning to the starting position.",
         "Step:6 Repeat the exercise with the other leg."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/iPm26QU.gif"
+      ]
     },
     {
       "nombre": "cable standing calf raise — Pantorrillas posterior",
       "descripcion": "Pantorrillas posterior",
-      "video_url": "/videos/gym30-external/pantorrillas-posterior-yl2iyyy.gif",
+      "video_url": "https://static.exercisedb.dev/media/yl2IYyy.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "yl2IYyy",
@@ -5198,13 +5166,12 @@
         "Step:3 Raise your heels off the ground by extending your ankles as high as possible.",
         "Step:4 Pause for a moment at the top, then slowly lower your heels back down to the starting position.",
         "Step:5 Repeat for the desired number of repetitions."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/yl2IYyy.gif"
+      ]
     },
     {
       "nombre": "cable standing one leg calf raise — Pantorrillas posterior",
       "descripcion": "Pantorrillas posterior",
-      "video_url": "/videos/gym30-external/pantorrillas-posterior-fgc9xdl.gif",
+      "video_url": "https://static.exercisedb.dev/media/fgc9Xdl.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "fgc9Xdl",
@@ -5215,13 +5182,12 @@
         "Step:4 Slowly raise your heel off the ground, lifting your body up onto your toes.",
         "Step:5 Pause for a moment at the top, then slowly lower your heel back down to the starting position.",
         "Step:6 Repeat for the desired number of repetitions, then switch legs."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/fgc9Xdl.gif"
+      ]
     },
     {
       "nombre": "calf push stretch with hands against wall — Pantorrillas posterior",
       "descripcion": "Pantorrillas posterior",
-      "video_url": "/videos/gym30-external/pantorrillas-posterior-pznxakt.gif",
+      "video_url": "https://static.exercisedb.dev/media/PzNxakt.gif",
       "nivel": "Avanzado",
       "source": "ExerciseDB V1",
       "source_id": "PzNxakt",
@@ -5232,98 +5198,7 @@
         "Step:4 Bend your front knee slightly and lean forward, feeling a stretch in your calf.",
         "Step:5 Hold the stretch for 20-30 seconds.",
         "Step:6 Switch legs and repeat the stretch."
-      ],
-      "source_media_url": "https://static.exercisedb.dev/media/PzNxakt.gif"
+      ]
     }
-  ],
-  "localMediaReady": false,
-  "localMediaSummary": {
-    "remotosDetectados": 20,
-    "descargados": 0,
-    "yaExistian": 0,
-    "errores": 20
-  },
-  "resumenMediaLocal": {
-    "Pecho alto": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Pecho medio": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Pecho bajo": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Hombros": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Bíceps": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Abdomen": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Cuádriceps": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Pantorrillas": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Trapecio": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Espalda alta": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Espalda media": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Espalda baja": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Tríceps": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Glúteos": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Isquiotibiales": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    },
-    "Pantorrillas posterior": {
-      "total": 30,
-      "conRutaLocal": 30,
-      "remotosPendientes": 0
-    }
-  },
-  "mediaLocalReady": true
+  ]
 }
