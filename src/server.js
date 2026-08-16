@@ -1101,117 +1101,417 @@ app.post("/api/planes-disciplina/:planId/ejercicios", async (req, res) => {
   }
 });
 
-// ==============================
-// MEMBRESÍAS Y PAGOS
-// ==============================
+// ============================================================
+// MEMBRESÍAS / MENSUALIDADES / REPORTES
+// ============================================================
 
-app.get("/api/pagos/socio/:socioId", async (req, res) => {
+async function ensureMembershipModule() {
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS membresias (
+      id SERIAL PRIMARY KEY,
+      socio_id INTEGER NOT NULL REFERENCES socios(id) ON DELETE CASCADE,
+      plan_nombre VARCHAR(100) NOT NULL DEFAULT 'Mensual',
+      fecha_inicio DATE NOT NULL,
+      fecha_fin DATE NOT NULL,
+      monto NUMERIC(10,2) NOT NULL DEFAULT 0,
+      estado VARCHAR(30) NOT NULL DEFAULT 'ACTIVA',
+      observacion TEXT,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )
+  `);
+
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS pagos_membresia (
+      id SERIAL PRIMARY KEY,
+      membresia_id INTEGER NOT NULL REFERENCES membresias(id) ON DELETE CASCADE,
+      socio_id INTEGER NOT NULL REFERENCES socios(id) ON DELETE CASCADE,
+      monto NUMERIC(10,2) NOT NULL DEFAULT 0,
+      metodo_pago VARCHAR(40) NOT NULL DEFAULT 'EFECTIVO',
+      referencia VARCHAR(180),
+      observacion TEXT,
+      estado VARCHAR(30) NOT NULL DEFAULT 'PAGADO',
+      fecha_pago TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )
+  `);
+
+  await pool.query(`
+    CREATE INDEX IF NOT EXISTS idx_membresias_socio
+    ON membresias (socio_id)
+  `);
+
+  await pool.query(`
+    CREATE INDEX IF NOT EXISTS idx_membresias_fecha_fin
+    ON membresias (fecha_fin)
+  `);
+
+  await pool.query(`
+    CREATE INDEX IF NOT EXISTS idx_pagos_membresia_fecha
+    ON pagos_membresia (fecha_pago)
+  `);
+
+  console.log("✅ Módulo Membresías/Mensualidades verificado.");
+}
+
+function addMonthsSafe(fechaISO, meses) {
+  const fecha = new Date(`${fechaISO}T12:00:00`);
+  if (Number.isNaN(fecha.getTime())) return null;
+
+  const diaOriginal = fecha.getDate();
+  fecha.setDate(1);
+  fecha.setMonth(fecha.getMonth() + Number(meses || 1));
+
+  const ultimoDia = new Date(
+    fecha.getFullYear(),
+    fecha.getMonth() + 1,
+    0
+  ).getDate();
+
+  fecha.setDate(Math.min(diaOriginal, ultimoDia));
+  return fecha.toISOString().slice(0, 10);
+}
+
+function membershipStatusSql(alias = "m") {
+  return `
+    CASE
+      WHEN ${alias}.estado = 'ANULADA' THEN 'ANULADA'
+      WHEN ${alias}.fecha_fin < CURRENT_DATE THEN 'VENCIDA'
+      WHEN ${alias}.fecha_fin <= CURRENT_DATE + INTERVAL '7 days' THEN 'POR VENCER'
+      ELSE 'ACTIVA'
+    END
+  `;
+}
+
+app.get("/api/membresias", async (req, res) => {
   try {
-    const { socioId } = req.params;
+    const { desde, hasta, estado, socio_id } = req.query;
+    const params = [];
+    const where = [];
+
+    if (desde) {
+      params.push(desde);
+      where.push(`m.fecha_inicio >= $${params.length}`);
+    }
+
+    if (hasta) {
+      params.push(hasta);
+      where.push(`m.fecha_inicio <= $${params.length}`);
+    }
+
+    if (socio_id) {
+      params.push(Number(socio_id));
+      where.push(`m.socio_id = $${params.length}`);
+    }
+
+    const estadoCalculado = membershipStatusSql("m");
+
+    if (estado && estado !== "TODOS") {
+      params.push(String(estado).toUpperCase());
+      where.push(`(${estadoCalculado}) = $${params.length}`);
+    }
+
     const result = await pool.query(
       `
       SELECT
-        p.*,
-        m.tipo AS membresia_tipo,
-        m.total AS membresia_total
-      FROM pagos p
-      LEFT JOIN membresias m ON m.id = p.membresia_id
-      WHERE p.socio_id = $1
-      ORDER BY p.fecha DESC, p.id DESC
+        m.*,
+        CONCAT(s.nombres, ' ', s.apellidos) AS socio_nombre,
+        s.cedula,
+        ${estadoCalculado} AS estado_calculado,
+        COALESCE(SUM(CASE WHEN p.estado = 'PAGADO' THEN p.monto ELSE 0 END),0) AS total_pagado,
+        GREATEST(
+          m.monto - COALESCE(SUM(CASE WHEN p.estado = 'PAGADO' THEN p.monto ELSE 0 END),0),
+          0
+        ) AS saldo_pendiente
+      FROM membresias m
+      INNER JOIN socios s ON s.id = m.socio_id
+      LEFT JOIN pagos_membresia p ON p.membresia_id = m.id
+      ${where.length ? `WHERE ${where.join(" AND ")}` : ""}
+      GROUP BY m.id, s.id
+      ORDER BY m.fecha_inicio DESC, m.id DESC
       `,
-      [socioId]
+      params
     );
 
-    res.json({ ok: true, pagos: result.rows || [] });
+    res.json({ ok: true, membresias: result.rows });
   } catch (error) {
+    console.error("Error listando membresías:", error);
     res.status(500).json({ ok: false, error: error.message });
   }
 });
 
 app.post("/api/membresias", async (req, res) => {
+  const client = await pool.connect();
+
   try {
     const {
       socio_id,
-      tipo,
-      precio,
-      descuento,
+      plan_nombre,
       fecha_inicio,
-      fecha_fin,
-      observaciones,
-    } = req.body;
+      meses,
+      monto,
+      monto_pagado,
+      metodo_pago,
+      referencia,
+      observacion,
+    } = req.body || {};
 
-    if (!socio_id || !tipo) {
-      return res.status(400).json({ ok: false, error: "Socio y tipo de membresía son obligatorios" });
+    const socioId = Number(socio_id);
+    const mesesNumero = Math.max(1, Number(meses || 1));
+    const montoNumero = Number(monto || 0);
+    const pagoInicial = Number(monto_pagado || 0);
+
+    if (!socioId || !fecha_inicio || montoNumero < 0) {
+      return res.status(400).json({
+        ok: false,
+        error: "Socio, fecha de inicio y monto son obligatorios.",
+      });
     }
 
-    const precioNum = Number(precio || 0);
-    const descuentoNum = Number(descuento || 0);
-    const total = Math.max(0, precioNum - descuentoNum);
+    const fechaFin = addMonthsSafe(fecha_inicio, mesesNumero);
+    if (!fechaFin) {
+      return res.status(400).json({ ok: false, error: "Fecha de inicio inválida." });
+    }
 
-    const result = await pool.query(
+    await client.query("BEGIN");
+
+    const socio = await client.query(
+      `SELECT id FROM socios WHERE id = $1 LIMIT 1`,
+      [socioId]
+    );
+
+    if (!socio.rowCount) {
+      await client.query("ROLLBACK");
+      return res.status(404).json({ ok: false, error: "Socio no encontrado." });
+    }
+
+    const creada = await client.query(
       `
-      INSERT INTO membresias
-      (socio_id, tipo, precio, descuento, total, fecha_inicio, fecha_fin, observaciones)
-      VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+      INSERT INTO membresias (
+        socio_id,
+        plan_nombre,
+        fecha_inicio,
+        fecha_fin,
+        monto,
+        estado,
+        observacion,
+        updated_at
+      )
+      VALUES ($1,$2,$3,$4,$5,'ACTIVA',$6,CURRENT_TIMESTAMP)
       RETURNING *
       `,
       [
-        socio_id,
-        tipo,
-        precioNum,
-        descuentoNum,
-        total,
-        fecha_inicio || null,
-        fecha_fin || null,
-        observaciones || null,
+        socioId,
+        String(plan_nombre || "Mensual"),
+        fecha_inicio,
+        fechaFin,
+        montoNumero,
+        observacion || null,
       ]
     );
 
-    res.status(201).json({ ok: true, membresia: result.rows[0] });
+    const membresia = creada.rows[0];
+
+    if (pagoInicial > 0) {
+      await client.query(
+        `
+        INSERT INTO pagos_membresia (
+          membresia_id,
+          socio_id,
+          monto,
+          metodo_pago,
+          referencia,
+          observacion,
+          estado
+        )
+        VALUES ($1,$2,$3,$4,$5,$6,'PAGADO')
+        `,
+        [
+          membresia.id,
+          socioId,
+          pagoInicial,
+          String(metodo_pago || "EFECTIVO").toUpperCase(),
+          referencia || null,
+          "Pago inicial de membresía",
+        ]
+      );
+    }
+
+    await client.query("COMMIT");
+    res.status(201).json({ ok: true, membresia });
   } catch (error) {
+    await client.query("ROLLBACK");
+    console.error("Error creando membresía:", error);
     res.status(500).json({ ok: false, error: error.message });
+  } finally {
+    client.release();
   }
 });
 
-app.post("/api/pagos", async (req, res) => {
+app.post("/api/membresias/:id/pagos", async (req, res) => {
   try {
+    const membresiaId = Number(req.params.id);
     const {
-      socio_id,
-      membresia_id,
       monto,
-      metodo,
-      referencia,
-      tipo,
-      observaciones,
-    } = req.body;
+      metodo_pago = "EFECTIVO",
+      referencia = null,
+      observacion = null,
+    } = req.body || {};
 
-    if (!socio_id || !metodo || Number(monto) <= 0) {
-      return res.status(400).json({ ok: false, error: "Socio, monto y método de pago son obligatorios" });
+    const montoNumero = Number(monto || 0);
+
+    if (!membresiaId || montoNumero <= 0) {
+      return res.status(400).json({
+        ok: false,
+        error: "Membresía y monto válido son obligatorios.",
+      });
+    }
+
+    const membresia = await pool.query(
+      `SELECT * FROM membresias WHERE id = $1 LIMIT 1`,
+      [membresiaId]
+    );
+
+    if (!membresia.rowCount) {
+      return res.status(404).json({ ok: false, error: "Membresía no encontrada." });
+    }
+
+    if (membresia.rows[0].estado === "ANULADA") {
+      return res.status(400).json({
+        ok: false,
+        error: "No se puede registrar pagos en una membresía anulada.",
+      });
     }
 
     const result = await pool.query(
       `
-      INSERT INTO pagos
-      (socio_id, membresia_id, monto, metodo, referencia, tipo, observaciones)
-      VALUES ($1,$2,$3,$4,$5,$6,$7)
+      INSERT INTO pagos_membresia (
+        membresia_id,
+        socio_id,
+        monto,
+        metodo_pago,
+        referencia,
+        observacion,
+        estado
+      )
+      VALUES ($1,$2,$3,$4,$5,$6,'PAGADO')
       RETURNING *
       `,
       [
-        socio_id,
-        membresia_id || null,
-        Number(monto),
-        metodo,
+        membresiaId,
+        membresia.rows[0].socio_id,
+        montoNumero,
+        String(metodo_pago).toUpperCase(),
         referencia || null,
-        tipo || "PAGO",
-        observaciones || null,
+        observacion || null,
       ]
     );
 
     res.status(201).json({ ok: true, pago: result.rows[0] });
   } catch (error) {
+    console.error("Error registrando pago:", error);
     res.status(500).json({ ok: false, error: error.message });
   }
 });
+
+app.patch("/api/membresias/:id/estado", async (req, res) => {
+  try {
+    const id = Number(req.params.id);
+    const estado = String(req.body?.estado || "").toUpperCase();
+
+    if (!["ACTIVA", "ANULADA"].includes(estado)) {
+      return res.status(400).json({ ok: false, error: "Estado inválido." });
+    }
+
+    const result = await pool.query(
+      `
+      UPDATE membresias
+      SET estado = $1, updated_at = CURRENT_TIMESTAMP
+      WHERE id = $2
+      RETURNING *
+      `,
+      [estado, id]
+    );
+
+    if (!result.rowCount) {
+      return res.status(404).json({ ok: false, error: "Membresía no encontrada." });
+    }
+
+    res.json({ ok: true, membresia: result.rows[0] });
+  } catch (error) {
+    console.error("Error actualizando membresía:", error);
+    res.status(500).json({ ok: false, error: error.message });
+  }
+});
+
+app.get("/api/membresias/resumen", async (_req, res) => {
+  try {
+    const estadoCalculado = membershipStatusSql("m");
+
+    const result = await pool.query(`
+      SELECT
+        COUNT(*) FILTER (WHERE (${estadoCalculado}) = 'ACTIVA') AS activas,
+        COUNT(*) FILTER (WHERE (${estadoCalculado}) = 'POR VENCER') AS por_vencer,
+        COUNT(*) FILTER (WHERE (${estadoCalculado}) = 'VENCIDA') AS vencidas,
+        COUNT(DISTINCT m.socio_id) FILTER (
+          WHERE (${estadoCalculado}) IN ('ACTIVA','POR VENCER')
+        ) AS socios_con_membresia,
+        COALESCE((
+          SELECT SUM(p.monto)
+          FROM pagos_membresia p
+          WHERE p.estado = 'PAGADO'
+            AND p.fecha_pago >= date_trunc('month', CURRENT_DATE)
+            AND p.fecha_pago < date_trunc('month', CURRENT_DATE) + INTERVAL '1 month'
+        ),0) AS ingresos_mes
+      FROM membresias m
+    `);
+
+    res.json({ ok: true, resumen: result.rows[0] || {} });
+  } catch (error) {
+    console.error("Error resumen membresías:", error);
+    res.status(500).json({ ok: false, error: error.message });
+  }
+});
+
+app.get("/api/reportes/pagos-membresia", async (req, res) => {
+  try {
+    const { desde, hasta } = req.query;
+    const params = [];
+    const where = ["p.estado = 'PAGADO'"];
+
+    if (desde) {
+      params.push(desde);
+      where.push(`p.fecha_pago >= $${params.length}::date`);
+    }
+
+    if (hasta) {
+      params.push(hasta);
+      where.push(`p.fecha_pago < ($${params.length}::date + INTERVAL '1 day')`);
+    }
+
+    const result = await pool.query(
+      `
+      SELECT
+        p.*,
+        m.plan_nombre,
+        CONCAT(s.nombres, ' ', s.apellidos) AS socio_nombre,
+        s.cedula
+      FROM pagos_membresia p
+      INNER JOIN membresias m ON m.id = p.membresia_id
+      INNER JOIN socios s ON s.id = p.socio_id
+      WHERE ${where.join(" AND ")}
+      ORDER BY p.fecha_pago DESC, p.id DESC
+      `,
+      params
+    );
+
+    res.json({ ok: true, pagos: result.rows });
+  } catch (error) {
+    console.error("Error reporte pagos membresía:", error);
+    res.status(500).json({ ok: false, error: error.message });
+  }
+});
+
 
 // ==============================
 // 404
@@ -1231,6 +1531,7 @@ async function startServer() {
   try {
     await initDB();
     await ensureDisciplineModule();
+    await ensureMembershipModule();
     await seedData();
 
     app.listen(PORT, "0.0.0.0", () => {
