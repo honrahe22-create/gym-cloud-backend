@@ -241,6 +241,32 @@ async function ensureDisciplineModule() {
     CREATE INDEX IF NOT EXISTS idx_disciplina_plan_detalle_plan ON disciplina_plan_detalle(plan_id);
   `);
 
+  // =========================================================
+  // RECUPERACIÓN AUTOMÁTICA: CALISTENIA Y BOXEO
+  // Garantiza que las disciplinas padre existan ANTES de sembrar
+  // los 30 ejercicios de cada nivel. La versión anterior hacía
+  // `continue` si faltaba la disciplina y dejaba el catálogo vacío.
+  // =========================================================
+  for (const disciplinaNombre of Object.keys(DISCIPLINE_SEED)) {
+    const disciplinaExistente = await pool.query(
+      `SELECT id FROM disciplinas WHERE LOWER(nombre) = LOWER($1) LIMIT 1`,
+      [disciplinaNombre]
+    );
+
+    if (!disciplinaExistente.rows.length) {
+      await pool.query(
+        `INSERT INTO disciplinas (nombre, estado) VALUES ($1, 'ACTIVO')`,
+        [disciplinaNombre]
+      );
+      console.log(`♻️ Disciplina recuperada: ${disciplinaNombre}`);
+    } else {
+      await pool.query(
+        `UPDATE disciplinas SET estado = 'ACTIVO' WHERE id = $1`,
+        [disciplinaExistente.rows[0].id]
+      );
+    }
+  }
+
   for (const [disciplinaNombre, ejercicios] of Object.entries(DISCIPLINE_SEED)) {
     const disciplinaRes = await pool.query(
       `SELECT id FROM disciplinas WHERE LOWER(nombre) = LOWER($1) LIMIT 1`,
@@ -386,6 +412,83 @@ async function ensureDisciplineModule() {
   `);
 
   console.log("✅ Módulos Calistenia y Boxeo preparados", conteoCatalogo.rows);
+}
+
+// =========================================================
+// RECUPERACIÓN AUTOMÁTICA: GYM 30 POR MÚSCULO
+// No borra ejercicios ni rutinas. Solo recompone relaciones
+// ejercicio <-> músculo a partir del campo descripcion.
+// =========================================================
+async function ensureGymExerciseRelations() {
+  const musculosGym = [
+    ["Pecho alto", "front"],
+    ["Pecho medio", "front"],
+    ["Pecho bajo", "front"],
+    ["Hombros", "front"],
+    ["Bíceps", "front"],
+    ["Abdomen", "front"],
+    ["Cuádriceps", "front"],
+    ["Pantorrillas", "front"],
+    ["Trapecio", "back"],
+    ["Espalda alta", "back"],
+    ["Espalda media", "back"],
+    ["Espalda baja", "back"],
+    ["Tríceps", "back"],
+    ["Glúteos", "back"],
+    ["Isquiotibiales", "back"],
+    ["Pantorrillas posterior", "back"],
+  ];
+
+  for (const [nombre, vista] of musculosGym) {
+    const existe = await pool.query(
+      `SELECT id FROM musculos WHERE LOWER(nombre) = LOWER($1) LIMIT 1`,
+      [nombre]
+    );
+
+    if (!existe.rows.length) {
+      await pool.query(
+        `INSERT INTO musculos (nombre, vista) VALUES ($1, $2)`,
+        [nombre, vista]
+      );
+      console.log(`♻️ Músculo recuperado: ${nombre}`);
+    } else {
+      await pool.query(
+        `UPDATE musculos SET vista = $1 WHERE id = $2`,
+        [vista, existe.rows[0].id]
+      );
+    }
+  }
+
+  const relaciones = await pool.query(`
+    INSERT INTO ejercicio_musculo (ejercicio_id, musculo_id)
+    SELECT e.id, m.id
+    FROM ejercicios e
+    INNER JOIN musculos m
+      ON LOWER(TRIM(m.nombre)) = LOWER(TRIM(e.descripcion))
+    WHERE COALESCE(e.estado, 'ACTIVO') = 'ACTIVO'
+      AND NOT EXISTS (
+        SELECT 1
+        FROM ejercicio_musculo em
+        WHERE em.ejercicio_id = e.id
+          AND em.musculo_id = m.id
+      )
+    RETURNING ejercicio_id, musculo_id
+  `);
+
+  const conteoGym = await pool.query(`
+    SELECT m.nombre AS musculo, COUNT(DISTINCT e.id)::int AS total
+    FROM musculos m
+    LEFT JOIN ejercicio_musculo em ON em.musculo_id = m.id
+    LEFT JOIN ejercicios e
+      ON e.id = em.ejercicio_id
+      AND COALESCE(e.estado, 'ACTIVO') = 'ACTIVO'
+    WHERE m.nombre = ANY($1::text[])
+    GROUP BY m.id, m.nombre
+    ORDER BY m.id ASC
+  `, [musculosGym.map(([nombre]) => nombre)]);
+
+  console.log(`✅ Relaciones GYM recuperadas: ${relaciones.rowCount || 0} nuevas`);
+  console.log("✅ Conteo GYM por músculo:", conteoGym.rows);
 }
 
 const allowedOrigins = [
@@ -1634,6 +1737,44 @@ app.get("/api/reportes/pagos-membresia", async (req, res) => {
 
 
 // ==============================
+// DIAGNÓSTICO DE CATÁLOGOS
+// ==============================
+app.get("/api/catalogos/estado", async (_req, res) => {
+  try {
+    const gym = await pool.query(`
+      SELECT m.nombre AS musculo, COUNT(DISTINCT e.id)::int AS total
+      FROM musculos m
+      LEFT JOIN ejercicio_musculo em ON em.musculo_id = m.id
+      LEFT JOIN ejercicios e
+        ON e.id = em.ejercicio_id
+        AND COALESCE(e.estado, 'ACTIVO') = 'ACTIVO'
+      GROUP BY m.id, m.nombre
+      ORDER BY m.id ASC
+    `);
+
+    const disciplinas = await pool.query(`
+      SELECT d.nombre AS disciplina, de.nivel, COUNT(*)::int AS total
+      FROM disciplinas d
+      LEFT JOIN disciplina_ejercicios de
+        ON de.disciplina_id = d.id
+        AND de.estado = 'ACTIVO'
+      WHERE LOWER(d.nombre) IN ('calistenia', 'boxeo')
+      GROUP BY d.id, d.nombre, de.nivel
+      ORDER BY d.nombre, de.nivel
+    `);
+
+    res.json({
+      ok: true,
+      gym: gym.rows,
+      disciplinas: disciplinas.rows,
+    });
+  } catch (error) {
+    console.error("Error diagnóstico catálogos:", error);
+    res.status(500).json({ ok: false, error: error.message });
+  }
+});
+
+// ==============================
 // 404
 // ==============================
 
@@ -1650,9 +1791,14 @@ const PORT = process.env.PORT || 10000;
 async function startServer() {
   try {
     await initDB();
+
+    // Primero recuperamos/sembramos GYM y después recompone relaciones.
+    await seedData();
+    await ensureGymExerciseRelations();
+
+    // Luego garantizamos los catálogos completos de Calistenia y Boxeo.
     await ensureDisciplineModule();
     await ensureMembershipModule();
-    await seedData();
 
     app.listen(PORT, "0.0.0.0", () => {
       console.log(`🚀 Backend corriendo en http://localhost:${PORT}`);
