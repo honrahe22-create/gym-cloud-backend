@@ -213,7 +213,71 @@ const DISCIPLINE_SEED = {
   ],
 };
 
+
+// =========================================================
+// MEDIOS EXACTOS YA EXISTENTES - CALISTENIA / BOXEO
+// No se asigna un video de otro ejercicio para rellenar.
+// =========================================================
+const DISCIPLINE_EXACT_MEDIA = {
+  Calistenia: {
+    "Flexiones inclinadas": "/videos/calistenia/flexiones-inclinadas.mp4",
+    "Sentadilla al aire": "/videos/calistenia/sentadilla-aire.mp4",
+    "Plancha frontal": "/videos/calistenia/plancha-frontal.mp4",
+    "Remo australiano": "/videos/calistenia/remo-australiano.mp4",
+    "Puente de glúteos": "/videos/calistenia/puente-gluteos.mp4",
+    "Flexiones clásicas": "/videos/calistenia/flexiones-clasicas.mp4",
+    "Dominada asistida": "/videos/calistenia/dominada-asistida.mp4",
+    "Fondos asistidos": "/videos/calistenia/fondos-asistidos.mp4",
+    "Zancadas alternas": "/videos/calistenia/zancadas-alternas.mp4",
+    "V-Up": "/videos/calistenia/v-up.mp4",
+    "Dominadas estrictas": "/videos/calistenia/dominadas-estrictas.mp4",
+    "Fondos en paralelas": "/videos/calistenia/fondos-paralelas.mp4",
+    "Flexiones cerradas": "/videos/calistenia/flexiones-cerradas.mp4",
+    "Elevación vertical de piernas": "/videos/calistenia/elevacion-vertical-piernas.mp4",
+    "Plancha lateral": "/videos/calistenia/plancha-lateral.mp4",
+    "Dominada commando": "/videos/calistenia/dominada-commando.mp4",
+    "Dominada supina": "/videos/calistenia/dominada-supina.mp4",
+    "Fondos escapulares": "/videos/calistenia/fondos-escapulares.mp4",
+    "Dominada ancho de hombros": "/videos/calistenia/dominada-ancho-hombros.mp4",
+  },
+  Boxeo: {
+    "Guardia y movilidad": "/videos/boxeo/guardia-y-movilidad.mp4",
+    "Jab directo": "/videos/boxeo/jab-directo.mp4",
+    "Defensa en guardia": "/videos/boxeo/defensa-guardia.mp4",
+    "Sombra básica": "/videos/boxeo/sombra-basica.mp4",
+    "Trabajo en saco básico": "/videos/boxeo/trabajo-en-saco.mp4",
+    "Golpes de potencia": "/videos/boxeo/golpes-potencia.mp4",
+    "Saco con combinaciones": "/videos/boxeo/saco-combinaciones.mp4",
+    "Combinaciones con pareja": "/videos/boxeo/combinaciones-con-pareja.mp4",
+    "Manoplas - combinación": "/videos/boxeo/manoplas-combinacion.mp4",
+    "Manoplas - velocidad": "/videos/boxeo/manoplas-velocidad.mp4",
+    "Sparring defensa y contraataque": "/videos/boxeo/sparring-defensa-contraataque.mp4",
+    "Sparring técnico": "/videos/boxeo/sparring-tecnico.mp4",
+    "Boxeo de potencia avanzado": "/videos/boxeo/boxeo-potencia-avanzado.mp4",
+    "Manoplas de alta intensidad": "/videos/boxeo/manoplas-intensidad.mp4",
+    "Combinación avanzada": "/videos/boxeo/combinacion-avanzada.mp4",
+  },
+};
+
+function validarCatalogoDisciplinasEnCodigo() {
+  for (const disciplina of ["Calistenia", "Boxeo"]) {
+    for (const nivel of ["Principiante", "Intermedio", "Avanzado"]) {
+      const total = (DISCIPLINE_SEED[disciplina] || []).filter(
+        (item) => item[2] === nivel
+      ).length;
+
+      if (total !== 30) {
+        throw new Error(
+          `${disciplina} ${nivel}: catálogo fuente ${total}/30. Se esperaban 30.`
+        );
+      }
+    }
+  }
+}
+
 async function ensureDisciplineModule() {
+  validarCatalogoDisciplinasEnCodigo();
+
   await pool.query(`
     CREATE TABLE IF NOT EXISTS disciplina_planes (
       id SERIAL PRIMARY KEY,
@@ -277,6 +341,9 @@ async function ensureDisciplineModule() {
     const disciplinaId = disciplinaRes.rows[0].id;
 
     for (const [nombre, categoria, nivel, descripcion] of ejercicios) {
+      const videoExacto =
+        DISCIPLINE_EXACT_MEDIA[disciplinaNombre]?.[nombre] || "";
+
       const existe = await pool.query(
         `
         SELECT id FROM disciplina_ejercicios
@@ -293,7 +360,7 @@ async function ensureDisciplineModule() {
           (disciplina_id, nombre, descripcion, nivel, categoria, video_url, imagen_url, estado)
           VALUES ($1,$2,$3,$4,$5,$6,$7,'ACTIVO')
           `,
-          [disciplinaId, nombre, descripcion, nivel, categoria, "", ""]
+          [disciplinaId, nombre, descripcion, nivel, categoria, videoExacto, ""]
         );
       } else {
         await pool.query(
@@ -302,10 +369,14 @@ async function ensureDisciplineModule() {
           SET descripcion = $1,
               nivel = $2,
               categoria = $3,
+              video_url = CASE
+                WHEN COALESCE(NULLIF($4, ''), '') <> '' THEN $4
+                ELSE video_url
+              END,
               estado = 'ACTIVO'
-          WHERE id = $4
+          WHERE id = $5
           `,
-          [descripcion, nivel, categoria, existe.rows[0].id]
+          [descripcion, nivel, categoria, videoExacto, existe.rows[0].id]
         );
       }
     }
@@ -1742,7 +1813,15 @@ app.get("/api/reportes/pagos-membresia", async (req, res) => {
 app.get("/api/catalogos/estado", async (_req, res) => {
   try {
     const gym = await pool.query(`
-      SELECT m.nombre AS musculo, COUNT(DISTINCT e.id)::int AS total
+      SELECT
+        m.nombre AS musculo,
+        COUNT(DISTINCT e.id)::int AS total,
+        COUNT(DISTINCT e.id) FILTER (
+          WHERE COALESCE(NULLIF(TRIM(e.video_url), ''), NULLIF(TRIM(e.imagen_url), '')) IS NOT NULL
+        )::int AS con_medio,
+        COUNT(DISTINCT e.id) FILTER (
+          WHERE COALESCE(NULLIF(TRIM(e.video_url), ''), NULLIF(TRIM(e.imagen_url), '')) IS NULL
+        )::int AS sin_medio
       FROM musculos m
       LEFT JOIN ejercicio_musculo em ON em.musculo_id = m.id
       LEFT JOIN ejercicios e
@@ -1753,7 +1832,16 @@ app.get("/api/catalogos/estado", async (_req, res) => {
     `);
 
     const disciplinas = await pool.query(`
-      SELECT d.nombre AS disciplina, de.nivel, COUNT(*)::int AS total
+      SELECT
+        d.nombre AS disciplina,
+        de.nivel,
+        COUNT(*)::int AS total,
+        COUNT(*) FILTER (
+          WHERE COALESCE(NULLIF(TRIM(de.video_url), ''), NULLIF(TRIM(de.imagen_url), '')) IS NOT NULL
+        )::int AS con_medio,
+        COUNT(*) FILTER (
+          WHERE COALESCE(NULLIF(TRIM(de.video_url), ''), NULLIF(TRIM(de.imagen_url), '')) IS NULL
+        )::int AS sin_medio
       FROM disciplinas d
       LEFT JOIN disciplina_ejercicios de
         ON de.disciplina_id = d.id

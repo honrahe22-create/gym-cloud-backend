@@ -617,6 +617,25 @@ async function seedData() {
         console.log(
           `✅ gym30-generated.json detectado: ${catalogoManifest.length} ejercicios.`
         );
+
+        const conteoManifest = {};
+        for (const item of catalogoManifest) {
+          conteoManifest[item.descripcion] = (conteoManifest[item.descripcion] || 0) + 1;
+        }
+
+        const gruposIncompletos = musculos
+          .map((m) => ({
+            musculo: m.nombre,
+            total: Number(conteoManifest[m.nombre] || 0),
+          }))
+          .filter((item) => item.total !== 30);
+
+        if (catalogoManifest.length !== 480 || gruposIncompletos.length) {
+          throw new Error(
+            `gym30-generated.json inválido: total ${catalogoManifest.length}/480; ` +
+            gruposIncompletos.map((x) => `${x.musculo} ${x.total}/30`).join(", ")
+          );
+        }
       } catch (errorManifest) {
         console.error(
           "⚠️ No se pudo leer gym30-generated.json:",
