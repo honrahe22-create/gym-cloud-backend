@@ -331,41 +331,6 @@ async function seedData() {
       },
 
       // =======================================================
-      // TRAPECIO
-      // =======================================================
-
-      {
-        nombre: 'Barbell Shrug',
-        descripcion: 'Trapecio',
-        video_url: '/videos/trapecio-1.mp4',
-        nivel: "Principiante",
-      },
-      {
-        nombre: 'Dumbbell Shrug',
-        descripcion: 'Trapecio',
-        video_url: '/videos/trapecio-2.mp4',
-        nivel: "Principiante",
-      },
-      {
-        nombre: 'Cable Shrug',
-        descripcion: 'Trapecio',
-        video_url: '/videos/trapecio-3.mp4',
-        nivel: "Intermedio",
-      },
-      {
-        nombre: 'Lever Shrug',
-        descripcion: 'Trapecio',
-        video_url: '/videos/trapecio-4.mp4',
-        nivel: "Intermedio",
-      },
-      {
-        nombre: 'Smith Machine Shrug',
-        descripcion: 'Trapecio',
-        video_url: '/videos/trapecio-5.mp4',
-        nivel: "Avanzado",
-      },
-
-      // =======================================================
       // ESPALDA ALTA
       // =======================================================
 
@@ -613,53 +578,71 @@ async function seedData() {
     ];
 
     // =========================================================
-    // FASE 3: HASTA 30 EJERCICIOS POR GRUPO MUSCULAR
-    // El script export-gym-videos-30.mjs genera este archivo
-    // automáticamente desde free-exercise-db-with-videos.
-    // Si todavía no existe, intenta usar gym20-generated.json y luego conserva la base actual.
+    // 3. RECUPERACIÓN DEL CATÁLOGO GYM 30
     // =========================================================
-    const generado30Path = path.join(__dirname, "gym30-generated.json");
-    const generado20Path = path.join(__dirname, "gym20-generated.json");
-    let ejerciciosConfigurados = ejercicios;
-    let archivoGeneradoUsado = "";
+    // Prioridad de recuperación:
+    // 1) gym30-generated.json, si está presente.
+    // 2) ejercicios que YA EXISTEN en PostgreSQL (aunque se haya perdido
+    //    la relación ejercicio_musculo).
+    // 3) catálogo base de este archivo como respaldo.
+    //
+    // IMPORTANTE: no borra ejercicios ni rutinas. Solo reconstruye las
+    // relaciones de cada músculo con un máximo de 30 ejercicios.
 
-    const cargarCatalogoGenerado = (ruta, nombreArchivo) => {
-      if (!fs.existsSync(ruta)) return false;
+    const normalizar = (valor = "") =>
+      String(valor)
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .trim();
 
+    const gym30Path = path.join(__dirname, "gym30-generated.json");
+    let catalogoManifest = [];
+
+    if (fs.existsSync(gym30Path)) {
       try {
-        const generado = JSON.parse(fs.readFileSync(ruta, "utf8"));
+        const gym30 = JSON.parse(fs.readFileSync(gym30Path, "utf8"));
+        const generados = Array.isArray(gym30?.ejercicios) ? gym30.ejercicios : [];
 
-        if (Array.isArray(generado?.ejercicios) && generado.ejercicios.length) {
-          ejerciciosConfigurados = generado.ejercicios;
-          archivoGeneradoUsado = nombreArchivo;
-          return true;
-        }
-      } catch (error) {
-        console.warn(`⚠️ No se pudo leer ${nombreArchivo}:`, error.message);
+        catalogoManifest = generados
+          .filter((e) => e && e.nombre && e.descripcion)
+          .map((e) => ({
+            nombre: e.nombre,
+            descripcion: e.descripcion,
+            video_url: e.video_url || "",
+            imagen_url: e.imagen_url || "",
+            nivel: e.nivel || "Intermedio",
+          }));
+
+        console.log(
+          `✅ gym30-generated.json detectado: ${catalogoManifest.length} ejercicios.`
+        );
+      } catch (errorManifest) {
+        console.error(
+          "⚠️ No se pudo leer gym30-generated.json:",
+          errorManifest.message
+        );
       }
-
-      return false;
-    };
-
-    if (cargarCatalogoGenerado(generado30Path, "gym30-generated.json")) {
-      console.log(
-        `✅ Catálogo GYM 30 cargado: ${ejerciciosConfigurados.length} ejercicios desde ${archivoGeneradoUsado}`
-      );
-    } else if (cargarCatalogoGenerado(generado20Path, "gym20-generated.json")) {
-      console.warn(
-        `⚠️ gym30-generated.json todavía no existe. Se mantiene temporalmente ${archivoGeneradoUsado} con ${ejerciciosConfigurados.length} ejercicios.`
-      );
     } else {
-      console.warn(
-        "⚠️ No existe gym30-generated.json ni gym20-generated.json. Se conserva el catálogo base."
+      console.log(
+        "ℹ️ gym30-generated.json no está presente. Se intentará recuperar el catálogo desde PostgreSQL."
       );
     }
 
+    // El manifest tiene prioridad. Si no está, conservamos el catálogo base
+    // para asegurar que nunca quede un músculo completamente vacío.
+    const ejerciciosParaInsertar = catalogoManifest.length
+      ? catalogoManifest
+      : ejercicios.map((e) => ({
+          ...e,
+          imagen_url: e.imagen_url || "",
+        }));
+
     // =========================================================
-    // 3. INSERTAR / ACTUALIZAR EJERCICIOS SIN DUPLICAR
+    // 4. INSERTAR / ACTUALIZAR EL CATÁLOGO DISPONIBLE SIN DUPLICAR
     // =========================================================
 
-    for (const ejercicio of ejerciciosConfigurados) {
+    for (const ejercicio of ejerciciosParaInsertar) {
       const existente = await pool.query(
         `
         SELECT id
@@ -671,136 +654,214 @@ async function seedData() {
         [ejercicio.nombre]
       );
 
-      let ejercicioId;
-
       if (existente.rows.length > 0) {
-        ejercicioId = existente.rows[0].id;
-
+        // Solo sobrescribimos medios cuando el nuevo catálogo trae un valor.
+        // Esto evita perder una animación que ya estaba guardada en PostgreSQL.
         await pool.query(
           `
           UPDATE ejercicios
-          SET descripcion = $1,
-              imagen_url = $2,
-              video_url = $3,
-              nivel = $4,
+          SET descripcion = COALESCE(NULLIF($1, ''), descripcion),
+              imagen_url = COALESCE(NULLIF($2, ''), imagen_url),
+              video_url = COALESCE(NULLIF($3, ''), video_url),
+              nivel = COALESCE(NULLIF($4, ''), nivel),
               estado = 'ACTIVO'
           WHERE id = $5
           `,
           [
-            ejercicio.descripcion,
-            "",
-            ejercicio.video_url,
-            ejercicio.nivel,
-            ejercicioId,
+            ejercicio.descripcion || "",
+            ejercicio.imagen_url || "",
+            ejercicio.video_url || "",
+            ejercicio.nivel || "Intermedio",
+            existente.rows[0].id,
           ]
         );
       } else {
-        const nuevo = await pool.query(
+        await pool.query(
           `
           INSERT INTO ejercicios
             (nombre, descripcion, imagen_url, video_url, nivel, estado)
           VALUES
             ($1, $2, $3, $4, $5, 'ACTIVO')
-          RETURNING id
           `,
           [
             ejercicio.nombre,
-            ejercicio.descripcion,
-            "",
-            ejercicio.video_url,
-            ejercicio.nivel,
+            ejercicio.descripcion || "",
+            ejercicio.imagen_url || "",
+            ejercicio.video_url || "",
+            ejercicio.nivel || "Intermedio",
           ]
         );
-
-        ejercicioId = nuevo.rows[0].id;
       }
+    }
 
-      // =======================================================
-      // 4. RELACIONAR AUTOMÁTICAMENTE CON EL MÚSCULO
-      // =======================================================
+    // =========================================================
+    // 5. RECUPERAR EJERCICIOS OCULTOS / DESRELACIONADOS DE POSTGRESQL
+    // =========================================================
+    // En ajustes anteriores podían quedar los ejercicios en la tabla
+    // "ejercicios", pero desaparecer de la pantalla porque se perdían las
+    // filas de "ejercicio_musculo". Aquí recuperamos esas filas existentes.
 
+    const dbEjerciciosRes = await pool.query(`
+      SELECT
+        id,
+        nombre,
+        descripcion,
+        imagen_url,
+        video_url,
+        nivel,
+        estado
+      FROM ejercicios
+      WHERE COALESCE(estado, 'ACTIVO') = 'ACTIVO'
+      ORDER BY id ASC
+    `);
+
+    const todosEjerciciosDB = dbEjerciciosRes.rows || [];
+    const resumenRecuperacion = {};
+
+    for (const musculo of musculos) {
       const musculoRes = await pool.query(
-        `
-        SELECT id
-        FROM musculos
-        WHERE nombre = $1
-        LIMIT 1
-        `,
-        [ejercicio.descripcion]
+        `SELECT id FROM musculos WHERE LOWER(nombre) = LOWER($1) LIMIT 1`,
+        [musculo.nombre]
       );
 
       if (!musculoRes.rows.length) {
-        console.warn(
-          `⚠️ No se encontró músculo para ${ejercicio.nombre}: ${ejercicio.descripcion}`
-        );
+        console.warn(`⚠️ No se encontró el músculo ${musculo.nombre}.`);
         continue;
       }
 
       const musculoId = musculoRes.rows[0].id;
+      const claveMusculo = normalizar(musculo.nombre);
 
-      const relacionExistente = await pool.query(
+      const candidatos = [];
+      const usados = new Set();
+
+      const agregarCandidato = (ejercicio, prioridad = 2) => {
+        if (!ejercicio?.id || !ejercicio?.nombre) return;
+        const claveNombre = normalizar(ejercicio.nombre);
+        if (!claveNombre || usados.has(claveNombre)) return;
+        usados.add(claveNombre);
+        candidatos.push({ ...ejercicio, prioridad });
+      };
+
+      // 5.1 Si existe manifest, sus nombres son la fuente autoritativa.
+      if (catalogoManifest.length) {
+        const nombresManifest = new Set(
+          catalogoManifest
+            .filter((e) => normalizar(e.descripcion) === claveMusculo)
+            .map((e) => normalizar(e.nombre))
+        );
+
+        for (const ejercicio of todosEjerciciosDB) {
+          if (nombresManifest.has(normalizar(ejercicio.nombre))) {
+            agregarCandidato(ejercicio, 0);
+          }
+        }
+      }
+
+      // 5.2 Recuperar filas antiguas cuyo músculo está guardado en descripcion.
+      for (const ejercicio of todosEjerciciosDB) {
+        if (normalizar(ejercicio.descripcion) === claveMusculo) {
+          agregarCandidato(ejercicio, 1);
+        }
+      }
+
+      // 5.3 Como respaldo, rescatar relaciones que aún existan para este músculo,
+      // incluso si una versión antigua dejó descripcion incompleta.
+      const relacionesActuales = await pool.query(
         `
-        SELECT id
-        FROM ejercicio_musculo
-        WHERE ejercicio_id = $1
-          AND musculo_id = $2
-        LIMIT 1
+        SELECT e.*
+        FROM ejercicio_musculo em
+        INNER JOIN ejercicios e ON e.id = em.ejercicio_id
+        WHERE em.musculo_id = $1
+          AND COALESCE(e.estado, 'ACTIVO') = 'ACTIVO'
+        ORDER BY e.id ASC
         `,
-        [ejercicioId, musculoId]
+        [musculoId]
       );
 
-      if (!relacionExistente.rows.length) {
+      for (const ejercicio of relacionesActuales.rows || []) {
+        agregarCandidato(ejercicio, 2);
+      }
+
+      candidatos.sort((a, b) => {
+        if (a.prioridad !== b.prioridad) return a.prioridad - b.prioridad;
+
+        // Prioriza los ejercicios que ya tienen medio válido guardado.
+        const mediaA = a.video_url || a.imagen_url ? 0 : 1;
+        const mediaB = b.video_url || b.imagen_url ? 0 : 1;
+        if (mediaA !== mediaB) return mediaA - mediaB;
+
+        return Number(a.id) - Number(b.id);
+      });
+
+      const seleccionados = candidatos.slice(0, 30);
+
+      // Reconstruimos SOLO las relaciones del músculo actual.
+      // No se elimina ningún ejercicio ni ningún detalle de rutina.
+      await pool.query(
+        `DELETE FROM ejercicio_musculo WHERE musculo_id = $1`,
+        [musculoId]
+      );
+
+      for (const ejercicio of seleccionados) {
         await pool.query(
           `
-          INSERT INTO ejercicio_musculo
-            (ejercicio_id, musculo_id)
-          VALUES
-            ($1, $2)
+          INSERT INTO ejercicio_musculo (ejercicio_id, musculo_id)
+          VALUES ($1, $2)
+          ON CONFLICT DO NOTHING
           `,
-          [ejercicioId, musculoId]
+          [ejercicio.id, musculoId]
         );
       }
-    }
 
-    // =========================================================
-    // 5. LIMPIAR RELACIONES ANTIGUAS DE LOS MÚSCULOS CONFIGURADOS
-    // Esto evita que aparezcan ejercicios viejos además del catálogo generado actual.
-    // No elimina ejercicios ni rutinas históricas; solo depura la relación
-    // visible entre músculo y ejercicio.
-    // =========================================================
-    const catalogoPorMusculo = new Map();
+      resumenRecuperacion[musculo.nombre] = seleccionados.length;
 
-    for (const ejercicio of ejerciciosConfigurados) {
-      if (!catalogoPorMusculo.has(ejercicio.descripcion)) {
-        catalogoPorMusculo.set(ejercicio.descripcion, []);
-      }
-      catalogoPorMusculo.get(ejercicio.descripcion).push(ejercicio.nombre);
-    }
-
-    for (const [musculoNombre, nombresPermitidos] of catalogoPorMusculo.entries()) {
-      const musculoRes = await pool.query(
-        `SELECT id FROM musculos WHERE nombre = $1 LIMIT 1`,
-        [musculoNombre]
-      );
-
-      if (!musculoRes.rows.length) continue;
-
-      await pool.query(
-        `
-          DELETE FROM ejercicio_musculo em
-          USING ejercicios e
-          WHERE em.ejercicio_id = e.id
-            AND em.musculo_id = $1
-            AND NOT (e.nombre = ANY($2::text[]))
-        `,
-        [musculoRes.rows[0].id, nombresPermitidos]
+      console.log(
+        `${seleccionados.length === 30 ? "✅" : "⚠️"} ${musculo.nombre}: ${seleccionados.length}/30 ejercicios relacionados.`
       );
     }
 
-    console.log("✅ Datos base del GYM insertados/actualizados correctamente.");
-    console.log(`✅ ${ejerciciosConfigurados.length} ejercicios configurados.`);
+    // =========================================================
+    // 6. VERIFICACIÓN FINAL
+    // =========================================================
+
+    const conteoFinal = await pool.query(`
+      SELECT
+        m.nombre AS musculo,
+        m.vista,
+        COUNT(DISTINCT em.ejercicio_id)::int AS total
+      FROM musculos m
+      LEFT JOIN ejercicio_musculo em ON em.musculo_id = m.id
+      GROUP BY m.id, m.nombre, m.vista
+      ORDER BY m.vista, m.id
+    `);
+
+    console.log("======================================================");
+    console.log("✅ RECUPERACIÓN GYM FINALIZADA");
+    console.log("======================================================");
+    console.table(conteoFinal.rows);
+
+    const incompletos = conteoFinal.rows.filter(
+      (fila) => Number(fila.total) < 30
+    );
+
+    if (incompletos.length) {
+      console.warn(
+        "⚠️ Hay músculos con menos de 30 filas físicas en PostgreSQL. No se inventaron ejercicios ni animaciones incorrectas:",
+        incompletos.map((x) => `${x.musculo}: ${x.total}/30`).join(" | ")
+      );
+    } else {
+      console.log("✅ Todos los músculos quedaron recuperados en 30/30.");
+    }
+
+    return {
+      ok: true,
+      resumen: resumenRecuperacion,
+      conteo: conteoFinal.rows,
+    };
   } catch (error) {
-    console.error("❌ Error insertando datos base:", error);
+    console.error("❌ Error insertando/recuperando datos base:", error);
+    throw error;
   }
 }
 
