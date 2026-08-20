@@ -1880,9 +1880,9 @@ async function startServer() {
   try {
     await initDB();
 
-    // Primero recuperamos/sembramos GYM y después recompone relaciones.
+    // GYM 30: seedData() ya deja las relaciones vigentes.
     await seedData();
-    await ensureGymExerciseRelations();
+    // No ejecutar ensureGymExerciseRelations(): remezcla ejercicios legacy.
 
     // Luego garantizamos los catálogos completos de Calistenia y Boxeo.
     await ensureDisciplineModule();
