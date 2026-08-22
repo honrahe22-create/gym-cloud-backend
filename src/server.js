@@ -275,6 +275,23 @@ function validarCatalogoDisciplinasEnCodigo() {
   }
 }
 
+
+function slugDisciplinaMedia(valor = "") {
+  return String(valor || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function imagenAnimadaDisciplina(disciplinaNombre, nombreEjercicio) {
+  const carpeta =
+    disciplinaNombre === "Calistenia" ? "calistenia" : "boxeo";
+
+  return `/discipline-media/${carpeta}/${slugDisciplinaMedia(nombreEjercicio)}.svg`;
+}
+
 async function ensureDisciplineModule() {
   validarCatalogoDisciplinasEnCodigo();
 
@@ -344,6 +361,12 @@ async function ensureDisciplineModule() {
       const videoExacto =
         DISCIPLINE_EXACT_MEDIA[disciplinaNombre]?.[nombre] || "";
 
+      // Cada ejercicio sin video real recibe SU PROPIO medio animado.
+      // No se reutiliza el video de otro ejercicio.
+      const imagenExacta = videoExacto
+        ? ""
+        : imagenAnimadaDisciplina(disciplinaNombre, nombre);
+
       const existe = await pool.query(
         `
         SELECT id FROM disciplina_ejercicios
@@ -360,7 +383,15 @@ async function ensureDisciplineModule() {
           (disciplina_id, nombre, descripcion, nivel, categoria, video_url, imagen_url, estado)
           VALUES ($1,$2,$3,$4,$5,$6,$7,'ACTIVO')
           `,
-          [disciplinaId, nombre, descripcion, nivel, categoria, videoExacto, ""]
+          [
+            disciplinaId,
+            nombre,
+            descripcion,
+            nivel,
+            categoria,
+            videoExacto,
+            imagenExacta,
+          ]
         );
       } else {
         await pool.query(
@@ -369,14 +400,19 @@ async function ensureDisciplineModule() {
           SET descripcion = $1,
               nivel = $2,
               categoria = $3,
-              video_url = CASE
-                WHEN COALESCE(NULLIF($4, ''), '') <> '' THEN $4
-                ELSE video_url
-              END,
+              video_url = $4,
+              imagen_url = $5,
               estado = 'ACTIVO'
-          WHERE id = $5
+          WHERE id = $6
           `,
-          [descripcion, nivel, categoria, videoExacto, existe.rows[0].id]
+          [
+            descripcion,
+            nivel,
+            categoria,
+            videoExacto,
+            imagenExacta,
+            existe.rows[0].id,
+          ]
         );
       }
     }
