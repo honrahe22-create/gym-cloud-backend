@@ -220,6 +220,7 @@ const DISCIPLINE_SEED = {
 // =========================================================
 const DISCIPLINE_EXACT_MEDIA = {
   Calistenia: {
+    // 19 medios originales ya existentes.
     "Flexiones inclinadas": "/videos/calistenia/flexiones-inclinadas.mp4",
     "Sentadilla al aire": "/videos/calistenia/sentadilla-aire.mp4",
     "Plancha frontal": "/videos/calistenia/plancha-frontal.mp4",
@@ -239,50 +240,36 @@ const DISCIPLINE_EXACT_MEDIA = {
     "Dominada supina": "/videos/calistenia/dominada-supina.mp4",
     "Fondos escapulares": "/videos/calistenia/fondos-escapulares.mp4",
     "Dominada ancho de hombros": "/videos/calistenia/dominada-ancho-hombros.mp4",
+
+    // GIFs ExerciseDB descargados y que SÍ coinciden con el catálogo vigente.
+    "Elevación de pantorrillas": "/videos/calistenia/elevacion-pantorrillas.gif",
+    "Remo invertido con rodillas flexionadas": "/videos/calistenia/remo-invertido-sillas.gif",
+    "Crunch invertido": "/videos/calistenia/crunch-invertido.gif",
+    "Flexiones diamante": "/videos/calistenia/flexiones-diamante-cerradas.gif",
+    "Burpee controlado": "/videos/calistenia/burpee.gif",
+    "Knee raises colgado": "/videos/calistenia/elevacion-rodillas-colgado.gif",
+    "Fondos en banco": "/videos/calistenia/fondos-en-banco.gif",
   },
   Boxeo: {
-    // =====================================================
-    // VIDEOS REALES EXISTENTES - PRINCIPIANTE
-    // =====================================================
+    // SOLO videos reales/originales del módulo.
+    // Los MP4 pequeños tipo dibujo/esquema NO se consideran videos reales.
     "Guardia y movilidad": "/videos/boxeo/guardia-y-movilidad.mp4",
     "Jab directo": "/videos/boxeo/jab-directo.mp4",
     "Defensa en guardia": "/videos/boxeo/defensa-guardia.mp4",
     "Sombra básica": "/videos/boxeo/sombra-basica.mp4",
     "Trabajo en saco básico": "/videos/boxeo/trabajo-en-saco.mp4",
-    "Cross directo": "/videos/boxeo/cross.mp4",
-    "Jab-cross": "/videos/boxeo/jab-cross.mp4",
-    "Gancho de izquierda": "/videos/boxeo/hook-delantero.mp4",
-    "Uppercut de derecha": "/videos/boxeo/uppercut-trasero.mp4",
-    "Desplazamiento lateral": "/videos/boxeo/desplazamiento.mp4",
-    "Roll bajo gancho": "/videos/boxeo/roll-bajo-hook.mp4",
 
-    // =====================================================
-    // VIDEOS REALES EXISTENTES - INTERMEDIO
-    // =====================================================
     "Golpes de potencia": "/videos/boxeo/golpes-potencia.mp4",
     "Saco con combinaciones": "/videos/boxeo/saco-combinaciones.mp4",
     "Combinaciones con pareja": "/videos/boxeo/combinaciones-con-pareja.mp4",
     "Manoplas - combinación": "/videos/boxeo/manoplas-combinacion.mp4",
     "Manoplas - velocidad": "/videos/boxeo/manoplas-velocidad.mp4",
-    "Doble jab-cross": "/videos/boxeo/doble-jab-cross.mp4",
-    "Jab-cross-gancho": "/videos/boxeo/combo-1-2-3.mp4",
-    "Pivot con contraataque": "/videos/boxeo/pivote-contraataque.mp4",
-    "Sombra con defensa activa": "/videos/boxeo/sombra-tecnica.mp4",
-    "Sombra por rounds": "/videos/boxeo/sombra-libre.mp4",
-    "Saco potencia al cuerpo": "/videos/boxeo/saco-potencia.mp4",
-    "Combinación 1-2-3-2": "/videos/boxeo/combo-1-2-3-2.mp4",
 
-    // =====================================================
-    // VIDEOS REALES EXISTENTES - AVANZADO
-    // =====================================================
     "Sparring defensa y contraataque": "/videos/boxeo/sparring-defensa-contraataque.mp4",
     "Sparring técnico": "/videos/boxeo/sparring-tecnico.mp4",
     "Boxeo de potencia avanzado": "/videos/boxeo/boxeo-potencia-avanzado.mp4",
     "Manoplas de alta intensidad": "/videos/boxeo/manoplas-intensidad.mp4",
     "Combinación avanzada": "/videos/boxeo/combinacion-avanzada.mp4",
-
-    // Los demás ejercicios mantienen imagen_url animada como respaldo.
-    // NO se reutiliza un mismo video real para ejercicios diferentes.
   },
 };
 
@@ -1305,6 +1292,49 @@ app.get("/api/disciplinas/:nombre/ejercicios", async (req, res) => {
     );
 
     res.json({ ok: true, ejercicios: result.rows || [] });
+  } catch (error) {
+    res.status(500).json({ ok: false, error: error.message });
+  }
+});
+
+
+app.get("/api/disciplinas/:nombre/estado-medios", async (req, res) => {
+  try {
+    const { nombre } = req.params;
+
+    const result = await pool.query(
+      `
+      SELECT
+        de.nivel,
+        COUNT(*)::int AS total,
+        COUNT(*) FILTER (
+          WHERE COALESCE(NULLIF(TRIM(de.video_url), ''), '') <> ''
+        )::int AS con_video,
+        COUNT(*) FILTER (
+          WHERE COALESCE(NULLIF(TRIM(de.video_url), ''), '') = ''
+            AND COALESCE(NULLIF(TRIM(de.imagen_url), ''), '') <> ''
+        )::int AS con_respaldo,
+        COUNT(*) FILTER (
+          WHERE COALESCE(NULLIF(TRIM(de.video_url), ''), '') = ''
+            AND COALESCE(NULLIF(TRIM(de.imagen_url), ''), '') = ''
+        )::int AS sin_medio
+      FROM disciplina_ejercicios de
+      INNER JOIN disciplinas d ON d.id = de.disciplina_id
+      WHERE LOWER(d.nombre) = LOWER($1)
+        AND de.estado = 'ACTIVO'
+      GROUP BY de.nivel
+      ORDER BY
+        CASE de.nivel
+          WHEN 'Principiante' THEN 1
+          WHEN 'Intermedio' THEN 2
+          WHEN 'Avanzado' THEN 3
+          ELSE 4
+        END
+      `,
+      [nombre]
+    );
+
+    res.json({ ok: true, disciplina: nombre, niveles: result.rows || [] });
   } catch (error) {
     res.status(500).json({ ok: false, error: error.message });
   }
