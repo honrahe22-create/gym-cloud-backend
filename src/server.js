@@ -220,57 +220,54 @@ const DISCIPLINE_SEED = {
 // =========================================================
 const DISCIPLINE_EXACT_MEDIA = {
   Calistenia: {
-    // 19 medios originales ya existentes.
-    "Flexiones inclinadas": "/videos/calistenia/flexiones-inclinadas.mp4",
-    "Sentadilla al aire": "/videos/calistenia/sentadilla-aire.mp4",
-    "Plancha frontal": "/videos/calistenia/plancha-frontal.mp4",
-    "Remo australiano": "/videos/calistenia/remo-australiano.mp4",
-    "Puente de glúteos": "/videos/calistenia/puente-gluteos.mp4",
-    "Flexiones clásicas": "/videos/calistenia/flexiones-clasicas.mp4",
-    "Dominada asistida": "/videos/calistenia/dominada-asistida.mp4",
-    "Fondos asistidos": "/videos/calistenia/fondos-asistidos.mp4",
-    "Zancadas alternas": "/videos/calistenia/zancadas-alternas.mp4",
-    "V-Up": "/videos/calistenia/v-up.mp4",
-    "Dominadas estrictas": "/videos/calistenia/dominadas-estrictas.mp4",
-    "Fondos en paralelas": "/videos/calistenia/fondos-paralelas.mp4",
-    "Flexiones cerradas": "/videos/calistenia/flexiones-cerradas.mp4",
-    "Elevación vertical de piernas": "/videos/calistenia/elevacion-vertical-piernas.mp4",
-    "Plancha lateral": "/videos/calistenia/plancha-lateral.mp4",
-    "Dominada commando": "/videos/calistenia/dominada-commando.mp4",
-    "Dominada supina": "/videos/calistenia/dominada-supina.mp4",
-    "Fondos escapulares": "/videos/calistenia/fondos-escapulares.mp4",
-    "Dominada ancho de hombros": "/videos/calistenia/dominada-ancho-hombros.mp4",
-
-    // GIFs ExerciseDB descargados y que SÍ coinciden con el catálogo vigente.
-    "Elevación de pantorrillas": "/videos/calistenia/elevacion-pantorrillas.gif",
-    "Remo invertido con rodillas flexionadas": "/videos/calistenia/remo-invertido-sillas.gif",
-    "Crunch invertido": "/videos/calistenia/crunch-invertido.gif",
-    "Flexiones diamante": "/videos/calistenia/flexiones-diamante-cerradas.gif",
-    "Burpee controlado": "/videos/calistenia/burpee.gif",
-    "Knee raises colgado": "/videos/calistenia/elevacion-rodillas-colgado.gif",
-    "Fondos en banco": "/videos/calistenia/fondos-en-banco.gif",
+  "Flexiones inclinadas": "/videos/calistenia/flexiones-inclinadas.mp4",
+  "Sentadilla al aire": "/videos/calistenia/sentadilla-aire.mp4",
+  "Plancha frontal": "/videos/calistenia/plancha-frontal.mp4",
+  "Remo australiano": "/videos/calistenia/remo-australiano.mp4",
+  "Puente de glúteos": "/videos/calistenia/puente-gluteos.mp4",
+  "Flexiones clásicas": "/videos/calistenia/flexiones-clasicas.mp4",
+  "Dominada asistida": "/videos/calistenia/dominada-asistida.mp4",
+  "Fondos asistidos": "/videos/calistenia/fondos-asistidos.mp4",
+  "Zancadas alternas": "/videos/calistenia/zancadas-alternas.mp4",
+  "V-Up": "/videos/calistenia/v-up.mp4",
+  "Dominadas estrictas": "/videos/calistenia/dominadas-estrictas.mp4",
+  "Fondos en paralelas": "/videos/calistenia/fondos-paralelas.mp4",
+  "Flexiones cerradas": "/videos/calistenia/flexiones-cerradas.mp4",
+  "Elevación vertical de piernas": "/videos/calistenia/elevacion-vertical-piernas.mp4",
+  "Plancha lateral": "/videos/calistenia/plancha-lateral.mp4",
+  "Dominada commando": "/videos/calistenia/dominada-commando.mp4",
+  "Dominada supina": "/videos/calistenia/dominada-supina.mp4",
+  "Fondos escapulares": "/videos/calistenia/fondos-escapulares.mp4",
+  "Dominada ancho de hombros": "/videos/calistenia/dominada-ancho-hombros.mp4",
+  "Elevación de pantorrillas": "/videos/calistenia/elevacion-pantorrillas.gif",
+  "Remo invertido con rodillas flexionadas": "/videos/calistenia/remo-invertido-sillas.gif",
+  "Crunch invertido": "/videos/calistenia/crunch-invertido.gif",
+  "Flexiones diamante": "/videos/calistenia/flexiones-diamante-cerradas.gif",
+  "Burpee controlado": "/videos/calistenia/burpee.gif",
+  "Knee raises colgado": "/videos/calistenia/elevacion-rodillas-colgado.gif",
+  "Fondos en banco": "/videos/calistenia/fondos-en-banco.gif",
+  "Dead bug": "/videos/calistenia/cal-dead-bug.gif",
+  "Flexión escapular": "/videos/calistenia/cal-flexion-escapular.gif",
+  "Colgado activo": "/videos/calistenia/cal-colgado-activo.gif",
+  "Mountain climber lento": "/videos/calistenia/cal-mountain-climber-lento.gif",
+  "Bear crawl básico": "/videos/calistenia/cal-bear-crawl-basico.gif",
+  "Flexiones declinadas": "/videos/calistenia/cal-flexiones-declinadas.gif",
+  "Flexiones archer asistidas": "/videos/calistenia/cal-flexiones-archer-asistidas.gif",
+  "Remo australiano pies elevados": "/videos/calistenia/cal-remo-australiano-pies-elevados.gif",
+  "Bear crawl lateral": "/videos/calistenia/cal-bear-crawl-lateral.gif",
+  "Muscle-up estricto": "/videos/calistenia/cal-muscle-up-estricto.gif",
+  "Muscle-up explosivo": "/videos/calistenia/cal-muscle-up-explosivo.gif",
+  "Handstand push-up": "/videos/calistenia/cal-handstand-push-up.gif",
+  "Handstand libre": "/videos/calistenia/cal-handstand-libre.gif",
+  "Front lever tuck": "/videos/calistenia/cal-front-lever-tuck.gif",
+  "Front lever avanzado": "/videos/calistenia/cal-front-lever-avanzado.gif",
+  "Back lever tuck": "/videos/calistenia/cal-back-lever-tuck.gif",
+  "Back lever avanzado": "/videos/calistenia/cal-back-lever-avanzado.gif",
+  "Flexiones archer": "/videos/calistenia/cal-flexiones-archer.gif",
+  "Dominada archer": "/videos/calistenia/cal-dominada-archer.gif",
+  "Fondos coreanos": "/videos/calistenia/cal-fondos-coreanos.gif",
   },
-  Boxeo: {
-    // SOLO videos reales/originales del módulo.
-    // Los MP4 pequeños tipo dibujo/esquema NO se consideran videos reales.
-    "Guardia y movilidad": "/videos/boxeo/guardia-y-movilidad.mp4",
-    "Jab directo": "/videos/boxeo/jab-directo.mp4",
-    "Defensa en guardia": "/videos/boxeo/defensa-guardia.mp4",
-    "Sombra básica": "/videos/boxeo/sombra-basica.mp4",
-    "Trabajo en saco básico": "/videos/boxeo/trabajo-en-saco.mp4",
-
-    "Golpes de potencia": "/videos/boxeo/golpes-potencia.mp4",
-    "Saco con combinaciones": "/videos/boxeo/saco-combinaciones.mp4",
-    "Combinaciones con pareja": "/videos/boxeo/combinaciones-con-pareja.mp4",
-    "Manoplas - combinación": "/videos/boxeo/manoplas-combinacion.mp4",
-    "Manoplas - velocidad": "/videos/boxeo/manoplas-velocidad.mp4",
-
-    "Sparring defensa y contraataque": "/videos/boxeo/sparring-defensa-contraataque.mp4",
-    "Sparring técnico": "/videos/boxeo/sparring-tecnico.mp4",
-    "Boxeo de potencia avanzado": "/videos/boxeo/boxeo-potencia-avanzado.mp4",
-    "Manoplas de alta intensidad": "/videos/boxeo/manoplas-intensidad.mp4",
-    "Combinación avanzada": "/videos/boxeo/combinacion-avanzada.mp4",
-  },
+  Boxeo: {},
 };
 
 function validarCatalogoDisciplinasEnCodigo() {
@@ -300,10 +297,12 @@ function slugDisciplinaMedia(valor = "") {
 }
 
 function imagenAnimadaDisciplina(disciplinaNombre, nombreEjercicio) {
-  const carpeta =
-    disciplinaNombre === "Calistenia" ? "calistenia" : "boxeo";
+  if (disciplinaNombre !== "Calistenia") return "";
+  return `/discipline-final/calistenia/${slugDisciplinaMedia(nombreEjercicio)}.svg`;
+}
 
-  return `/discipline-media/${carpeta}/${slugDisciplinaMedia(nombreEjercicio)}.svg`;
+function videoFinalBoxeo(nombreEjercicio) {
+  return `/discipline-final/boxeo/${slugDisciplinaMedia(nombreEjercicio)}.mp4`;
 }
 
 async function ensureDisciplineModule() {
@@ -373,13 +372,16 @@ async function ensureDisciplineModule() {
 
     for (const [nombre, categoria, nivel, descripcion] of ejercicios) {
       const videoExacto =
-        DISCIPLINE_EXACT_MEDIA[disciplinaNombre]?.[nombre] || "";
+        disciplinaNombre === "Boxeo"
+          ? videoFinalBoxeo(nombre)
+          : DISCIPLINE_EXACT_MEDIA.Calistenia?.[nombre] || "";
 
-      // Cada ejercicio sin video real recibe SU PROPIO medio animado.
-      // No se reutiliza el video de otro ejercicio.
-      const imagenExacta = videoExacto
-        ? ""
-        : imagenAnimadaDisciplina(disciplinaNombre, nombre);
+      // Calistenia: si no existe demo real verificado, usa animación técnica propia.
+      // Boxeo: los 90 ejercicios reciben MP4 generado desde clips reales.
+      const imagenExacta =
+        disciplinaNombre === "Calistenia" && !videoExacto
+          ? imagenAnimadaDisciplina(disciplinaNombre, nombre)
+          : "";
 
       const existe = await pool.query(
         `
