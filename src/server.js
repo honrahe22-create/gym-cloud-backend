@@ -1975,9 +1975,9 @@ async function startServer() {
   try {
     await initDB();
 
-    // GYM 30: seedData() ya deja las relaciones vigentes.
+    // GYM 30: seedData() carga el catálogo base.
     await seedData();
-    // No ejecutar ensureGymExerciseRelations(): remezcla ejercicios legacy.
+    await ensureGymExerciseRelations();
 
     // Luego garantizamos los catálogos completos de Calistenia y Boxeo.
     await ensureDisciplineModule();
